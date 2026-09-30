@@ -162,16 +162,42 @@
       transform: translateY(-1px);
     }
 
+    /* =========================
+       DISCORD
+       ========================= */
+
     .discord-login-btn {
       min-width: auto;
       padding: 0 14px;
       background: var(--discord);
       border-color: transparent;
       font-weight: 800;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
     }
 
     .discord-login-btn:hover {
       background: #4752c4;
+    }
+
+    .discord-logo {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      min-height: 16px;
+      max-width: 16px;
+      max-height: 16px;
+      border-radius: 50%;
+      overflow: hidden;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      background: white;
+      padding: 1px;
+      flex-shrink: 0;
     }
 
     .discord-user {
@@ -200,6 +226,10 @@
       box-shadow: 0 0 10px rgba(57,229,140,0.7);
     }
 
+    /* =========================
+       PANIER NAV
+       ========================= */
+
     .cart-btn {
       position: relative;
       padding: 0 15px;
@@ -220,6 +250,10 @@
       font-size: 11px;
       font-weight: 800;
     }
+
+    /* =========================
+       MAIN
+       ========================= */
 
     main {
       max-width: 1400px;
@@ -297,6 +331,10 @@
       font-size: 15px;
     }
 
+    /* =========================
+       CATEGORIES
+       ========================= */
+
     .section-head {
       display: flex;
       align-items: center;
@@ -330,10 +368,11 @@
       padding: 10px 15px;
       border-radius: 11px;
       transition: 0.2s;
+
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 5px;
+      gap: 6px;
     }
 
     .category:hover,
@@ -343,21 +382,25 @@
       background: rgba(124,60,255,0.13);
     }
 
+    /* Petit cercle pour les logos des catégories */
     .category-logo {
-      width: 12px !important;
-      height: 12px !important;
-      min-width: 12px !important;
-      min-height: 12px !important;
-      max-width: 12px !important;
-      max-height: 12px !important;
+      width: 14px !important;
+      height: 14px !important;
+      min-width: 14px !important;
+      min-height: 14px !important;
+      max-width: 14px !important;
+      max-height: 14px !important;
+
       border-radius: 50%;
       overflow: hidden;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: #fff;
-      flex-shrink: 0;
+
+      background: white;
       border: 1px solid rgba(255,255,255,0.15);
+
+      flex-shrink: 0;
     }
 
     .category-logo img {
@@ -365,8 +408,10 @@
       height: 100% !important;
       max-width: 100% !important;
       max-height: 100% !important;
+
       object-fit: contain !important;
       object-position: center !important;
+
       display: block;
       padding: 1px;
     }
@@ -375,6 +420,10 @@
       font-size: 7px;
       background: rgba(255,255,255,0.08);
     }
+
+    /* =========================
+       CONTROLS
+       ========================= */
 
     .controls {
       display: flex;
@@ -393,6 +442,10 @@
       background: #11111a;
       outline: none;
     }
+
+    /* =========================
+       PRODUITS
+       ========================= */
 
     .products-grid {
       display: grid;
@@ -446,7 +499,7 @@
       margin-bottom: 8px;
     }
 
-    /* IMPORTANT : AUCUN LOGO SOUS LES PRODUITS */
+    /* AUCUN LOGO SOUS LES PRODUITS */
     .product-category img,
     .product-category-logo {
       display: none !important;
@@ -508,6 +561,10 @@
       color: var(--muted);
     }
 
+    /* =========================
+       FOOTER
+       ========================= */
+
     footer {
       border-top: 1px solid var(--border);
       padding: 30px 24px;
@@ -515,6 +572,10 @@
       text-align: center;
       font-size: 12px;
     }
+
+    /* =========================
+       PANIER
+       ========================= */
 
     .drawer-overlay {
       position: fixed;
@@ -632,10 +693,9 @@
       font-size: 17px;
     }
 
-    .drawer-bottom {
-      border-top: 1px solid var(--border);
-      padding: 18px;
-    }
+    /* =========================
+       DISCORD CHECKOUT
+       ========================= */
 
     .discord-required {
       display: none;
@@ -672,10 +732,28 @@
       background: var(--discord);
       color: white;
       font-weight: 800;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
     }
 
     .drawer-discord-btn:hover {
       background: #4752c4;
+    }
+
+    .drawer-discord-logo {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      min-height: 16px;
+      border-radius: 50%;
+      object-fit: contain;
+      object-position: center;
+      background: white;
+      padding: 1px;
+      display: block;
     }
 
     .logged-user-box {
@@ -692,6 +770,15 @@
 
     .logged-user-box.visible {
       display: block;
+    }
+
+    /* =========================
+       TOTAL
+       ========================= */
+
+    .drawer-bottom {
+      border-top: 1px solid var(--border);
+      padding: 18px;
     }
 
     .total-line {
@@ -744,6 +831,10 @@
       margin-top: 10px;
     }
 
+    /* =========================
+       TOAST
+       ========================= */
+
     .toast-container {
       position: fixed;
       z-index: 200;
@@ -777,6 +868,10 @@
       }
     }
 
+    /* =========================
+       RESPONSIVE
+       ========================= */
+
     @media (max-width: 1150px) {
       .products-grid {
         grid-template-columns:
@@ -800,9 +895,9 @@
         padding: 0;
       }
 
-      .discord-login-btn::after {
-        content: "💬";
-        font-size: 18px;
+      .discord-login-btn .discord-logo {
+        width: 18px;
+        height: 18px;
       }
     }
 
@@ -868,8 +963,12 @@
         display: none;
       }
 
-      .nav-actions .nav-btn:first-child {
+      .nav-actions .nav-btn:not(.discord-login-btn):first-of-type {
         display: none;
+      }
+
+      .discord-login-btn {
+        width: 44px;
       }
     }
   </style>
@@ -902,13 +1001,23 @@
 
       <div class="nav-actions">
 
+        <!-- =========================
+             DISCORD
+             ========================= -->
+
         <button
           class="nav-btn discord-login-btn"
           id="discordLoginButton"
           type="button"
           title="Se connecter avec Discord"
         >
-          🔵 Discord
+          <img
+            class="discord-logo"
+            src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBevsdZpJiIhrXJKvOSYipsYbqdUBBn6r6Hb.keWYwuyu5QJ84NCtr5ij3JMrlPglnBeeDch3kJBTCQneZnfl9dA-&format=source&h=210"
+            alt="Discord"
+          >
+
+          <span>Discord</span>
         </button>
 
         <div
@@ -916,8 +1025,15 @@
           id="discordUser"
         >
           <span class="discord-dot"></span>
-          <span id="discordUsername">Connecté</span>
+
+          <span id="discordUsername">
+            Connecté
+          </span>
         </div>
+
+        <!-- =========================
+             ACCUEIL
+             ========================= -->
 
         <button
           class="nav-btn"
@@ -927,6 +1043,10 @@
         >
           🏠
         </button>
+
+        <!-- =========================
+             PANIER
+             ========================= -->
 
         <button
           class="nav-btn cart-btn"
@@ -951,6 +1071,10 @@
 
   <main>
 
+    <!-- =========================
+         HERO
+         ========================= -->
+
     <section class="hero">
 
       <div class="hero-content">
@@ -974,6 +1098,10 @@
 
     </section>
 
+    <!-- =========================
+         CATEGORIES
+         ========================= -->
+
     <div class="section-head">
       <h2>Catégories</h2>
     </div>
@@ -982,6 +1110,10 @@
       class="categories"
       id="categories"
     ></div>
+
+    <!-- =========================
+         TRI
+         ========================= -->
 
     <div class="controls">
 
@@ -996,6 +1128,7 @@
         class="sort"
         id="sortSelect"
       >
+
         <option value="default">
           Trier : recommandé
         </option>
@@ -1011,9 +1144,14 @@
         <option value="name">
           Nom A-Z
         </option>
+
       </select>
 
     </div>
+
+    <!-- =========================
+         PRODUITS
+         ========================= -->
 
     <section
       class="products-grid"
@@ -1022,14 +1160,26 @@
 
   </main>
 
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
   <footer>
     © 2026 NOVA KEY SHOP • Boutique numérique
   </footer>
+
+  <!-- =========================
+       OVERLAY PANIER
+       ========================= -->
 
   <div
     class="drawer-overlay"
     id="drawerOverlay"
   ></div>
+
+  <!-- =========================
+       PANIER
+       ========================= -->
 
   <aside
     class="cart-drawer"
@@ -1059,10 +1209,15 @@
 
     <div class="drawer-bottom">
 
+      <!-- =========================
+           DISCORD OBLIGATOIRE
+           ========================= -->
+
       <div
         class="discord-required"
         id="discordRequired"
       >
+
         <div class="discord-required-title">
           🔐 Connexion Discord requise
         </div>
@@ -1076,14 +1231,33 @@
           id="drawerDiscordButton"
           type="button"
         >
-          🔵 Se connecter avec Discord
+
+          <img
+            class="drawer-discord-logo"
+            src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBevsdZpJiIhrXJKvOSYipsYbqdUBBn6r6Hb.keWYwuyu5QJ84NCtr5ij3JMrlPglnBeeDch3kJBTCQneZnfl9dA-&format=source&h=210"
+            alt="Discord"
+          >
+
+          <span>
+            Se connecter avec Discord
+          </span>
+
         </button>
+
       </div>
+
+      <!-- =========================
+           UTILISATEUR CONNECTÉ
+           ========================= -->
 
       <div
         class="logged-user-box"
         id="loggedUserBox"
       ></div>
+
+      <!-- =========================
+           TOTAL
+           ========================= -->
 
       <div class="total-line">
 
@@ -1099,6 +1273,10 @@
         </span>
 
       </div>
+
+      <!-- =========================
+           PAYPAL
+           ========================= -->
 
       <button
         class="checkout-btn"
@@ -1118,10 +1296,18 @@
 
   </aside>
 
+  <!-- =========================
+       TOASTS
+       ========================= -->
+
   <div
     class="toast-container"
     id="toastContainer"
   ></div>
+
+  <!-- =========================
+       JAVASCRIPT
+       ========================= -->
 
   <script src="app.js"></script>
 
