@@ -25,6 +25,7 @@
       --accent2: #a66cff;
       --success: #39e58c;
       --danger: #ff4d67;
+      --discord: #5865f2;
     }
 
     body {
@@ -161,6 +162,44 @@
       transform: translateY(-1px);
     }
 
+    .discord-login-btn {
+      min-width: auto;
+      padding: 0 14px;
+      background: var(--discord);
+      border-color: transparent;
+      font-weight: 800;
+    }
+
+    .discord-login-btn:hover {
+      background: #4752c4;
+    }
+
+    .discord-user {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      height: 44px;
+      padding: 0 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(57,229,140,0.25);
+      background: rgba(57,229,140,0.07);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .discord-user.visible {
+      display: flex;
+    }
+
+    .discord-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 10px rgba(57,229,140,0.7);
+    }
+
     .cart-btn {
       position: relative;
       padding: 0 15px;
@@ -291,6 +330,10 @@
       padding: 10px 15px;
       border-radius: 11px;
       transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
     }
 
     .category:hover,
@@ -298,6 +341,39 @@
       color: white;
       border-color: rgba(124,60,255,0.65);
       background: rgba(124,60,255,0.13);
+    }
+
+    .category-logo {
+      width: 12px !important;
+      height: 12px !important;
+      min-width: 12px !important;
+      min-height: 12px !important;
+      max-width: 12px !important;
+      max-height: 12px !important;
+      border-radius: 50%;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      flex-shrink: 0;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .category-logo img {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      object-fit: contain !important;
+      object-position: center !important;
+      display: block;
+      padding: 1px;
+    }
+
+    .category-logo-all {
+      font-size: 7px;
+      background: rgba(255,255,255,0.08);
     }
 
     .controls {
@@ -370,6 +446,12 @@
       margin-bottom: 8px;
     }
 
+    /* IMPORTANT : AUCUN LOGO SOUS LES PRODUITS */
+    .product-category img,
+    .product-category-logo {
+      display: none !important;
+    }
+
     .product-name {
       min-height: 42px;
       font-size: 15px;
@@ -381,6 +463,12 @@
       color: var(--muted);
       font-size: 12px;
       margin-top: 8px;
+    }
+
+    .product-type {
+      color: #77778a;
+      font-size: 11px;
+      margin-top: 5px;
     }
 
     .product-bottom {
@@ -463,7 +551,7 @@
     }
 
     .drawer-head {
-      height: 75px;
+      min-height: 75px;
       padding: 0 20px;
       display: flex;
       align-items: center;
@@ -549,6 +637,63 @@
       padding: 18px;
     }
 
+    .discord-required {
+      display: none;
+      margin-bottom: 12px;
+      padding: 13px;
+      border: 1px solid rgba(88,101,242,0.25);
+      background: rgba(88,101,242,0.08);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .discord-required.visible {
+      display: block;
+    }
+
+    .discord-required-title {
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .discord-required-text {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .drawer-discord-btn {
+      width: 100%;
+      min-height: 42px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--discord);
+      color: white;
+      font-weight: 800;
+    }
+
+    .drawer-discord-btn:hover {
+      background: #4752c4;
+    }
+
+    .logged-user-box {
+      display: none;
+      margin-bottom: 12px;
+      padding: 10px 12px;
+      border: 1px solid rgba(57,229,140,0.18);
+      background: rgba(57,229,140,0.06);
+      border-radius: 10px;
+      color: #bff5d8;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .logged-user-box.visible {
+      display: block;
+    }
+
     .total-line {
       display: flex;
       align-items: center;
@@ -632,10 +777,32 @@
       }
     }
 
-    @media (max-width: 1050px) {
+    @media (max-width: 1150px) {
       .products-grid {
         grid-template-columns:
           repeat(3, minmax(0, 1fr));
+      }
+
+      .discord-user {
+        max-width: 160px;
+        overflow: hidden;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .discord-user {
+        display: none !important;
+      }
+
+      .discord-login-btn {
+        font-size: 0;
+        width: 44px;
+        padding: 0;
+      }
+
+      .discord-login-btn::after {
+        content: "💬";
+        font-size: 18px;
       }
     }
 
@@ -697,6 +864,10 @@
         height: 190px;
       }
 
+      .logo span {
+        display: none;
+      }
+
       .nav-actions .nav-btn:first-child {
         display: none;
       }
@@ -732,9 +903,27 @@
       <div class="nav-actions">
 
         <button
+          class="nav-btn discord-login-btn"
+          id="discordLoginButton"
+          type="button"
+          title="Se connecter avec Discord"
+        >
+          🔵 Discord
+        </button>
+
+        <div
+          class="discord-user"
+          id="discordUser"
+        >
+          <span class="discord-dot"></span>
+          <span id="discordUsername">Connecté</span>
+        </div>
+
+        <button
           class="nav-btn"
           id="homeButton"
           title="Accueil"
+          type="button"
         >
           🏠
         </button>
@@ -743,6 +932,7 @@
           class="nav-btn cart-btn"
           id="cartButton"
           title="Panier"
+          type="button"
         >
           🛒
 
@@ -855,6 +1045,7 @@
       <button
         class="close-btn"
         id="closeCart"
+        type="button"
       >
         ✕
       </button>
@@ -867,6 +1058,32 @@
     ></div>
 
     <div class="drawer-bottom">
+
+      <div
+        class="discord-required"
+        id="discordRequired"
+      >
+        <div class="discord-required-title">
+          🔐 Connexion Discord requise
+        </div>
+
+        <div class="discord-required-text">
+          Connecte-toi avec Discord avant de pouvoir payer.
+        </div>
+
+        <button
+          class="drawer-discord-btn"
+          id="drawerDiscordButton"
+          type="button"
+        >
+          🔵 Se connecter avec Discord
+        </button>
+      </div>
+
+      <div
+        class="logged-user-box"
+        id="loggedUserBox"
+      ></div>
 
       <div class="total-line">
 
@@ -886,14 +1103,15 @@
       <button
         class="checkout-btn"
         id="checkoutButton"
+        type="button"
         disabled
       >
         💳 Payer avec PayPal
       </button>
 
       <div class="paypal-info">
-        Le montant du panier sera automatiquement
-        ajouté à ton lien PayPal.
+        Connexion Discord obligatoire avant le paiement.
+        Le montant du panier sera ajouté à ton lien PayPal.
       </div>
 
     </div>
