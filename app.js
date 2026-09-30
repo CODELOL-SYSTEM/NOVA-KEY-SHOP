@@ -662,9 +662,9 @@ const PAYPAL_USERNAME = "SH0PNOVA";
 // DISCORD_OAUTH_URL avec ton URL OAuth2 Discord.
 // ============================================================
 
-const DISCORD_BOT_ID = "1554855867973771354";
+const DISCORD_BOT_ID = "monidbot";
 
-const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1554854634986938398/VnSuCzFU5YRfcRVIqX-Uu2PYtWxgYKI9Zsbv12VmERRQGOP_hhLsbLGw80CNEbhwtzQh";
+const DISCORD_WEBHOOK_URL = "whebook";
 
 
 // ------------------------------------------------------------
