@@ -451,7 +451,7 @@ const products = [
 
 
   // ============================================================
-  // CARTES PLAYSTATION STORE
+  // PLAYSTATION STORE
   // ============================================================
 
   {
@@ -631,7 +631,7 @@ const products = [
 
 
   // ============================================================
-  // NINTENDO ESHOP
+  // NINTENDO
   // ============================================================
 
   {
@@ -702,12 +702,11 @@ const products = [
 // ============================================================
 
 const CART_STORAGE_KEY = "novaKeyShopCart";
-
 const PAYPAL_USERNAME = "SH0PNOVA";
 
 
 // ============================================================
-// LOGOS DES CATÉGORIES
+// LOGOS
 // ============================================================
 
 const categoryLogos = {
@@ -880,7 +879,7 @@ function saveCart() {
 
 
 // ============================================================
-// LOGO D'UNE CATÉGORIE
+// LOGO CATÉGORIE
 // ============================================================
 
 function getCategoryLogo(category) {
@@ -898,7 +897,7 @@ function getCategoryLogo(category) {
 
 
 // ============================================================
-// NOM AFFICHÉ DES CATÉGORIES
+// NOM CATÉGORIE
 // ============================================================
 
 function getCategoryLabel(category) {
@@ -1255,6 +1254,7 @@ function renderProducts() {
 
           <div class="product-category">
             ${categoryHTML}
+
             <span>
               ${escapeHTML(
                 product.category
@@ -1801,9 +1801,7 @@ function openCart() {
 
 function closeCart() {
 
-  if (
-    cartDrawer
-  ) {
+  if (cartDrawer) {
 
     cartDrawer.classList.remove(
       "open"
@@ -1811,9 +1809,7 @@ function closeCart() {
   }
 
 
-  if (
-    drawerOverlay
-  ) {
+  if (drawerOverlay) {
 
     drawerOverlay.classList.remove(
       "open"
@@ -2077,6 +2073,99 @@ document.addEventListener(
     }
 
   }
+);
+
+
+// ============================================================
+// CSS DES PETITS CERCLES
+// ============================================================
+
+const categoryLogoStyles =
+  document.createElement("style");
+
+categoryLogoStyles.textContent = `
+
+  .category {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+
+  .category-logo {
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px !important;
+    max-width: 22px !important;
+    min-height: 22px !important;
+    max-height: 22px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(255,255,255,0.18) !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .category-logo img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block !important;
+    padding: 3px !important;
+    box-sizing: border-box !important;
+  }
+
+  .category-logo-all {
+    font-size: 11px !important;
+    background: rgba(255,255,255,0.08) !important;
+  }
+
+  .category-logo-fallback {
+    font-size: 11px !important;
+  }
+
+  .product-category {
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+  }
+
+  .product-category-logo {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    max-width: 18px !important;
+    min-height: 18px !important;
+    max-height: 18px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #ffffff !important;
+    flex-shrink: 0 !important;
+  }
+
+  .product-category-logo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    padding: 2px !important;
+    box-sizing: border-box !important;
+    display: block !important;
+  }
+
+`;
+
+document.head.appendChild(
+  categoryLogoStyles
 );
 
 
