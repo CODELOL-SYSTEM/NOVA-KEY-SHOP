@@ -1298,6 +1298,63 @@
     }
 
 
+    /* ============================================================
+       DISCORD / COMMANDE
+    ============================================================ */
+
+    .discord-order-btn {
+      width: 100%;
+
+      min-height: 48px;
+
+      margin-top: 10px;
+
+      border:
+        1px solid
+        rgba(124,60,255,0.45);
+
+      border-radius: 12px;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          135deg,
+          #5865f2,
+          #7c3cff
+        );
+
+      font-weight: 900;
+
+      transition:
+        0.2s;
+    }
+
+
+    .discord-order-btn:hover:not(:disabled) {
+      transform:
+        translateY(-1px);
+
+      filter:
+        brightness(1.08);
+
+      box-shadow:
+        0 8px 25px
+        rgba(88,101,242,0.25);
+    }
+
+
+    .discord-order-btn:disabled {
+      opacity: 0.4;
+
+      cursor: not-allowed;
+    }
+
+
+    /* ============================================================
+       INFO PAYPAL
+    ============================================================ */
+
     .paypal-info {
       color: #77778a;
 
@@ -1882,6 +1939,18 @@
         disabled
       >
         💳 Payer avec PayPal
+      </button>
+
+
+      <!-- DISCORD -->
+
+      <button
+        class="discord-order-btn"
+        id="discordOrderButton"
+        type="button"
+        disabled
+      >
+        🟣 Envoyer la commande sur Discord
       </button>
 
 
