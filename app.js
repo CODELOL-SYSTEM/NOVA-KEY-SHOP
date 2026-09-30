@@ -476,7 +476,7 @@ const products = [
     category: "PlayStation Store",
     type: "Carte cadeau",
     platform: "PlayStation",
-    image: "https://gaming-cdn.com/images/products/12774/616x353/carte-cadeau-playstation-store-100eur-playstation-5-playstation-4-playstation-store-cover.jpg?v=1752592914"
+    image: "https://gaming-cdn.com/images/products/12774/616x353/carte-cadeau-playstation-store-100eur-playstation-4-playstation-5-playstation-store-cover.jpg?v=1752592914"
   },
   {
     id: "ps-store-150",
@@ -485,7 +485,7 @@ const products = [
     category: "PlayStation Store",
     type: "Carte cadeau",
     platform: "PlayStation",
-    image: "https://gaming-cdn.com/images/products/21246/616x353/carte-cadeau-playstation-store-150eur-playstation-5-playstation-4-playstation-store-cover.jpg?v=1764260665"
+    image: "https://gaming-cdn.com/images/products/21246/616x353/carte-cadeau-playstation-store-150eur-playstation-5-playstation-store-cover.jpg?v=1764260665"
   },
 
 
@@ -639,15 +639,17 @@ const products = [
 
 
 // ============================================================
-// CONFIG
+// CONFIGURATION
 // ============================================================
 
 const CART_STORAGE_KEY = "novaKeyShopCart";
+
 const PAYPAL_USERNAME = "SH0PNOVA";
 
 
 // ============================================================
-// LOGOS DES CATÉGORIES UNIQUEMENT
+// LOGOS DES CATÉGORIES
+// IMPORTANT : LOGOS UNIQUEMENT DANS LES CATÉGORIES
 // ============================================================
 
 const categoryLogos = {
@@ -678,7 +680,9 @@ const categoryLogos = {
 // ============================================================
 
 let cart = loadCart();
+
 let activeCategory = "Tous";
+
 let searchTerm = "";
 
 
@@ -749,7 +753,7 @@ function formatPrice(price) {
 
 
 // ============================================================
-// LOAD CART
+// CHARGER LE PANIER
 // ============================================================
 
 function loadCart() {
@@ -792,7 +796,7 @@ function loadCart() {
 
 
 // ============================================================
-// SAVE CART
+// SAUVEGARDER LE PANIER
 // ============================================================
 
 function saveCart() {
@@ -815,7 +819,7 @@ function saveCart() {
 
 
 // ============================================================
-// LOGO
+// RÉCUPÉRER LE LOGO D'UNE CATÉGORIE
 // ============================================================
 
 function getCategoryLogo(category) {
@@ -833,7 +837,7 @@ function getCategoryLogo(category) {
 
 
 // ============================================================
-// LABEL
+// NOM AFFICHÉ DES CATÉGORIES
 // ============================================================
 
 function getCategoryLabel(category) {
@@ -841,13 +845,23 @@ function getCategoryLabel(category) {
   const labels = {
 
     Tous: "Tous",
+
     Roblox: "Roblox",
+
     Fortnite: "Fortnite",
+
     VALORANT: "VALORANT",
+
     PlayStation: "PlayStation",
-    "PlayStation Plus": "PlayStation Plus",
-    "PlayStation Store": "PlayStation Store",
+
+    "PlayStation Plus":
+      "PlayStation Plus",
+
+    "PlayStation Store":
+      "PlayStation Store",
+
     Xbox: "Xbox",
+
     Nintendo: "Nintendo"
 
   };
@@ -869,13 +883,16 @@ function renderCategories() {
 
 
   const categories = [
+
     "Tous",
+
     ...new Set(
       products.map(
         product =>
           product.category
       )
     )
+
   ];
 
 
@@ -915,19 +932,16 @@ function renderCategories() {
         );
 
 
-      if (
-        category !== "Tous" &&
-        logo
-      ) {
+      // --------------------------------------------------------
+      // CATÉGORIE "TOUS"
+      // --------------------------------------------------------
+
+      if (category === "Tous") {
 
         button.innerHTML = `
 
-          <span class="category-logo">
-            <img
-              src="${escapeAttribute(logo)}"
-              alt=""
-              loading="lazy"
-            >
+          <span class="category-logo category-logo-all">
+            🎮
           </span>
 
           <span>
@@ -936,13 +950,44 @@ function renderCategories() {
 
         `;
 
-      } else {
+      }
+
+
+      // --------------------------------------------------------
+      // AUTRES CATÉGORIES AVEC LOGO
+      // --------------------------------------------------------
+
+      else if (logo) {
 
         button.innerHTML = `
 
-          <span class="category-logo category-logo-all">
-            🎮
+          <span class="category-logo">
+
+            <img
+              src="${escapeAttribute(logo)}"
+              alt=""
+              loading="lazy"
+              draggable="false"
+            >
+
           </span>
+
+          <span>
+            ${escapeHTML(label)}
+          </span>
+
+        `;
+
+      }
+
+
+      // --------------------------------------------------------
+      // SÉCURITÉ SI AUCUN LOGO
+      // --------------------------------------------------------
+
+      else {
+
+        button.innerHTML = `
 
           <span>
             ${escapeHTML(label)}
@@ -960,6 +1005,7 @@ function renderCategories() {
             category;
 
           renderCategories();
+
           renderProducts();
 
         }
@@ -976,7 +1022,7 @@ function renderCategories() {
 
 
 // ============================================================
-// FILTRES
+// FILTRER LES PRODUITS
 // ============================================================
 
 function getFilteredProducts() {
@@ -1024,6 +1070,10 @@ function getFilteredProducts() {
       : "default";
 
 
+  // ----------------------------------------------------------
+  // PRIX CROISSANT
+  // ----------------------------------------------------------
+
   if (
     sort === "price-low"
   ) {
@@ -1033,7 +1083,14 @@ function getFilteredProducts() {
         a.price - b.price
     );
 
-  } else if (
+  }
+
+
+  // ----------------------------------------------------------
+  // PRIX DÉCROISSANT
+  // ----------------------------------------------------------
+
+  else if (
     sort === "price-high"
   ) {
 
@@ -1042,7 +1099,14 @@ function getFilteredProducts() {
         b.price - a.price
     );
 
-  } else if (
+  }
+
+
+  // ----------------------------------------------------------
+  // NOM A-Z
+  // ----------------------------------------------------------
+
+  else if (
     sort === "name"
   ) {
 
@@ -1053,6 +1117,7 @@ function getFilteredProducts() {
           "fr"
         )
     );
+
   }
 
 
@@ -1061,8 +1126,8 @@ function getFilteredProducts() {
 
 
 // ============================================================
-// PRODUITS
-// IMPORTANT : AUCUN LOGO ICI
+// AFFICHER LES PRODUITS
+// IMPORTANT : AUCUN LOGO DE CATÉGORIE ICI
 // ============================================================
 
 function renderProducts() {
@@ -1087,8 +1152,13 @@ function renderProducts() {
           ? "s"
           : ""
       }`;
+
   }
 
+
+  // ----------------------------------------------------------
+  // AUCUN RÉSULTAT
+  // ----------------------------------------------------------
 
   if (
     filtered.length === 0
@@ -1119,6 +1189,10 @@ function renderProducts() {
   }
 
 
+  // ----------------------------------------------------------
+  // PRODUITS
+  // ----------------------------------------------------------
+
   filtered.forEach(
     product => {
 
@@ -1132,9 +1206,8 @@ function renderProducts() {
         "product-card";
 
 
-      // AUCUN LOGO DE CATÉGORIE
-      // DANS LES PRODUITS
-
+      // IMPORTANT :
+      // AUCUN LOGO DE CATÉGORIE DANS LA CARTE
 
       card.innerHTML = `
 
@@ -1147,8 +1220,9 @@ function renderProducts() {
             product.name
           )}"
           loading="lazy"
+          draggable="false"
           onerror="
-            this.style.opacity='0.25'
+            this.style.opacity='0.25';
           "
         >
 
@@ -1221,6 +1295,7 @@ function renderProducts() {
 
           }
         );
+
       }
 
 
@@ -1234,7 +1309,7 @@ function renderProducts() {
 
 
 // ============================================================
-// AJOUT PANIER
+// AJOUTER AU PANIER
 // ============================================================
 
 function addToCart(productId) {
@@ -1265,14 +1340,18 @@ function addToCart(productId) {
   } else {
 
     cart.push({
+
       id: product.id,
+
       quantity: 1
+
     });
 
   }
 
 
   saveCart();
+
   updateCartUI();
 
 
@@ -1283,7 +1362,7 @@ function addToCart(productId) {
 
 
 // ============================================================
-// SUPPRESSION
+// SUPPRIMER DU PANIER
 // ============================================================
 
 function removeFromCart(
@@ -1298,12 +1377,13 @@ function removeFromCart(
 
 
   saveCart();
+
   updateCartUI();
 }
 
 
 // ============================================================
-// QUANTITÉ
+// MODIFIER LA QUANTITÉ
 // ============================================================
 
 function changeQuantity(
@@ -1339,6 +1419,7 @@ function changeQuantity(
 
 
   saveCart();
+
   updateCartUI();
 }
 
@@ -1350,6 +1431,7 @@ function changeQuantity(
 function getCartProducts() {
 
   return cart
+
     .map(
       item => {
 
@@ -1366,19 +1448,23 @@ function getCartProducts() {
 
 
         return {
+
           ...product,
+
           quantity:
             Number(item.quantity)
+
         };
 
       }
     )
+
     .filter(Boolean);
 }
 
 
 // ============================================================
-// TOTAL
+// TOTAL DU PANIER
 // ============================================================
 
 function getCartTotal() {
@@ -1426,7 +1512,7 @@ function getCartQuantity() {
 
 
 // ============================================================
-// RENDER PANIER
+// AFFICHER LE PANIER
 // ============================================================
 
 function renderCart() {
@@ -1446,6 +1532,10 @@ function renderCart() {
 
   cartItems.innerHTML = "";
 
+
+  // ----------------------------------------------------------
+  // PANIER VIDE
+  // ----------------------------------------------------------
 
   if (
     cartProducts.length === 0
@@ -1471,7 +1561,14 @@ function renderCart() {
 
     `;
 
-  } else {
+  }
+
+
+  // ----------------------------------------------------------
+  // PRODUITS DU PANIER
+  // ----------------------------------------------------------
+
+  else {
 
     cartProducts.forEach(
       product => {
@@ -1496,6 +1593,7 @@ function renderCart() {
               product.name
             )}"
             loading="lazy"
+            draggable="false"
           >
 
           <div>
@@ -1519,6 +1617,7 @@ function renderCart() {
                 type="button"
                 class="quantity-btn"
                 data-action="minus"
+                aria-label="Diminuer"
               >
                 −
               </button>
@@ -1531,6 +1630,7 @@ function renderCart() {
                 type="button"
                 class="quantity-btn"
                 data-action="plus"
+                aria-label="Augmenter"
               >
                 +
               </button>
@@ -1543,6 +1643,7 @@ function renderCart() {
             type="button"
             class="remove-item"
             data-action="remove"
+            aria-label="Supprimer"
           >
             ✕
           </button>
@@ -1581,6 +1682,7 @@ function renderCart() {
 
             }
           );
+
         }
 
 
@@ -1597,6 +1699,7 @@ function renderCart() {
 
             }
           );
+
         }
 
 
@@ -1612,6 +1715,7 @@ function renderCart() {
 
             }
           );
+
         }
 
 
@@ -1621,8 +1725,13 @@ function renderCart() {
 
       }
     );
+
   }
 
+
+  // ----------------------------------------------------------
+  // TOTAL
+  // ----------------------------------------------------------
 
   cartTotal.textContent =
     formatPrice(
@@ -1630,13 +1739,17 @@ function renderCart() {
     );
 
 
+  // ----------------------------------------------------------
+  // BOUTON PAYPAL
+  // ----------------------------------------------------------
+
   checkoutButton.disabled =
     cartProducts.length === 0;
 }
 
 
 // ============================================================
-// UPDATE UI
+// METTRE À JOUR L'INTERFACE DU PANIER
 // ============================================================
 
 function updateCartUI() {
@@ -1654,7 +1767,7 @@ function updateCartUI() {
 
 
 // ============================================================
-// OUVRIR PANIER
+// OUVRIR LE PANIER
 // ============================================================
 
 function openCart() {
@@ -1665,6 +1778,9 @@ function openCart() {
   ) {
     return;
   }
+
+
+  renderCart();
 
 
   cartDrawer.classList.add(
@@ -1683,7 +1799,7 @@ function openCart() {
 
 
 // ============================================================
-// FERMER PANIER
+// FERMER LE PANIER
 // ============================================================
 
 function closeCart() {
@@ -1693,6 +1809,7 @@ function closeCart() {
     cartDrawer.classList.remove(
       "open"
     );
+
   }
 
 
@@ -1701,6 +1818,7 @@ function closeCart() {
     drawerOverlay.classList.remove(
       "open"
     );
+
   }
 
 
@@ -1731,13 +1849,19 @@ function payWithPayPal() {
   }
 
 
+  // Montant avec exactement 2 décimales
+
   const amount =
     total.toFixed(2);
 
 
+  // Lien PayPal.me avec le montant
+
   const paypalUrl =
     `https://paypal.me/${PAYPAL_USERNAME}/${amount}`;
 
+
+  // Ouverture du paiement
 
   window.location.href =
     paypalUrl;
@@ -1803,7 +1927,7 @@ function showToast(
 
 
 // ============================================================
-// SÉCURITÉ
+// SÉCURITÉ HTML
 // ============================================================
 
 function escapeHTML(
@@ -1811,28 +1935,37 @@ function escapeHTML(
 ) {
 
   return String(value)
+
     .replaceAll(
       "&",
       "&amp;"
     )
+
     .replaceAll(
       "<",
       "&lt;"
     )
+
     .replaceAll(
       ">",
       "&gt;"
     )
+
     .replaceAll(
       '"',
       "&quot;"
     )
+
     .replaceAll(
       "'",
       "&#039;"
     );
 }
 
+
+// ============================================================
+// SÉCURITÉ ATTRIBUT
+// ============================================================
 
 function escapeAttribute(
   value
@@ -1876,7 +2009,7 @@ if (sortSelect) {
 
 
 // ============================================================
-// PANIER
+// OUVRIR PANIER
 // ============================================================
 
 if (cartButton) {
@@ -1888,6 +2021,10 @@ if (cartButton) {
 }
 
 
+// ============================================================
+// FERMER PANIER
+// ============================================================
+
 if (closeCartButton) {
 
   closeCartButton.addEventListener(
@@ -1896,6 +2033,10 @@ if (closeCartButton) {
   );
 }
 
+
+// ============================================================
+// FERMER AVEC OVERLAY
+// ============================================================
 
 if (drawerOverlay) {
 
@@ -1907,7 +2048,7 @@ if (drawerOverlay) {
 
 
 // ============================================================
-// CHECKOUT
+// CHECKOUT PAYPAL
 // ============================================================
 
 if (checkoutButton) {
@@ -1929,6 +2070,24 @@ if (homeButton) {
     "click",
     () => {
 
+      activeCategory =
+        "Tous";
+
+      searchTerm =
+        "";
+
+      if (searchInput) {
+        searchInput.value = "";
+      }
+
+      if (sortSelect) {
+        sortSelect.value = "default";
+      }
+
+      renderCategories();
+
+      renderProducts();
+
       window.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -1940,7 +2099,7 @@ if (homeButton) {
 
 
 // ============================================================
-// ESC
+// TOUCHE ESC
 // ============================================================
 
 document.addEventListener(
@@ -1960,8 +2119,8 @@ document.addEventListener(
 
 
 // ============================================================
-// PETITS LOGOS DES CATÉGORIES
-// SEULEMENT LES CATÉGORIES
+// STYLES DES PETITS LOGOS
+// LOGOS UNIQUEMENT DANS LES CATÉGORIES
 // ============================================================
 
 const categoryLogoStyles =
@@ -1972,28 +2131,51 @@ const categoryLogoStyles =
 
 categoryLogoStyles.textContent = `
 
+  /* ==========================================================
+     BOUTONS DE CATÉGORIE
+     ========================================================== */
+
   .category {
+
     display: inline-flex !important;
+
     align-items: center !important;
+
     justify-content: center !important;
-    gap: 5px !important;
+
+    gap: 6px !important;
+
+    white-space: nowrap !important;
+
   }
 
-  /* CERCLE ULTRA PETIT */
+
+  /* ==========================================================
+     PETIT CERCLE DU LOGO
+     ========================================================== */
 
   .category-logo {
+
     width: 16px !important;
+
     height: 16px !important;
+
     min-width: 16px !important;
+
     max-width: 16px !important;
+
     min-height: 16px !important;
+
     max-height: 16px !important;
 
     border-radius: 50% !important;
+
     overflow: hidden !important;
 
     display: inline-flex !important;
+
     align-items: center !important;
+
     justify-content: center !important;
 
     background: #ffffff !important;
@@ -2005,20 +2187,33 @@ categoryLogoStyles.textContent = `
       0.15
     ) !important;
 
-    flex-shrink: 0 !important;
+    flex: 0 0 16px !important;
 
     box-sizing: border-box !important;
+
   }
 
 
+  /* ==========================================================
+     LOGO ENTIER VISIBLE
+     ========================================================== */
+
   .category-logo img {
+
     width: 100% !important;
+
     height: 100% !important;
 
+    min-width: 0 !important;
+
+    min-height: 0 !important;
+
     max-width: 100% !important;
+
     max-height: 100% !important;
 
     object-fit: contain !important;
+
     object-position: center !important;
 
     display: block !important;
@@ -2026,32 +2221,77 @@ categoryLogoStyles.textContent = `
     padding: 2px !important;
 
     box-sizing: border-box !important;
+
   }
 
+
+  /* ==========================================================
+     CATÉGORIE "TOUS"
+     ========================================================== */
 
   .category-logo-all {
+
     font-size: 8px !important;
-    background: rgba(
-      255,
-      255,
-      255,
-      0.08
-    ) !important;
+
+    line-height: 1 !important;
+
+    background:
+      rgba(
+        255,
+        255,
+        255,
+        0.08
+      ) !important;
+
+    border-color:
+      rgba(
+        255,
+        255,
+        255,
+        0.10
+      ) !important;
+
   }
 
 
-  /* SUPPRESSION TOTALE DES ANCIENS LOGOS
-     DANS LES CARTES PRODUITS */
+  /* ==========================================================
+     IMPORTANT :
+     AUCUN LOGO DANS LES CARTES PRODUITS
+     ========================================================== */
 
   .product-category-logo {
+
     display: none !important;
+
   }
 
+
   .product-category img {
+
     display: none !important;
+
+  }
+
+
+  .product-category-logo img {
+
+    display: none !important;
+
+  }
+
+
+  /* ==========================================================
+     EMPÊCHER LES LOGOS HÉRITÉS
+     ========================================================== */
+
+  .product-card .category-logo {
+
+    display: none !important;
+
   }
 
 `;
+
 
 document.head.appendChild(
   categoryLogoStyles
@@ -2059,7 +2299,7 @@ document.head.appendChild(
 
 
 // ============================================================
-// INIT
+// INITIALISATION
 // ============================================================
 
 function init() {
