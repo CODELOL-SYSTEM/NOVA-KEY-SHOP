@@ -29,10 +29,13 @@
       --card: #11111a;
       --card2: #171722;
       --border: rgba(255,255,255,0.09);
+
       --text: #ffffff;
       --muted: #9292a3;
+
       --accent: #7c3cff;
       --accent2: #a66cff;
+
       --success: #39e58c;
       --danger: #ff4d67;
     }
@@ -87,6 +90,7 @@
       height: 34px;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -106,6 +110,7 @@
 
     header {
       position: sticky;
+
       top: 0;
 
       z-index: 50;
@@ -138,7 +143,7 @@
     }
 
     /* ============================================================
-       LOGO NOVA
+       LOGO
     ============================================================ */
 
     .logo {
@@ -244,6 +249,8 @@
 
     /* ============================================================
        ACTIONS HEADER
+       ORDRE :
+       ACCUEIL → AUTH → DISCORD → PANIER
     ============================================================ */
 
     .nav-actions {
@@ -292,7 +299,23 @@
     }
 
     /* ============================================================
-       BOUTON DISCORD
+       AUTH
+    ============================================================ */
+
+    .auth-btn {
+      font-size: 18px;
+    }
+
+    .auth-btn.logged {
+      border-color:
+        rgba(57,229,140,0.55);
+
+      background:
+        rgba(57,229,140,0.08);
+    }
+
+    /* ============================================================
+       DISCORD
     ============================================================ */
 
     .discord-btn {
@@ -303,6 +326,7 @@
 
     .discord-btn img {
       width: 22px;
+
       height: 22px;
 
       object-fit: contain;
@@ -325,7 +349,7 @@
     }
 
     /* ============================================================
-       PANIER HEADER
+       PANIER
     ============================================================ */
 
     .cart-btn {
@@ -1438,6 +1462,7 @@
 
       .logo-mark {
         width: 32px;
+
         height: 32px;
       }
 
@@ -1461,6 +1486,7 @@
 
       .cart-item img {
         width: 60px;
+
         height: 50px;
       }
 
@@ -1469,6 +1495,7 @@
   </style>
 
 </head>
+
 
 <body>
 
@@ -1526,7 +1553,10 @@
       </div>
 
 
-      <!-- ACTIONS -->
+      <!-- ========================================================
+           ACTIONS
+           🏠 → 🔐 → DISCORD → 🛒
+      ========================================================= -->
 
       <div class="nav-actions">
 
@@ -1541,6 +1571,19 @@
           aria-label="Accueil"
         >
           🏠
+        </button>
+
+
+        <!-- AUTHENTIFICATION -->
+
+        <button
+          class="nav-btn auth-btn"
+          id="authButton"
+          type="button"
+          title="Connexion / Compte"
+          aria-label="Connexion / Compte"
+        >
+          🔐
         </button>
 
 
@@ -1655,7 +1698,7 @@
 
 
     <!-- ==========================================================
-         TRI
+         CONTRÔLES
     =========================================================== -->
 
     <div class="controls">
@@ -1734,6 +1777,7 @@
 
   <!-- ============================================================
        PANIER
+       PAS DE BOUTON DISCORD ICI
   ============================================================ -->
 
   <aside
@@ -1777,6 +1821,8 @@
     <div class="drawer-bottom">
 
 
+      <!-- TOTAL -->
+
       <div class="total-line">
 
         <span>
@@ -1793,7 +1839,7 @@
       </div>
 
 
-      <!-- PAYPAL -->
+      <!-- PAYPAL UNIQUEMENT -->
 
       <button
         class="checkout-btn"
@@ -1821,7 +1867,7 @@
 
 
   <!-- ============================================================
-       TOAST
+       TOASTS
   ============================================================ -->
 
   <div
