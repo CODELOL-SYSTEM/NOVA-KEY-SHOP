@@ -642,25 +642,40 @@ const PAYPAL_USERNAME = "SH0PNOVA";
 // DISCORD
 // ============================================================
 
-// À REMPLACER PAR L'ID DE TON BOT
-const DISCORD_BOT_ID = "1554855867973771354";
+const DISCORD_BOT_ID =
+  "1554855867973771354";
 
-// À REMPLACER PAR TON WEBHOOK DISCORD
-const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1554854634986938398/VnSuCzFU5YRfcRVIqX-Uu2PYtWxgYKI9Zsbv12VmERRQGOP_hhLsbLGw80CNEbhwtzQh";
+// ⚠️ METS TON NOUVEAU WEBHOOK ICI
+const DISCORD_WEBHOOK_URL =
+  "https://discord.com/api/webhooks/1554854634986938398/VnSuCzFU5YRfcRVIqX-Uu2PYtWxgYKI9Zsbv12VmERRQGOP_hhLsbLGw80CNEbhwtzQh";
 
-// À REMPLACER PAR LE LIEN DE TON SERVEUR
-const DISCORD_SERVER_URL = "https://discord.gg/4eq7sSKhS";
+const DISCORD_SERVER_URL =
+  "https://discord.gg/4eq7sSKhS";
 
-// À REMPLACER PAR TON LIEN OAUTH SI TU UTILISES L'AUTHENTIFICATION
-const DISCORD_OAUTH_URL = "https://discord.com/oauth2/authorize?client_id=1554855867973771354&response_type=code&redirect_uri=https%3A%2F%2Fcodelol-system.github.io%2FNOVA-KEY-SHOP%2F&scope=identify+connections";
+const DISCORD_CLIENT_ID =
+  "1554855867973771354";
 
-// Logo Discord
+const DISCORD_REDIRECT_URI =
+  "https://codelol-system.github.io/NOVA-KEY-SHOP/";
+
 const DISCORD_LOGO_URL =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0hYuyxdAgrKOlEeGtlGDAqvmeYqyzLYr57DWV6uoljg&s=10";
 
 
 // ============================================================
-// LOGOS DES CATÉGORIES
+// UTILISATEUR DISCORD
+// ============================================================
+
+let discordUser =
+  JSON.parse(
+    localStorage.getItem(
+      "novaDiscordUser"
+    ) || "null"
+  );
+
+
+// ============================================================
+// LOGOS
 // ============================================================
 
 const categoryLogos = {
@@ -748,10 +763,14 @@ const homeButton =
 // ============================================================
 
 function formatPrice(price) {
-  return Number(price).toLocaleString("fr-FR", {
-    style: "currency",
-    currency: "EUR"
-  });
+
+  return Number(price).toLocaleString(
+    "fr-FR",
+    {
+      style: "currency",
+      currency: "EUR"
+    }
+  );
 }
 
 
@@ -760,13 +779,18 @@ function formatPrice(price) {
 // ============================================================
 
 function loadCart() {
+
   try {
+
     const saved =
-      localStorage.getItem(CART_STORAGE_KEY);
+      localStorage.getItem(
+        CART_STORAGE_KEY
+      );
 
     if (!saved) return [];
 
-    const parsed = JSON.parse(saved);
+    const parsed =
+      JSON.parse(saved);
 
     if (!Array.isArray(parsed)) {
       return [];
@@ -778,7 +802,9 @@ function loadCart() {
         typeof item.id === "string" &&
         Number(item.quantity) > 0
     );
+
   } catch (error) {
+
     console.error(
       "Erreur chargement panier :",
       error
@@ -790,12 +816,16 @@ function loadCart() {
 
 
 function saveCart() {
+
   try {
+
     localStorage.setItem(
       CART_STORAGE_KEY,
       JSON.stringify(cart)
     );
+
   } catch (error) {
+
     console.error(
       "Erreur sauvegarde panier :",
       error
@@ -804,7 +834,12 @@ function saveCart() {
 }
 
 
+// ============================================================
+// CATÉGORIES
+// ============================================================
+
 function getCategoryLogo(category) {
+
   if (
     category === "PlayStation Plus" ||
     category === "PlayStation Store"
@@ -817,14 +852,18 @@ function getCategoryLogo(category) {
 
 
 function getCategoryLabel(category) {
+
   const labels = {
+
     Tous: "Tous",
     Roblox: "Roblox",
     Fortnite: "Fortnite",
     VALORANT: "VALORANT",
     PlayStation: "PlayStation",
-    "PlayStation Plus": "PlayStation Plus",
-    "PlayStation Store": "PlayStation Store",
+    "PlayStation Plus":
+      "PlayStation Plus",
+    "PlayStation Store":
+      "PlayStation Store",
     Xbox: "Xbox",
     Nintendo: "Nintendo"
   };
@@ -833,80 +872,107 @@ function getCategoryLabel(category) {
 }
 
 
-// ============================================================
-// CATÉGORIES
-// ============================================================
-
 function renderCategories() {
+
   if (!categoriesContainer) return;
 
   const categories = [
     "Tous",
     ...new Set(
-      products.map(product => product.category)
+      products.map(
+        product => product.category
+      )
     )
   ];
 
   categoriesContainer.innerHTML = "";
 
-  categories.forEach(category => {
-    const button =
-      document.createElement("button");
+  categories.forEach(
+    category => {
 
-    button.type = "button";
+      const button =
+        document.createElement(
+          "button"
+        );
 
-    button.className =
-      "category" +
-      (
-        category === activeCategory
-          ? " active"
-          : ""
+      button.type =
+        "button";
+
+      button.className =
+        "category" +
+        (
+          category === activeCategory
+            ? " active"
+            : ""
+        );
+
+      const logo =
+        getCategoryLogo(
+          category
+        );
+
+      const label =
+        getCategoryLabel(
+          category
+        );
+
+      if (
+        category === "Tous"
+      ) {
+
+        button.innerHTML = `
+          <span class="category-logo category-logo-all">
+            🎮
+          </span>
+
+          <span>
+            ${escapeHTML(label)}
+          </span>
+        `;
+
+      } else if (logo) {
+
+        button.innerHTML = `
+          <span class="category-logo">
+            <img
+              src="${escapeAttribute(logo)}"
+              alt=""
+              loading="lazy"
+              draggable="false"
+            >
+          </span>
+
+          <span>
+            ${escapeHTML(label)}
+          </span>
+        `;
+
+      } else {
+
+        button.innerHTML = `
+          <span>
+            ${escapeHTML(label)}
+          </span>
+        `;
+      }
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          activeCategory =
+            category;
+
+          renderCategories();
+          renderProducts();
+        }
       );
 
-    const logo =
-      getCategoryLogo(category);
-
-    const label =
-      getCategoryLabel(category);
-
-    if (category === "Tous") {
-      button.innerHTML = `
-        <span class="category-logo category-logo-all">🎮</span>
-        <span>${escapeHTML(label)}</span>
-      `;
+      categoriesContainer.appendChild(
+        button
+      );
     }
-
-    else if (logo) {
-      button.innerHTML = `
-        <span class="category-logo">
-          <img
-            src="${escapeAttribute(logo)}"
-            alt=""
-            loading="lazy"
-            draggable="false"
-          >
-        </span>
-        <span>${escapeHTML(label)}</span>
-      `;
-    }
-
-    else {
-      button.innerHTML = `
-        <span>${escapeHTML(label)}</span>
-      `;
-    }
-
-    button.addEventListener(
-      "click",
-      () => {
-        activeCategory = category;
-        renderCategories();
-        renderProducts();
-      }
-    );
-
-    categoriesContainer.appendChild(button);
-  });
+  );
 }
 
 
@@ -915,33 +981,38 @@ function renderCategories() {
 // ============================================================
 
 function getFilteredProducts() {
+
   let filtered =
-    products.filter(product => {
+    products.filter(
+      product => {
 
-      const matchesCategory =
-        activeCategory === "Tous" ||
-        product.category === activeCategory;
+        const matchesCategory =
+          activeCategory === "Tous" ||
+          product.category ===
+            activeCategory;
 
-      const searchableText = (
-        product.name +
-        " " +
-        product.category +
-        " " +
-        product.type +
-        " " +
-        product.platform
-      ).toLowerCase();
+        const searchableText =
+          (
+            product.name +
+            " " +
+            product.category +
+            " " +
+            product.type +
+            " " +
+            product.platform
+          ).toLowerCase();
 
-      const matchesSearch =
-        searchableText.includes(
-          searchTerm.toLowerCase()
+        const matchesSearch =
+          searchableText.includes(
+            searchTerm.toLowerCase()
+          );
+
+        return (
+          matchesCategory &&
+          matchesSearch
         );
-
-      return (
-        matchesCategory &&
-        matchesSearch
-      );
-    });
+      }
+    );
 
   const sort =
     sortSelect
@@ -949,18 +1020,25 @@ function getFilteredProducts() {
       : "default";
 
   if (sort === "price-low") {
-    filtered.sort(
-      (a, b) => a.price - b.price
-    );
-  }
 
-  else if (sort === "price-high") {
     filtered.sort(
-      (a, b) => b.price - a.price
+      (a, b) =>
+        a.price - b.price
     );
-  }
 
-  else if (sort === "name") {
+  } else if (
+    sort === "price-high"
+  ) {
+
+    filtered.sort(
+      (a, b) =>
+        b.price - a.price
+    );
+
+  } else if (
+    sort === "name"
+  ) {
+
     filtered.sort(
       (a, b) =>
         a.name.localeCompare(
@@ -975,18 +1053,21 @@ function getFilteredProducts() {
 
 
 // ============================================================
-// AFFICHAGE PRODUITS
+// PRODUITS
 // ============================================================
 
 function renderProducts() {
+
   if (!productsGrid) return;
 
   const filtered =
     getFilteredProducts();
 
-  productsGrid.innerHTML = "";
+  productsGrid.innerHTML =
+    "";
 
   if (resultCount) {
+
     resultCount.textContent =
       `${filtered.length} produit${
         filtered.length > 1
@@ -995,10 +1076,16 @@ function renderProducts() {
       }`;
   }
 
-  if (filtered.length === 0) {
+  if (
+    filtered.length === 0
+  ) {
+
     productsGrid.innerHTML = `
       <div class="empty">
-        <div style="font-size:42px;">🔎</div>
+
+        <div style="font-size:42px;">
+          🔎
+        </div>
 
         <strong>
           Aucun produit trouvé
@@ -1007,102 +1094,121 @@ function renderProducts() {
         <div style="margin-top:7px;">
           Essaie une autre recherche ou catégorie.
         </div>
+
       </div>
     `;
 
     return;
   }
 
-  filtered.forEach(product => {
-    const card =
-      document.createElement("article");
+  filtered.forEach(
+    product => {
 
-    card.className =
-      "product-card";
+      const card =
+        document.createElement(
+          "article"
+        );
 
-    card.innerHTML = `
-      <img
-        class="product-image"
-        src="${escapeAttribute(product.image)}"
-        alt="${escapeAttribute(product.name)}"
-        loading="lazy"
-        draggable="false"
-        onerror="this.style.opacity='0.25';"
-      >
+      card.className =
+        "product-card";
 
-      <div class="product-body">
+      card.innerHTML = `
+        <img
+          class="product-image"
+          src="${escapeAttribute(product.image)}"
+          alt="${escapeAttribute(product.name)}"
+          loading="lazy"
+          draggable="false"
+          onerror="this.style.opacity='0.25';"
+        >
 
-        <div class="product-category">
-          ${escapeHTML(product.category)}
-        </div>
+        <div class="product-body">
 
-        <div class="product-name">
-          ${escapeHTML(product.name)}
-        </div>
-
-        <div class="product-platform">
-          🎮 ${escapeHTML(product.platform)}
-        </div>
-
-        <div class="product-type">
-          🏷️ ${escapeHTML(product.type)}
-        </div>
-
-        <div class="product-bottom">
-
-          <div class="product-price">
-            ${formatPrice(product.price)}
+          <div class="product-category">
+            ${escapeHTML(product.category)}
           </div>
 
-          <button
-            type="button"
-            class="add-btn"
-            data-product-id="${escapeAttribute(product.id)}"
-          >
-            Ajouter
-          </button>
+          <div class="product-name">
+            ${escapeHTML(product.name)}
+          </div>
+
+          <div class="product-platform">
+            🎮 ${escapeHTML(product.platform)}
+          </div>
+
+          <div class="product-type">
+            🏷️ ${escapeHTML(product.type)}
+          </div>
+
+          <div class="product-bottom">
+
+            <div class="product-price">
+              ${formatPrice(product.price)}
+            </div>
+
+            <button
+              type="button"
+              class="add-btn"
+              data-product-id="${escapeAttribute(product.id)}"
+            >
+              Ajouter
+            </button>
+
+          </div>
 
         </div>
-      </div>
-    `;
+      `;
 
-    const addButton =
-      card.querySelector(".add-btn");
+      const addButton =
+        card.querySelector(
+          ".add-btn"
+        );
 
-    if (addButton) {
-      addButton.addEventListener(
-        "click",
-        () => addToCart(product.id)
+      if (addButton) {
+
+        addButton.addEventListener(
+          "click",
+          () =>
+            addToCart(
+              product.id
+            )
+        );
+      }
+
+      productsGrid.appendChild(
+        card
       );
     }
-
-    productsGrid.appendChild(card);
-  });
+  );
 }
 
 
 // ============================================================
-// AJOUT PANIER
+// PANIER ACTIONS
 // ============================================================
 
 function addToCart(productId) {
+
   const product =
     products.find(
-      item => item.id === productId
+      item =>
+        item.id === productId
     );
 
   if (!product) return;
 
   const existing =
     cart.find(
-      item => item.id === productId
+      item =>
+        item.id === productId
     );
 
   if (existing) {
-    existing.quantity += 1;
-  }
 
-  else {
+    existing.quantity += 1;
+
+  } else {
+
     cart.push({
       id: product.id,
       quantity: 1
@@ -1118,14 +1224,14 @@ function addToCart(productId) {
 }
 
 
-// ============================================================
-// SUPPRESSION
-// ============================================================
+function removeFromCart(
+  productId
+) {
 
-function removeFromCart(productId) {
   cart =
     cart.filter(
-      item => item.id !== productId
+      item =>
+        item.id !== productId
     );
 
   saveCart();
@@ -1133,14 +1239,11 @@ function removeFromCart(productId) {
 }
 
 
-// ============================================================
-// QUANTITÉ
-// ============================================================
-
 function changeQuantity(
   productId,
   amount
 ) {
+
   const item =
     cart.find(
       cartItem =>
@@ -1151,8 +1254,14 @@ function changeQuantity(
 
   item.quantity += amount;
 
-  if (item.quantity <= 0) {
-    removeFromCart(productId);
+  if (
+    item.quantity <= 0
+  ) {
+
+    removeFromCart(
+      productId
+    );
+
     return;
   }
 
@@ -1161,45 +1270,62 @@ function changeQuantity(
 }
 
 
-// ============================================================
-// PRODUITS PANIER
-// ============================================================
-
 function getCartProducts() {
+
   return cart
-    .map(item => {
-      const product =
-        products.find(
-          p => p.id === item.id
-        );
+    .map(
+      item => {
 
-      if (!product) return null;
+        const product =
+          products.find(
+            p =>
+              p.id === item.id
+          );
 
-      return {
-        ...product,
-        quantity: Number(item.quantity)
-      };
-    })
+        if (!product) {
+          return null;
+        }
+
+        return {
+          ...product,
+          quantity:
+            Number(
+              item.quantity
+            )
+        };
+      }
+    )
     .filter(Boolean);
 }
 
 
 function getCartTotal() {
-  return getCartProducts().reduce(
-    (total, product) =>
-      total +
-      product.price *
-      product.quantity,
-    0
-  );
+
+  return getCartProducts()
+    .reduce(
+      (
+        total,
+        product
+      ) =>
+        total +
+        product.price *
+        product.quantity,
+      0
+    );
 }
 
 
 function getCartQuantity() {
+
   return cart.reduce(
-    (total, item) =>
+    (
+      total,
+      item
+    ) =>
       total +
-      Number(item.quantity),
+      Number(
+        item.quantity
+      ),
     0
   );
 }
@@ -1210,6 +1336,7 @@ function getCartQuantity() {
 // ============================================================
 
 function renderCart() {
+
   if (
     !cartItems ||
     !cartTotal ||
@@ -1221,9 +1348,13 @@ function renderCart() {
   const cartProducts =
     getCartProducts();
 
-  cartItems.innerHTML = "";
+  cartItems.innerHTML =
+    "";
 
-  if (cartProducts.length === 0) {
+  if (
+    cartProducts.length === 0
+  ) {
+
     cartItems.innerHTML = `
       <div class="empty">
 
@@ -1241,124 +1372,130 @@ function renderCart() {
 
       </div>
     `;
-  }
 
-  else {
-    cartProducts.forEach(product => {
+  } else {
 
-      const item =
-        document.createElement("div");
+    cartProducts.forEach(
+      product => {
 
-      item.className =
-        "cart-item";
+        const item =
+          document.createElement(
+            "div"
+          );
 
-      item.innerHTML = `
-        <img
-          src="${escapeAttribute(product.image)}"
-          alt="${escapeAttribute(product.name)}"
-          loading="lazy"
-          draggable="false"
-        >
+        item.className =
+          "cart-item";
 
-        <div>
+        item.innerHTML = `
+          <img
+            src="${escapeAttribute(product.image)}"
+            alt="${escapeAttribute(product.name)}"
+            loading="lazy"
+            draggable="false"
+          >
 
-          <div class="cart-item-name">
-            ${escapeHTML(product.name)}
-          </div>
+          <div>
 
-          <div class="cart-item-price">
-            ${formatPrice(product.price)}
-            ×
-            ${product.quantity}
-          </div>
+            <div class="cart-item-name">
+              ${escapeHTML(product.name)}
+            </div>
 
-          <div class="quantity-controls">
-
-            <button
-              type="button"
-              class="quantity-btn"
-              data-action="minus"
-              aria-label="Diminuer"
-            >
-              −
-            </button>
-
-            <span>
+            <div class="cart-item-price">
+              ${formatPrice(product.price)}
+              ×
               ${product.quantity}
-            </span>
+            </div>
 
-            <button
-              type="button"
-              class="quantity-btn"
-              data-action="plus"
-              aria-label="Augmenter"
-            >
-              +
-            </button>
+            <div class="quantity-controls">
+
+              <button
+                type="button"
+                class="quantity-btn"
+                data-action="minus"
+              >
+                −
+              </button>
+
+              <span>
+                ${product.quantity}
+              </span>
+
+              <button
+                type="button"
+                class="quantity-btn"
+                data-action="plus"
+              >
+                +
+              </button>
+
+            </div>
 
           </div>
 
-        </div>
+          <button
+            type="button"
+            class="remove-item"
+            data-action="remove"
+          >
+            ✕
+          </button>
+        `;
 
-        <button
-          type="button"
-          class="remove-item"
-          data-action="remove"
-          aria-label="Supprimer"
-        >
-          ✕
-        </button>
-      `;
+        const minusButton =
+          item.querySelector(
+            '[data-action="minus"]'
+          );
 
-      const minusButton =
-        item.querySelector(
-          '[data-action="minus"]'
-        );
+        const plusButton =
+          item.querySelector(
+            '[data-action="plus"]'
+          );
 
-      const plusButton =
-        item.querySelector(
-          '[data-action="plus"]'
-        );
+        const removeButton =
+          item.querySelector(
+            '[data-action="remove"]'
+          );
 
-      const removeButton =
-        item.querySelector(
-          '[data-action="remove"]'
-        );
+        if (minusButton) {
 
-      if (minusButton) {
-        minusButton.addEventListener(
-          "click",
-          () =>
-            changeQuantity(
-              product.id,
-              -1
-            )
+          minusButton.addEventListener(
+            "click",
+            () =>
+              changeQuantity(
+                product.id,
+                -1
+              )
+          );
+        }
+
+        if (plusButton) {
+
+          plusButton.addEventListener(
+            "click",
+            () =>
+              changeQuantity(
+                product.id,
+                1
+              )
+          );
+        }
+
+        if (removeButton) {
+
+          removeButton.addEventListener(
+            "click",
+            () =>
+              removeFromCart(
+                product.id
+              )
+          );
+        }
+
+        cartItems.appendChild(
+          item
         );
       }
-
-      if (plusButton) {
-        plusButton.addEventListener(
-          "click",
-          () =>
-            changeQuantity(
-              product.id,
-              1
-            )
-        );
-      }
-
-      if (removeButton) {
-        removeButton.addEventListener(
-          "click",
-          () =>
-            removeFromCart(
-              product.id
-            )
-        );
-      }
-
-      cartItems.appendChild(item);
-    });
+    );
   }
 
   cartTotal.textContent =
@@ -1371,12 +1508,10 @@ function renderCart() {
 }
 
 
-// ============================================================
-// UI PANIER
-// ============================================================
-
 function updateCartUI() {
+
   if (cartCount) {
+
     cartCount.textContent =
       getCartQuantity();
   }
@@ -1386,6 +1521,7 @@ function updateCartUI() {
 
 
 function openCart() {
+
   if (
     !cartDrawer ||
     !drawerOverlay
@@ -1395,9 +1531,13 @@ function openCart() {
 
   renderCart();
 
-  cartDrawer.classList.add("open");
+  cartDrawer.classList.add(
+    "open"
+  );
 
-  drawerOverlay.classList.add("open");
+  drawerOverlay.classList.add(
+    "open"
+  );
 
   document.body.style.overflow =
     "hidden";
@@ -1405,13 +1545,16 @@ function openCart() {
 
 
 function closeCart() {
+
   if (cartDrawer) {
+
     cartDrawer.classList.remove(
       "open"
     );
   }
 
   if (drawerOverlay) {
+
     drawerOverlay.classList.remove(
       "open"
     );
@@ -1423,33 +1566,31 @@ function closeCart() {
 
 
 // ============================================================
-// DISCORD
+// DISCORD PRODUITS
 // ============================================================
 
 function buildDiscordProductList(
   cartProducts
 ) {
+
   let text = "";
 
-  for (const product of cartProducts) {
+  for (
+    const product of cartProducts
+  ) {
 
     const line =
-      `• **${product.name}** × ${
+      `• **${product.name}** × ${product.quantity} • ${formatPrice(
+        product.price *
         product.quantity
-      } • ${
-        formatPrice(
-          product.price *
-          product.quantity
-        )
-      } • ${
-        product.platform
-      }\n`;
+      )} • ${product.platform}\n`;
 
     if (
       text.length +
       line.length >
       950
     ) {
+
       text +=
         "• … autres articles";
 
@@ -1466,16 +1607,16 @@ function buildDiscordProductList(
 }
 
 
+// ============================================================
+// ENVOI DISCORD
+// ============================================================
+
 async function sendOrderToDiscord() {
 
   if (
     !DISCORD_WEBHOOK_URL ||
     DISCORD_WEBHOOK_URL ===
-      "WEBHOOK_ICI" ||
-    DISCORD_WEBHOOK_URL ===
-      "whebook" ||
-    DISCORD_WEBHOOK_URL ===
-      "mon_whebook"
+      "TON_NOUVEAU_WEBHOOK_ICI"
   ) {
 
     console.warn(
@@ -1509,13 +1650,44 @@ async function sendOrderToDiscord() {
       cartProducts
     );
 
+  const clientName =
+    discordUser
+      ? (
+          discordUser.global_name ||
+          discordUser.username ||
+          "Utilisateur Discord"
+        )
+      : "Non connecté";
+
+  const clientId =
+    discordUser
+      ? discordUser.id
+      : "Non connecté";
+
+  const clientEmail =
+    discordUser
+      ? (
+          discordUser.email ||
+          "Non fourni"
+        )
+      : "Non connecté";
+
+  const clientMention =
+    discordUser
+      ? `<@${discordUser.id}>`
+      : "Non connecté";
+
   const message = {
 
     username:
       "NOVA KEY SHOP",
 
     allowed_mentions: {
-      parse: []
+      parse: [],
+      users:
+        discordUser
+          ? [discordUser.id]
+          : []
     },
 
     embeds: [
@@ -1525,12 +1697,47 @@ async function sendOrderToDiscord() {
           "🛒 NOVA KEY SHOP • Nouvelle commande",
 
         description:
-          "Une commande a été initiée depuis NOVA KEY SHOP.",
+          discordUser
+            ? `Commande de ${clientMention} depuis NOVA KEY SHOP.`
+            : "Une commande a été initiée depuis NOVA KEY SHOP.",
 
         color:
           0x7c3cff,
 
         fields: [
+
+          {
+            name:
+              "👤 Client Discord",
+
+            value:
+              `**${clientName}**`,
+
+            inline:
+              true
+          },
+
+          {
+            name:
+              "🆔 Discord ID",
+
+            value:
+              `\`${clientId}\``,
+
+            inline:
+              true
+          },
+
+          {
+            name:
+              "📧 Email Discord",
+
+            value:
+              clientEmail,
+
+            inline:
+              true
+          },
 
           {
             name:
@@ -1581,8 +1788,7 @@ async function sendOrderToDiscord() {
               "🤖 Bot ID",
 
             value:
-              DISCORD_BOT_ID ||
-              "Non configuré",
+              DISCORD_BOT_ID,
 
             inline:
               true
@@ -1613,6 +1819,7 @@ async function sendOrderToDiscord() {
         ],
 
         footer: {
+
           text:
             "NOVA KEY SHOP • Commande automatique"
         },
@@ -1639,18 +1846,21 @@ async function sendOrderToDiscord() {
           },
 
           body:
-            JSON.stringify(message)
+            JSON.stringify(
+              message
+            )
         }
       );
 
     if (!response.ok) {
+
       throw new Error(
         `Discord HTTP ${response.status}`
       );
     }
 
     console.log(
-      "Commande envoyée automatiquement sur Discord :",
+      "Commande envoyée sur Discord :",
       orderId
     );
 
@@ -1709,6 +1919,340 @@ async function payWithPayPal() {
 
 
 // ============================================================
+// OAUTH DISCORD
+// ============================================================
+
+function generateRandomString(
+  length = 64
+) {
+
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~";
+
+  let result = "";
+
+  const randomValues =
+    new Uint8Array(length);
+
+  crypto.getRandomValues(
+    randomValues
+  );
+
+  for (
+    let i = 0;
+    i < length;
+    i++
+  ) {
+
+    result +=
+      characters[
+        randomValues[i] %
+        characters.length
+      ];
+  }
+
+  return result;
+}
+
+
+async function sha256Base64URL(
+  value
+) {
+
+  const encoder =
+    new TextEncoder();
+
+  const data =
+    encoder.encode(value);
+
+  const hash =
+    await crypto.subtle.digest(
+      "SHA-256",
+      data
+    );
+
+  const bytes =
+    new Uint8Array(hash);
+
+  let binary = "";
+
+  bytes.forEach(
+    byte => {
+
+      binary +=
+        String.fromCharCode(
+          byte
+        );
+    }
+  );
+
+  return btoa(binary)
+    .replace(
+      /\+/g,
+      "-"
+    )
+    .replace(
+      /\//g,
+      "_"
+    )
+    .replace(
+      /=+$/,
+      ""
+    );
+}
+
+
+async function openDiscordAuthentication() {
+
+  try {
+
+    const codeVerifier =
+      generateRandomString();
+
+    const codeChallenge =
+      await sha256Base64URL(
+        codeVerifier
+      );
+
+    sessionStorage.setItem(
+      "novaDiscordCodeVerifier",
+      codeVerifier
+    );
+
+    const params =
+      new URLSearchParams({
+
+        client_id:
+          DISCORD_CLIENT_ID,
+
+        response_type:
+          "code",
+
+        redirect_uri:
+          DISCORD_REDIRECT_URI,
+
+        scope:
+          "identify email",
+
+        code_challenge:
+          codeChallenge,
+
+        code_challenge_method:
+          "S256"
+      });
+
+    window.location.href =
+      "https://discord.com/oauth2/authorize?" +
+      params.toString();
+
+  } catch (error) {
+
+    console.error(
+      "Erreur connexion Discord :",
+      error
+    );
+
+    showToast(
+      "Impossible de lancer Discord."
+    );
+  }
+}
+
+
+// ============================================================
+// RETOUR DISCORD
+// ============================================================
+
+async function handleDiscordCallback() {
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+  const code =
+    params.get("code");
+
+  const error =
+    params.get("error");
+
+  if (error) {
+
+    console.error(
+      "Discord OAuth error :",
+      error
+    );
+
+    showToast(
+      "Connexion Discord annulée."
+    );
+
+    window.history.replaceState(
+      {},
+      document.title,
+      window.location.pathname
+    );
+
+    return;
+  }
+
+  if (!code) {
+    return;
+  }
+
+  const codeVerifier =
+    sessionStorage.getItem(
+      "novaDiscordCodeVerifier"
+    );
+
+  if (!codeVerifier) {
+
+    showToast(
+      "Session Discord expirée. Recommence."
+    );
+
+    return;
+  }
+
+  try {
+
+    showToast(
+      "Connexion Discord..."
+    );
+
+    const tokenBody =
+      new URLSearchParams({
+
+        client_id:
+          DISCORD_CLIENT_ID,
+
+        grant_type:
+          "authorization_code",
+
+        code:
+          code,
+
+        redirect_uri:
+          DISCORD_REDIRECT_URI,
+
+        code_verifier:
+          codeVerifier
+      });
+
+    const tokenResponse =
+      await fetch(
+        "https://discord.com/api/oauth2/token",
+        {
+          method:
+            "POST",
+
+          headers: {
+            "Content-Type":
+              "application/x-www-form-urlencoded"
+          },
+
+          body:
+            tokenBody.toString()
+        }
+      );
+
+    if (!tokenResponse.ok) {
+
+      throw new Error(
+        `Discord token HTTP ${tokenResponse.status}`
+      );
+    }
+
+    const tokenData =
+      await tokenResponse.json();
+
+    if (!tokenData.access_token) {
+
+      throw new Error(
+        "Access token Discord manquant."
+      );
+    }
+
+    const userResponse =
+      await fetch(
+        "https://discord.com/api/users/@me",
+        {
+          method:
+            "GET",
+
+          headers: {
+            Authorization:
+              `Bearer ${tokenData.access_token}`
+          }
+        }
+      );
+
+    if (!userResponse.ok) {
+
+      throw new Error(
+        `Discord user HTTP ${userResponse.status}`
+      );
+    }
+
+    const user =
+      await userResponse.json();
+
+    discordUser = {
+
+      id:
+        user.id || "",
+
+      username:
+        user.username || "",
+
+      global_name:
+        user.global_name || "",
+
+      email:
+        user.email || ""
+    };
+
+    localStorage.setItem(
+      "novaDiscordUser",
+      JSON.stringify(
+        discordUser
+      )
+    );
+
+    sessionStorage.removeItem(
+      "novaDiscordCodeVerifier"
+    );
+
+    window.history.replaceState(
+      {},
+      document.title,
+      window.location.pathname
+    );
+
+    showToast(
+      `Connecté : ${
+        discordUser.global_name ||
+        discordUser.username
+      }`
+    );
+
+    updateDiscordButton();
+
+  } catch (error) {
+
+    console.error(
+      "Erreur authentification Discord :",
+      error
+    );
+
+    showToast(
+      "Erreur pendant la connexion Discord."
+    );
+  }
+}
+
+
+// ============================================================
 // BOUTONS DISCORD
 // ============================================================
 
@@ -1721,22 +2265,22 @@ function createDiscordButtons() {
 
   if (!navActions) return;
 
-  const oldDiscord =
-    document.getElementById(
-      "discordButton"
-    );
-
-  if (oldDiscord) {
-    oldDiscord.remove();
-  }
-
   const oldAuth =
     document.getElementById(
-      "authButton"
+      "novaAuthButton"
     );
 
   if (oldAuth) {
     oldAuth.remove();
+  }
+
+  const oldDiscord =
+    document.getElementById(
+      "novaDiscordButton"
+    );
+
+  if (oldDiscord) {
+    oldDiscord.remove();
   }
 
   const authButton =
@@ -1754,11 +2298,11 @@ function createDiscordButtons() {
     "novaAuthButton";
 
   authButton.title =
-    "Authentification Discord";
+    "Se connecter avec Discord";
 
   authButton.setAttribute(
     "aria-label",
-    "Authentification Discord"
+    "Se connecter avec Discord"
   );
 
   authButton.innerHTML =
@@ -1766,7 +2310,17 @@ function createDiscordButtons() {
 
   authButton.addEventListener(
     "click",
-    openDiscordAuthentication
+    () => {
+
+      if (discordUser) {
+
+        logoutDiscord();
+
+      } else {
+
+        openDiscordAuthentication();
+      }
+    }
   );
 
   const discordButton =
@@ -1826,6 +2380,74 @@ function createDiscordButtons() {
       authButton
     );
   }
+
+  updateDiscordButton();
+}
+
+
+// ============================================================
+// COMPTE DISCORD
+// ============================================================
+
+function updateDiscordButton() {
+
+  const authButton =
+    document.getElementById(
+      "novaAuthButton"
+    );
+
+  if (!authButton) {
+    return;
+  }
+
+  if (discordUser) {
+
+    const name =
+      discordUser.global_name ||
+      discordUser.username ||
+      "Discord";
+
+    authButton.innerHTML =
+      "👤";
+
+    authButton.title =
+      `${name} • Déconnexion`;
+
+    authButton.setAttribute(
+      "aria-label",
+      `Discord connecté : ${name}`
+    );
+
+  } else {
+
+    authButton.innerHTML =
+      "👤";
+
+    authButton.title =
+      "Se connecter avec Discord";
+
+    authButton.setAttribute(
+      "aria-label",
+      "Se connecter avec Discord"
+    );
+  }
+}
+
+
+function logoutDiscord() {
+
+  discordUser =
+    null;
+
+  localStorage.removeItem(
+    "novaDiscordUser"
+  );
+
+  updateDiscordButton();
+
+  showToast(
+    "Compte Discord déconnecté."
+  );
 }
 
 
@@ -1857,36 +2479,14 @@ function openDiscordServer() {
 
 
 // ============================================================
-// AUTHENTIFICATION DISCORD
-// ============================================================
-
-function openDiscordAuthentication() {
-
-  if (
-    !DISCORD_OAUTH_URL ||
-    DISCORD_OAUTH_URL ===
-      "LIEN_OAUTH_ICI"
-  ) {
-
-    showToast(
-      "Authentification Discord non configurée."
-    );
-
-    return;
-  }
-
-  window.location.href =
-    DISCORD_OAUTH_URL;
-}
-
-
-// ============================================================
 // TOAST
 // ============================================================
 
 function showToast(message) {
 
-  if (!toastContainer) return;
+  if (!toastContainer) {
+    return;
+  }
 
   const toast =
     document.createElement(
@@ -1913,7 +2513,8 @@ function showToast(message) {
         "translateY(10px)";
 
       setTimeout(
-        () => toast.remove(),
+        () =>
+          toast.remove(),
         250
       );
 
@@ -1924,28 +2525,33 @@ function showToast(message) {
 
 
 // ============================================================
-// SÉCURITÉ HTML
+// SÉCURITÉ
 // ============================================================
 
 function escapeHTML(value) {
 
   return String(value)
+
     .replaceAll(
       "&",
       "&amp;"
     )
+
     .replaceAll(
       "<",
       "&lt;"
     )
+
     .replaceAll(
       ">",
       "&gt;"
     )
+
     .replaceAll(
       '"',
       "&quot;"
     )
+
     .replaceAll(
       "'",
       "&#039;"
@@ -1991,7 +2597,7 @@ if (sortSelect) {
 
 
 // ============================================================
-// OUVRIR PANIER
+// PANIER
 // ============================================================
 
 if (cartButton) {
@@ -2002,10 +2608,6 @@ if (cartButton) {
   );
 }
 
-
-// ============================================================
-// FERMER PANIER
-// ============================================================
 
 if (closeCartButton) {
 
@@ -2084,7 +2686,9 @@ document.addEventListener(
   "keydown",
   event => {
 
-    if (event.key === "Escape") {
+    if (
+      event.key === "Escape"
+    ) {
       closeCart();
     }
   }
@@ -2092,7 +2696,7 @@ document.addEventListener(
 
 
 // ============================================================
-// CSS LOGOS
+// CSS
 // ============================================================
 
 const categoryLogoStyles =
@@ -2208,6 +2812,10 @@ function init() {
   updateCartUI();
 
   createDiscordButtons();
+
+  updateDiscordButton();
+
+  handleDiscordCallback();
 }
 
 
