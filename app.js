@@ -642,9 +642,28 @@ const products = [
 // CONFIGURATION
 // ============================================================
 
-const CART_STORAGE_KEY = "novaKeyShopCart";
+const CART_STORAGE_KEY =
+  "novaKeyShopCart";
 
-const PAYPAL_USERNAME = "SH0PNOVA";
+const PAYPAL_USERNAME =
+  "SH0PNOVA";
+
+
+// ============================================================
+// DISCORD
+// ============================================================
+// IMPORTANT :
+// DISCORD_BOT_ID = ID DU BOT POUR TON AUTHENTIFICATION
+// DISCORD_WEBHOOK_URL = WEBHOOK QUI REÇOIT LES COMMANDES
+//
+// NE METS JAMAIS LE BOT TOKEN DANS CE FICHIER.
+// ============================================================
+
+const DISCORD_BOT_ID =
+  "1554855867973771354";
+
+const DISCORD_WEBHOOK_URL =
+  "https://discord.com/api/webhooks/1554854634986938398/VnSuCzFU5YRfcRVIqX-Uu2PYtWxgYKI9Zsbv12VmERRQGOP_hhLsbLGw80CNEbhwtzQh";
 
 
 // ============================================================
@@ -679,11 +698,14 @@ const categoryLogos = {
 // ÉTAT
 // ============================================================
 
-let cart = loadCart();
+let cart =
+  loadCart();
 
-let activeCategory = "Tous";
+let activeCategory =
+  "Tous";
 
-let searchTerm = "";
+let searchTerm =
+  "";
 
 
 // ============================================================
@@ -691,49 +713,79 @@ let searchTerm = "";
 // ============================================================
 
 const productsGrid =
-  document.getElementById("productsGrid");
+  document.getElementById(
+    "productsGrid"
+  );
 
 const categoriesContainer =
-  document.getElementById("categories");
+  document.getElementById(
+    "categories"
+  );
 
 const searchInput =
-  document.getElementById("searchInput");
+  document.getElementById(
+    "searchInput"
+  );
 
 const sortSelect =
-  document.getElementById("sortSelect");
+  document.getElementById(
+    "sortSelect"
+  );
 
 const resultCount =
-  document.getElementById("resultCount");
+  document.getElementById(
+    "resultCount"
+  );
 
 const cartButton =
-  document.getElementById("cartButton");
+  document.getElementById(
+    "cartButton"
+  );
 
 const cartCount =
-  document.getElementById("cartCount");
+  document.getElementById(
+    "cartCount"
+  );
 
 const cartDrawer =
-  document.getElementById("cartDrawer");
+  document.getElementById(
+    "cartDrawer"
+  );
 
 const drawerOverlay =
-  document.getElementById("drawerOverlay");
+  document.getElementById(
+    "drawerOverlay"
+  );
 
 const closeCartButton =
-  document.getElementById("closeCart");
+  document.getElementById(
+    "closeCart"
+  );
 
 const cartItems =
-  document.getElementById("cartItems");
+  document.getElementById(
+    "cartItems"
+  );
 
 const cartTotal =
-  document.getElementById("cartTotal");
+  document.getElementById(
+    "cartTotal"
+  );
 
 const checkoutButton =
-  document.getElementById("checkoutButton");
+  document.getElementById(
+    "checkoutButton"
+  );
 
 const toastContainer =
-  document.getElementById("toastContainer");
+  document.getElementById(
+    "toastContainer"
+  );
 
 const homeButton =
-  document.getElementById("homeButton");
+  document.getElementById(
+    "homeButton"
+  );
 
 
 // ============================================================
@@ -896,7 +948,8 @@ function renderCategories() {
   ];
 
 
-  categoriesContainer.innerHTML = "";
+  categoriesContainer.innerHTML =
+    "";
 
 
   categories.forEach(
@@ -908,7 +961,8 @@ function renderCategories() {
         );
 
 
-      button.type = "button";
+      button.type =
+        "button";
 
 
       button.className =
@@ -1141,7 +1195,8 @@ function renderProducts() {
     getFilteredProducts();
 
 
-  productsGrid.innerHTML = "";
+  productsGrid.innerHTML =
+    "";
 
 
   if (resultCount) {
@@ -1205,9 +1260,6 @@ function renderProducts() {
       card.className =
         "product-card";
 
-
-      // IMPORTANT :
-      // AUCUN LOGO DE CATÉGORIE DANS LA CARTE
 
       card.innerHTML = `
 
@@ -1530,7 +1582,8 @@ function renderCart() {
     getCartProducts();
 
 
-  cartItems.innerHTML = "";
+  cartItems.innerHTML =
+    "";
 
 
   // ----------------------------------------------------------
@@ -1828,10 +1881,299 @@ function closeCart() {
 
 
 // ============================================================
+// CONSTRUIRE LA LISTE DISCORD
+// ============================================================
+
+function buildDiscordProductList(
+  cartProducts
+) {
+
+  let text = "";
+
+
+  for (
+    const product of cartProducts
+  ) {
+
+    const line =
+      `• **${product.name}** × ${product.quantity} • ${formatPrice(
+        product.price * product.quantity
+      )} • ${product.platform}\n`;
+
+
+    if (
+      (
+        text.length +
+        line.length
+      ) > 950
+    ) {
+
+      text +=
+        "• … autres articles";
+
+      break;
+    }
+
+
+    text +=
+      line;
+  }
+
+
+  return (
+    text ||
+    "Aucun produit"
+  );
+}
+
+
+// ============================================================
+// ENVOYER LA COMMANDE SUR DISCORD
+// ============================================================
+// IMPORTANT :
+// Cette fonction signale qu'une commande a été INITIÉE.
+// Elle ne confirme PAS que PayPal a été payé.
+// ============================================================
+
+async function sendOrderToDiscord() {
+
+  if (
+    !DISCORD_WEBHOOK_URL ||
+    DISCORD_WEBHOOK_URL ===
+      "COLLE_TON_WEBHOOK_ICI"
+  ) {
+
+    console.warn(
+      "Webhook Discord non configuré."
+    );
+
+    showToast(
+      "Webhook Discord non configuré."
+    );
+
+    return false;
+  }
+
+
+  const cartProducts =
+    getCartProducts();
+
+
+  const total =
+    getCartTotal();
+
+
+  if (
+    cartProducts.length === 0 ||
+    total <= 0
+  ) {
+
+    return false;
+  }
+
+
+  const orderId =
+    "NOVA-" +
+    Date.now()
+      .toString(36)
+      .toUpperCase();
+
+
+  const productLines =
+    buildDiscordProductList(
+      cartProducts
+    );
+
+
+  const message = {
+
+    username:
+      "NOVA KEY SHOP",
+
+    allowed_mentions: {
+      parse: []
+    },
+
+    embeds: [
+
+      {
+
+        title:
+          "🛒 NOVA KEY SHOP • Nouvelle commande",
+
+        description:
+          "Une nouvelle commande vient d’être initiée depuis la boutique.",
+
+        color:
+          0x7c3cff,
+
+        fields: [
+
+          {
+            name:
+              "🆔 Référence",
+
+            value:
+              `\`${orderId}\``,
+
+            inline:
+              true
+          },
+
+          {
+            name:
+              "💰 Montant",
+
+            value:
+              `**${formatPrice(total)}**`,
+
+            inline:
+              true
+          },
+
+          {
+            name:
+              "💳 Paiement",
+
+            value:
+              "PayPal",
+
+            inline:
+              true
+          },
+
+          {
+            name:
+              "🟡 Statut",
+
+            value:
+              "**Paiement en attente**",
+
+            inline:
+              true
+          },
+
+          {
+            name:
+              "🤖 Bot ID",
+
+            value:
+              DISCORD_BOT_ID ||
+              "Non configuré",
+
+            inline:
+              true
+          },
+
+          {
+            name:
+              "🛍️ Boutique",
+
+            value:
+              "NOVA KEY SHOP",
+
+            inline:
+              true
+          },
+
+          {
+            name:
+              "📦 Articles",
+
+            value:
+              productLines,
+
+            inline:
+              false
+          }
+
+        ],
+
+        footer: {
+
+          text:
+            "NOVA KEY SHOP • Système de commandes"
+
+        },
+
+        timestamp:
+          new Date().toISOString()
+
+      }
+
+    ]
+
+  };
+
+
+  try {
+
+    const response =
+      await fetch(
+        DISCORD_WEBHOOK_URL,
+        {
+
+          method:
+            "POST",
+
+          headers: {
+
+            "Content-Type":
+              "application/json"
+
+          },
+
+          body:
+            JSON.stringify(
+              message
+            )
+
+        }
+      );
+
+
+    if (
+      !response.ok
+    ) {
+
+      throw new Error(
+        `Discord HTTP ${response.status}`
+      );
+
+    }
+
+
+    console.log(
+      "Commande envoyée sur Discord :",
+      orderId
+    );
+
+
+    return true;
+
+  } catch (error) {
+
+    console.error(
+      "Erreur webhook Discord :",
+      error
+    );
+
+
+    showToast(
+      "Impossible d'envoyer la commande sur Discord."
+    );
+
+
+    return false;
+  }
+}
+
+
+// ============================================================
 // PAYPAL
 // ============================================================
 
-function payWithPayPal() {
+async function payWithPayPal() {
 
   const total =
     getCartTotal();
@@ -1849,19 +2191,47 @@ function payWithPayPal() {
   }
 
 
-  // Montant avec exactement 2 décimales
+  // ----------------------------------------------------------
+  // MONTANT AVEC EXACTEMENT 2 DÉCIMALES
+  // ----------------------------------------------------------
 
   const amount =
     total.toFixed(2);
 
 
-  // Lien PayPal.me avec le montant
+  // ----------------------------------------------------------
+  // LIEN PAYPAL.ME
+  // ----------------------------------------------------------
 
   const paypalUrl =
     `https://paypal.me/${PAYPAL_USERNAME}/${amount}`;
 
 
-  // Ouverture du paiement
+  // ----------------------------------------------------------
+  // ÉVITER LES DOUBLE-CLICS
+  // ----------------------------------------------------------
+
+  if (checkoutButton) {
+
+    checkoutButton.disabled =
+      true;
+
+    checkoutButton.textContent =
+      "⏳ Préparation...";
+
+  }
+
+
+  // ----------------------------------------------------------
+  // ENVOI DE LA COMMANDE SUR DISCORD
+  // ----------------------------------------------------------
+
+  await sendOrderToDiscord();
+
+
+  // ----------------------------------------------------------
+  // REDIRECTION PAYPAL
+  // ----------------------------------------------------------
 
   window.location.href =
     paypalUrl;
@@ -2073,24 +2443,40 @@ if (homeButton) {
       activeCategory =
         "Tous";
 
+
       searchTerm =
         "";
 
+
       if (searchInput) {
-        searchInput.value = "";
+
+        searchInput.value =
+          "";
+
       }
 
+
       if (sortSelect) {
-        sortSelect.value = "default";
+
+        sortSelect.value =
+          "default";
+
       }
+
 
       renderCategories();
 
       renderProducts();
 
+
       window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+
+        top:
+          0,
+
+        behavior:
+          "smooth"
+
       });
 
     }
