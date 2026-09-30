@@ -1,5 +1,5 @@
 // ============================================================
-// NOVA KEY SHOP - APP.JS COMPLET
+// NOVA KEY SHOP - APP.JS
 // ============================================================
 
 
@@ -8,10 +8,9 @@
 // ============================================================
 
 const products = [
-
-  // ============================================================
+  // ==========================================================
   // ROBLOX
-  // ============================================================
+  // ==========================================================
 
   {
     id: "roblox-100",
@@ -119,7 +118,7 @@ const products = [
     category: "Roblox",
     type: "Carte cadeau",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/7995/616x353/roblox-4500-robux-pc-cover.jpg?v=1767788921"
+    image: "https://gaming-cdn.com/images/products/7995/616x353/roblox-card-4500-robux-pc-cover.jpg?v=1767788921"
   },
   {
     id: "roblox-5250",
@@ -140,10 +139,9 @@ const products = [
     image: "https://gaming-cdn.com/images/products/10435/616x353/roblox-10000-robux-pc-cover.jpg?v=1767788900"
   },
 
-
-  // ============================================================
+  // ==========================================================
   // FORTNITE
-  // ============================================================
+  // ==========================================================
 
   {
     id: "fortnite-legendes-fraiches",
@@ -308,10 +306,9 @@ const products = [
     image: "https://gaming-cdn.com/images/products/22586/616x353/epic-games-gift-card-90eur-fortnite-12500-v-bucks-gift-card-epic-games-cover.jpg?v=1778169070"
   },
 
-
-  // ============================================================
+  // ==========================================================
   // VALORANT
-  // ============================================================
+  // ==========================================================
 
   {
     id: "valorant-450",
@@ -377,10 +374,9 @@ const products = [
     image: "https://gaming-cdn.com/images/products/13053/616x353/valorant-100eur-11000-riot-points-pc-cover.jpg?v=1768550803"
   },
 
-
-  // ============================================================
+  // ==========================================================
   // PLAYSTATION PLUS
-  // ============================================================
+  // ==========================================================
 
   {
     id: "ps-plus-essential-1-month",
@@ -410,10 +406,9 @@ const products = [
     image: "https://gaming-cdn.com/images/products/10691/616x353/playstation-plus-essential-12-mois-essential-12-months-playstation-4-playstation-5-jeu-playstation-store-europe-cover.jpg?v=1698221975"
   },
 
-
-  // ============================================================
+  // ==========================================================
   // PLAYSTATION STORE
-  // ============================================================
+  // ==========================================================
 
   {
     id: "ps-store-10",
@@ -488,10 +483,9 @@ const products = [
     image: "https://gaming-cdn.com/images/products/21246/616x353/carte-cadeau-playstation-store-150eur-playstation-5-playstation-4-playstation-store-cover.jpg?v=1764260665"
   },
 
-
-  // ============================================================
+  // ==========================================================
   // XBOX
-  // ============================================================
+  // ==========================================================
 
   {
     id: "xbox-live-5",
@@ -575,10 +569,9 @@ const products = [
     image: "https://gaming-cdn.com/images/products/23075/616x353/carte-cadeau-xbox-100eur-pc-xbox-series-x-s-xbox-one-microsoft-store-cover.jpg?v=1782311503"
   },
 
-
-  // ============================================================
+  // ==========================================================
   // NINTENDO
-  // ============================================================
+  // ==========================================================
 
   {
     id: "nintendo-eshop-15",
@@ -634,7 +627,6 @@ const products = [
     platform: "Nintendo Switch",
     image: "https://gaming-cdn.com/images/products/16876/616x353/abonnement-nintendo-switch-online-pack-additionnel-12-mois-individuel-12-months-switch-jeu-nintendo-eshop-europe-cover.jpg?v=1716974715"
   }
-
 ];
 
 
@@ -643,62 +635,26 @@ const products = [
 // ============================================================
 
 const CART_STORAGE_KEY = "novaKeyShopCart";
-
 const PAYPAL_USERNAME = "SH0PNOVA";
 
 
 // ============================================================
 // DISCORD
 // ============================================================
-//
-// IMPORTANT
-//
-// BOT ID = identifiant public de ton application Discord.
-// WEBHOOK = reçoit automatiquement les commandes.
-//
-// NE METS JAMAIS LE TOKEN DU BOT ICI.
-//
-// Pour l'authentification Discord réelle, configure aussi
-// DISCORD_OAUTH_URL avec ton URL OAuth2 Discord.
-// ============================================================
 
-const DISCORD_BOT_ID = "monidbot";
+// À REMPLACER PAR L'ID DE TON BOT
+const DISCORD_BOT_ID = "1554855867973771354";
 
-const DISCORD_WEBHOOK_URL = "whebook";
+// À REMPLACER PAR TON WEBHOOK DISCORD
+const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1554854634986938398/VnSuCzFU5YRfcRVIqX-Uu2PYtWxgYKI9Zsbv12VmERRQGOP_hhLsbLGw80CNEbhwtzQh";
 
+// À REMPLACER PAR LE LIEN DE TON SERVEUR
+const DISCORD_SERVER_URL = "https://discord.gg/4eq7sSKhS";
 
-// ------------------------------------------------------------
-// URL DU SERVEUR DISCORD
-// ------------------------------------------------------------
-//
-// Mets ici le lien d'invitation de ton serveur.
-// Exemple : https://discord.gg/xxxxxx
-//
-// NE METS PAS LE WEBHOOK ICI.
-// ------------------------------------------------------------
+// À REMPLACER PAR TON LIEN OAUTH SI TU UTILISES L'AUTHENTIFICATION
+const DISCORD_OAUTH_URL = "https://discord.com/oauth2/authorize?client_id=1554855867973771354&response_type=code&redirect_uri=https%3A%2F%2Fcodelol-system.github.io%2FNOVA-KEY-SHOP%2F&scope=identify+connections";
 
-const DISCORD_SERVER_URL = "https://discord.gg/73jCJ2tNV";
-
-
-// ------------------------------------------------------------
-// AUTHENTIFICATION DISCORD
-// ------------------------------------------------------------
-//
-// Pour une vraie connexion Discord, il faut créer OAuth2
-// dans le Developer Portal Discord.
-//
-// Le Bot ID seul ne permet PAS de connecter un utilisateur.
-//
-// Mets ici ton URL OAuth2 complète.
-// ------------------------------------------------------------
-
-const DISCORD_OAUTH_URL = "https://discord.com/oauth2/authorize?client_id=1554855867973771354&response_type=code&redirect_uri=https%3A%2F%2Fcodelol-system.github.io%2FNOVA-KEY-SHOP%2F&scope=identify";
-
-
-// ============================================================
-// LOGO DISCORD
-// ============================================================
-
+// Logo Discord
 const DISCORD_LOGO_URL =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0hYuyxdAgrKOlEeGtlGDAqvmeYqyzLYr57DWV6uoljg&s=10";
 
@@ -708,7 +664,6 @@ const DISCORD_LOGO_URL =
 // ============================================================
 
 const categoryLogos = {
-
   Roblox:
     "https://lens.usercontent.google.com/image?vsrid=CMWTyeuezJ6FyQEQAhgBIiQ2ZjQzYWEyZS01ZTFkLTQyMTUtYjMyZC1hMGQ2OGViYTk1MmYyggEiAmVuKC5CdAoubGZlLWR1bW15OjczYzc2NDVmLTk5ZjEtNGIwMS04OWNhLThlZGY0YzlmMWEyYhJCCkAvYm5zL3JhL2JvcmcvcmEvYm5zL2xlbnMtZnJvbnRlbmQtYXBpL3Byb2QubGVucy1mcm9udGVuZC1hcGkvMTA0WgQKAnJhOIWF7a-zlpcD&gsessionid=dpXIvtjXQUfTfeLwHkwMqes0qb5DYLTXJUWMbZZAii4RlpZU1eG2Rw",
 
@@ -726,7 +681,6 @@ const categoryLogos = {
 
   Nintendo:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF2h0xKBZSie1sgJrOvppHwYFOICSUhTU27G8PP2hzPA&s=10"
-
 };
 
 
@@ -735,9 +689,7 @@ const categoryLogos = {
 // ============================================================
 
 let cart = loadCart();
-
 let activeCategory = "Tous";
-
 let searchTerm = "";
 
 
@@ -796,36 +748,25 @@ const homeButton =
 // ============================================================
 
 function formatPrice(price) {
-
-  return Number(price).toLocaleString(
-    "fr-FR",
-    {
-      style: "currency",
-      currency: "EUR"
-    }
-  );
+  return Number(price).toLocaleString("fr-FR", {
+    style: "currency",
+    currency: "EUR"
+  });
 }
 
 
 // ============================================================
-// CHARGER LE PANIER
+// PANIER
 // ============================================================
 
 function loadCart() {
-
   try {
-
     const saved =
-      localStorage.getItem(
-        CART_STORAGE_KEY
-      );
+      localStorage.getItem(CART_STORAGE_KEY);
 
-    if (!saved) {
-      return [];
-    }
+    if (!saved) return [];
 
-    const parsed =
-      JSON.parse(saved);
+    const parsed = JSON.parse(saved);
 
     if (!Array.isArray(parsed)) {
       return [];
@@ -837,9 +778,7 @@ function loadCart() {
         typeof item.id === "string" &&
         Number(item.quantity) > 0
     );
-
   } catch (error) {
-
     console.error(
       "Erreur chargement panier :",
       error
@@ -850,21 +789,13 @@ function loadCart() {
 }
 
 
-// ============================================================
-// SAUVEGARDER LE PANIER
-// ============================================================
-
 function saveCart() {
-
   try {
-
     localStorage.setItem(
       CART_STORAGE_KEY,
       JSON.stringify(cart)
     );
-
   } catch (error) {
-
     console.error(
       "Erreur sauvegarde panier :",
       error
@@ -873,17 +804,11 @@ function saveCart() {
 }
 
 
-// ============================================================
-// LOGO CATÉGORIE
-// ============================================================
-
 function getCategoryLogo(category) {
-
   if (
     category === "PlayStation Plus" ||
     category === "PlayStation Store"
   ) {
-
     return categoryLogos.PlayStation;
   }
 
@@ -891,34 +816,17 @@ function getCategoryLogo(category) {
 }
 
 
-// ============================================================
-// NOM CATÉGORIE
-// ============================================================
-
 function getCategoryLabel(category) {
-
   const labels = {
-
     Tous: "Tous",
-
     Roblox: "Roblox",
-
     Fortnite: "Fortnite",
-
     VALORANT: "VALORANT",
-
     PlayStation: "PlayStation",
-
-    "PlayStation Plus":
-      "PlayStation Plus",
-
-    "PlayStation Store":
-      "PlayStation Store",
-
+    "PlayStation Plus": "PlayStation Plus",
+    "PlayStation Store": "PlayStation Store",
     Xbox: "Xbox",
-
     Nintendo: "Nintendo"
-
   };
 
   return labels[category] || category;
@@ -930,155 +838,110 @@ function getCategoryLabel(category) {
 // ============================================================
 
 function renderCategories() {
-
-  if (!categoriesContainer) {
-    return;
-  }
+  if (!categoriesContainer) return;
 
   const categories = [
-
     "Tous",
-
     ...new Set(
-      products.map(
-        product =>
-          product.category
-      )
+      products.map(product => product.category)
     )
-
   ];
 
   categoriesContainer.innerHTML = "";
 
-  categories.forEach(
-    category => {
+  categories.forEach(category => {
+    const button =
+      document.createElement("button");
 
-      const button =
-        document.createElement("button");
+    button.type = "button";
 
-      button.type = "button";
-
-      button.className =
-        "category" +
-        (
-          category === activeCategory
-            ? " active"
-            : ""
-        );
-
-      const logo =
-        getCategoryLogo(category);
-
-      const label =
-        getCategoryLabel(category);
-
-      if (category === "Tous") {
-
-        button.innerHTML = `
-
-          <span class="category-logo category-logo-all">
-            🎮
-          </span>
-
-          <span>
-            ${escapeHTML(label)}
-          </span>
-
-        `;
-
-      } else if (logo) {
-
-        button.innerHTML = `
-
-          <span class="category-logo">
-
-            <img
-              src="${escapeAttribute(logo)}"
-              alt=""
-              loading="lazy"
-              draggable="false"
-            >
-
-          </span>
-
-          <span>
-            ${escapeHTML(label)}
-          </span>
-
-        `;
-
-      } else {
-
-        button.innerHTML = `
-
-          <span>
-            ${escapeHTML(label)}
-          </span>
-
-        `;
-      }
-
-      button.addEventListener(
-        "click",
-        () => {
-
-          activeCategory =
-            category;
-
-          renderCategories();
-
-          renderProducts();
-
-        }
+    button.className =
+      "category" +
+      (
+        category === activeCategory
+          ? " active"
+          : ""
       );
 
-      categoriesContainer.appendChild(
-        button
-      );
+    const logo =
+      getCategoryLogo(category);
 
+    const label =
+      getCategoryLabel(category);
+
+    if (category === "Tous") {
+      button.innerHTML = `
+        <span class="category-logo category-logo-all">🎮</span>
+        <span>${escapeHTML(label)}</span>
+      `;
     }
-  );
+
+    else if (logo) {
+      button.innerHTML = `
+        <span class="category-logo">
+          <img
+            src="${escapeAttribute(logo)}"
+            alt=""
+            loading="lazy"
+            draggable="false"
+          >
+        </span>
+        <span>${escapeHTML(label)}</span>
+      `;
+    }
+
+    else {
+      button.innerHTML = `
+        <span>${escapeHTML(label)}</span>
+      `;
+    }
+
+    button.addEventListener(
+      "click",
+      () => {
+        activeCategory = category;
+        renderCategories();
+        renderProducts();
+      }
+    );
+
+    categoriesContainer.appendChild(button);
+  });
 }
 
 
 // ============================================================
-// FILTRER LES PRODUITS
+// FILTRAGE
 // ============================================================
 
 function getFilteredProducts() {
-
   let filtered =
-    products.filter(
-      product => {
+    products.filter(product => {
 
-        const matchesCategory =
-          activeCategory === "Tous" ||
-          product.category ===
-            activeCategory;
+      const matchesCategory =
+        activeCategory === "Tous" ||
+        product.category === activeCategory;
 
-        const searchableText =
-          (
-            product.name +
-            " " +
-            product.category +
-            " " +
-            product.type +
-            " " +
-            product.platform
-          ).toLowerCase();
+      const searchableText = (
+        product.name +
+        " " +
+        product.category +
+        " " +
+        product.type +
+        " " +
+        product.platform
+      ).toLowerCase();
 
-        const matchesSearch =
-          searchableText.includes(
-            searchTerm.toLowerCase()
-          );
-
-        return (
-          matchesCategory &&
-          matchesSearch
+      const matchesSearch =
+        searchableText.includes(
+          searchTerm.toLowerCase()
         );
 
-      }
-    );
+      return (
+        matchesCategory &&
+        matchesSearch
+      );
+    });
 
   const sort =
     sortSelect
@@ -1086,21 +949,18 @@ function getFilteredProducts() {
       : "default";
 
   if (sort === "price-low") {
-
     filtered.sort(
-      (a, b) =>
-        a.price - b.price
+      (a, b) => a.price - b.price
     );
+  }
 
-  } else if (sort === "price-high") {
-
+  else if (sort === "price-high") {
     filtered.sort(
-      (a, b) =>
-        b.price - a.price
+      (a, b) => b.price - a.price
     );
+  }
 
-  } else if (sort === "name") {
-
+  else if (sort === "name") {
     filtered.sort(
       (a, b) =>
         a.name.localeCompare(
@@ -1108,7 +968,6 @@ function getFilteredProducts() {
           "fr"
         )
     );
-
   }
 
   return filtered;
@@ -1116,14 +975,11 @@ function getFilteredProducts() {
 
 
 // ============================================================
-// AFFICHER LES PRODUITS
+// AFFICHAGE PRODUITS
 // ============================================================
 
 function renderProducts() {
-
-  if (!productsGrid) {
-    return;
-  }
+  if (!productsGrid) return;
 
   const filtered =
     getFilteredProducts();
@@ -1131,187 +987,129 @@ function renderProducts() {
   productsGrid.innerHTML = "";
 
   if (resultCount) {
-
     resultCount.textContent =
       `${filtered.length} produit${
         filtered.length > 1
           ? "s"
           : ""
       }`;
-
   }
 
   if (filtered.length === 0) {
-
     productsGrid.innerHTML = `
-
       <div class="empty">
-
-        <div style="font-size:42px;">
-          🔎
-        </div>
+        <div style="font-size:42px;">🔎</div>
 
         <strong>
           Aucun produit trouvé
         </strong>
 
         <div style="margin-top:7px;">
-          Essaie une autre recherche
-          ou catégorie.
+          Essaie une autre recherche ou catégorie.
         </div>
-
       </div>
-
     `;
 
     return;
   }
 
-  filtered.forEach(
-    product => {
+  filtered.forEach(product => {
+    const card =
+      document.createElement("article");
 
-      const card =
-        document.createElement("article");
+    card.className =
+      "product-card";
 
-      card.className =
-        "product-card";
+    card.innerHTML = `
+      <img
+        class="product-image"
+        src="${escapeAttribute(product.image)}"
+        alt="${escapeAttribute(product.name)}"
+        loading="lazy"
+        draggable="false"
+        onerror="this.style.opacity='0.25';"
+      >
 
-      card.innerHTML = `
+      <div class="product-body">
 
-        <img
-          class="product-image"
-          src="${escapeAttribute(
-            product.image
-          )}"
-          alt="${escapeAttribute(
-            product.name
-          )}"
-          loading="lazy"
-          draggable="false"
-          onerror="
-            this.style.opacity='0.25';
-          "
-        >
-
-        <div class="product-body">
-
-          <div class="product-category">
-            ${escapeHTML(
-              product.category
-            )}
-          </div>
-
-          <div class="product-name">
-            ${escapeHTML(
-              product.name
-            )}
-          </div>
-
-          <div class="product-platform">
-            🎮 ${escapeHTML(
-              product.platform
-            )}
-          </div>
-
-          <div class="product-type">
-            🏷️ ${escapeHTML(
-              product.type
-            )}
-          </div>
-
-          <div class="product-bottom">
-
-            <div class="product-price">
-              ${formatPrice(
-                product.price
-              )}
-            </div>
-
-            <button
-              type="button"
-              class="add-btn"
-              data-product-id="${escapeAttribute(
-                product.id
-              )}"
-            >
-              Ajouter
-            </button>
-
-          </div>
-
+        <div class="product-category">
+          ${escapeHTML(product.category)}
         </div>
 
-      `;
+        <div class="product-name">
+          ${escapeHTML(product.name)}
+        </div>
 
-      const addButton =
-        card.querySelector(
-          ".add-btn"
-        );
+        <div class="product-platform">
+          🎮 ${escapeHTML(product.platform)}
+        </div>
 
-      if (addButton) {
+        <div class="product-type">
+          🏷️ ${escapeHTML(product.type)}
+        </div>
 
-        addButton.addEventListener(
-          "click",
-          () => {
+        <div class="product-bottom">
 
-            addToCart(
-              product.id
-            );
+          <div class="product-price">
+            ${formatPrice(product.price)}
+          </div>
 
-          }
-        );
+          <button
+            type="button"
+            class="add-btn"
+            data-product-id="${escapeAttribute(product.id)}"
+          >
+            Ajouter
+          </button>
 
-      }
+        </div>
+      </div>
+    `;
 
-      productsGrid.appendChild(
-        card
+    const addButton =
+      card.querySelector(".add-btn");
+
+    if (addButton) {
+      addButton.addEventListener(
+        "click",
+        () => addToCart(product.id)
       );
-
     }
-  );
+
+    productsGrid.appendChild(card);
+  });
 }
 
 
 // ============================================================
-// AJOUTER AU PANIER
+// AJOUT PANIER
 // ============================================================
 
 function addToCart(productId) {
-
   const product =
     products.find(
-      item =>
-        item.id === productId
+      item => item.id === productId
     );
 
-  if (!product) {
-    return;
-  }
+  if (!product) return;
 
   const existing =
     cart.find(
-      item =>
-        item.id === productId
+      item => item.id === productId
     );
 
   if (existing) {
-
     existing.quantity += 1;
+  }
 
-  } else {
-
+  else {
     cart.push({
-
       id: product.id,
-
       quantity: 1
-
     });
-
   }
 
   saveCart();
-
   updateCartUI();
 
   showToast(
@@ -1321,59 +1119,44 @@ function addToCart(productId) {
 
 
 // ============================================================
-// SUPPRIMER DU PANIER
+// SUPPRESSION
 // ============================================================
 
-function removeFromCart(
-  productId
-) {
-
+function removeFromCart(productId) {
   cart =
     cart.filter(
-      item =>
-        item.id !== productId
+      item => item.id !== productId
     );
 
   saveCart();
-
   updateCartUI();
 }
 
 
 // ============================================================
-// MODIFIER QUANTITÉ
+// QUANTITÉ
 // ============================================================
 
 function changeQuantity(
   productId,
   amount
 ) {
-
   const item =
     cart.find(
       cartItem =>
         cartItem.id === productId
     );
 
-  if (!item) {
-    return;
-  }
+  if (!item) return;
 
   item.quantity += amount;
 
-  if (
-    item.quantity <= 0
-  ) {
-
-    removeFromCart(
-      productId
-    );
-
+  if (item.quantity <= 0) {
+    removeFromCart(productId);
     return;
   }
 
   saveCart();
-
   updateCartUI();
 }
 
@@ -1383,92 +1166,50 @@ function changeQuantity(
 // ============================================================
 
 function getCartProducts() {
-
   return cart
+    .map(item => {
+      const product =
+        products.find(
+          p => p.id === item.id
+        );
 
-    .map(
-      item => {
+      if (!product) return null;
 
-        const product =
-          products.find(
-            p =>
-              p.id === item.id
-          );
-
-        if (!product) {
-          return null;
-        }
-
-        return {
-
-          ...product,
-
-          quantity:
-            Number(item.quantity)
-
-        };
-
-      }
-    )
-
+      return {
+        ...product,
+        quantity: Number(item.quantity)
+      };
+    })
     .filter(Boolean);
 }
 
 
-// ============================================================
-// TOTAL
-// ============================================================
-
 function getCartTotal() {
-
-  return getCartProducts()
-    .reduce(
-      (
-        total,
-        product
-      ) => {
-
-        return (
-          total +
-          product.price *
-          product.quantity
-        );
-
-      },
-      0
-    );
+  return getCartProducts().reduce(
+    (total, product) =>
+      total +
+      product.price *
+      product.quantity,
+    0
+  );
 }
 
 
-// ============================================================
-// QUANTITÉ TOTALE
-// ============================================================
-
 function getCartQuantity() {
-
   return cart.reduce(
-    (
-      total,
-      item
-    ) => {
-
-      return (
-        total +
-        Number(item.quantity)
-      );
-
-    },
+    (total, item) =>
+      total +
+      Number(item.quantity),
     0
   );
 }
 
 
 // ============================================================
-// AFFICHER PANIER
+// AFFICHAGE PANIER
 // ============================================================
 
 function renderCart() {
-
   if (
     !cartItems ||
     !cartTotal ||
@@ -1482,12 +1223,8 @@ function renderCart() {
 
   cartItems.innerHTML = "";
 
-  if (
-    cartProducts.length === 0
-  ) {
-
+  if (cartProducts.length === 0) {
     cartItems.innerHTML = `
-
       <div class="empty">
 
         <div style="font-size:42px;">
@@ -1503,156 +1240,125 @@ function renderCart() {
         </div>
 
       </div>
-
     `;
+  }
 
-  } else {
+  else {
+    cartProducts.forEach(product => {
 
-    cartProducts.forEach(
-      product => {
+      const item =
+        document.createElement("div");
 
-        const item =
-          document.createElement("div");
+      item.className =
+        "cart-item";
 
-        item.className =
-          "cart-item";
+      item.innerHTML = `
+        <img
+          src="${escapeAttribute(product.image)}"
+          alt="${escapeAttribute(product.name)}"
+          loading="lazy"
+          draggable="false"
+        >
 
-        item.innerHTML = `
+        <div>
 
-          <img
-            src="${escapeAttribute(
-              product.image
-            )}"
-            alt="${escapeAttribute(
-              product.name
-            )}"
-            loading="lazy"
-            draggable="false"
-          >
+          <div class="cart-item-name">
+            ${escapeHTML(product.name)}
+          </div>
 
-          <div>
+          <div class="cart-item-price">
+            ${formatPrice(product.price)}
+            ×
+            ${product.quantity}
+          </div>
 
-            <div class="cart-item-name">
-              ${escapeHTML(
-                product.name
-              )}
-            </div>
+          <div class="quantity-controls">
 
-            <div class="cart-item-price">
-              ${formatPrice(
-                product.price
-              )}
-              × ${product.quantity}
-            </div>
+            <button
+              type="button"
+              class="quantity-btn"
+              data-action="minus"
+              aria-label="Diminuer"
+            >
+              −
+            </button>
 
-            <div class="quantity-controls">
+            <span>
+              ${product.quantity}
+            </span>
 
-              <button
-                type="button"
-                class="quantity-btn"
-                data-action="minus"
-                aria-label="Diminuer"
-              >
-                −
-              </button>
-
-              <span>
-                ${product.quantity}
-              </span>
-
-              <button
-                type="button"
-                class="quantity-btn"
-                data-action="plus"
-                aria-label="Augmenter"
-              >
-                +
-              </button>
-
-            </div>
+            <button
+              type="button"
+              class="quantity-btn"
+              data-action="plus"
+              aria-label="Augmenter"
+            >
+              +
+            </button>
 
           </div>
 
-          <button
-            type="button"
-            class="remove-item"
-            data-action="remove"
-            aria-label="Supprimer"
-          >
-            ✕
-          </button>
+        </div>
 
-        `;
+        <button
+          type="button"
+          class="remove-item"
+          data-action="remove"
+          aria-label="Supprimer"
+        >
+          ✕
+        </button>
+      `;
 
-        const minusButton =
-          item.querySelector(
-            '[data-action="minus"]'
-          );
-
-        const plusButton =
-          item.querySelector(
-            '[data-action="plus"]'
-          );
-
-        const removeButton =
-          item.querySelector(
-            '[data-action="remove"]'
-          );
-
-        if (minusButton) {
-
-          minusButton.addEventListener(
-            "click",
-            () => {
-
-              changeQuantity(
-                product.id,
-                -1
-              );
-
-            }
-          );
-
-        }
-
-        if (plusButton) {
-
-          plusButton.addEventListener(
-            "click",
-            () => {
-
-              changeQuantity(
-                product.id,
-                1
-              );
-
-            }
-          );
-
-        }
-
-        if (removeButton) {
-
-          removeButton.addEventListener(
-            "click",
-            () => {
-
-              removeFromCart(
-                product.id
-              );
-
-            }
-          );
-
-        }
-
-        cartItems.appendChild(
-          item
+      const minusButton =
+        item.querySelector(
+          '[data-action="minus"]'
         );
 
-      }
-    );
+      const plusButton =
+        item.querySelector(
+          '[data-action="plus"]'
+        );
 
+      const removeButton =
+        item.querySelector(
+          '[data-action="remove"]'
+        );
+
+      if (minusButton) {
+        minusButton.addEventListener(
+          "click",
+          () =>
+            changeQuantity(
+              product.id,
+              -1
+            )
+        );
+      }
+
+      if (plusButton) {
+        plusButton.addEventListener(
+          "click",
+          () =>
+            changeQuantity(
+              product.id,
+              1
+            )
+        );
+      }
+
+      if (removeButton) {
+        removeButton.addEventListener(
+          "click",
+          () =>
+            removeFromCart(
+              product.id
+            )
+        );
+      }
+
+      cartItems.appendChild(item);
+    });
   }
 
   cartTotal.textContent =
@@ -1670,24 +1376,16 @@ function renderCart() {
 // ============================================================
 
 function updateCartUI() {
-
   if (cartCount) {
-
     cartCount.textContent =
       getCartQuantity();
-
   }
 
   renderCart();
 }
 
 
-// ============================================================
-// OUVRIR PANIER
-// ============================================================
-
 function openCart() {
-
   if (
     !cartDrawer ||
     !drawerOverlay
@@ -1697,39 +1395,26 @@ function openCart() {
 
   renderCart();
 
-  cartDrawer.classList.add(
-    "open"
-  );
+  cartDrawer.classList.add("open");
 
-  drawerOverlay.classList.add(
-    "open"
-  );
+  drawerOverlay.classList.add("open");
 
   document.body.style.overflow =
     "hidden";
 }
 
 
-// ============================================================
-// FERMER PANIER
-// ============================================================
-
 function closeCart() {
-
   if (cartDrawer) {
-
     cartDrawer.classList.remove(
       "open"
     );
-
   }
 
   if (drawerOverlay) {
-
     drawerOverlay.classList.remove(
       "open"
     );
-
   }
 
   document.body.style.overflow =
@@ -1738,39 +1423,40 @@ function closeCart() {
 
 
 // ============================================================
-// LISTE DISCORD
+// DISCORD
 // ============================================================
 
 function buildDiscordProductList(
   cartProducts
 ) {
-
   let text = "";
 
-  for (
-    const product of cartProducts
-  ) {
+  for (const product of cartProducts) {
 
     const line =
-      `• **${product.name}** × ${product.quantity} • ${formatPrice(
-        product.price * product.quantity
-      )} • ${product.platform}\n`;
+      `• **${product.name}** × ${
+        product.quantity
+      } • ${
+        formatPrice(
+          product.price *
+          product.quantity
+        )
+      } • ${
+        product.platform
+      }\n`;
 
     if (
-      (
-        text.length +
-        line.length
-      ) > 950
+      text.length +
+      line.length >
+      950
     ) {
-
       text +=
         "• … autres articles";
 
       break;
     }
 
-    text +=
-      line;
+    text += line;
   }
 
   return (
@@ -1780,16 +1466,14 @@ function buildDiscordProductList(
 }
 
 
-// ============================================================
-// ENVOI AUTOMATIQUE DISCORD
-// ============================================================
-
 async function sendOrderToDiscord() {
 
   if (
     !DISCORD_WEBHOOK_URL ||
     DISCORD_WEBHOOK_URL ===
-      "COLLE_TON_WEBHOOK_ICI" ||
+      "WEBHOOK_ICI" ||
+    DISCORD_WEBHOOK_URL ===
+      "whebook" ||
     DISCORD_WEBHOOK_URL ===
       "mon_whebook"
   ) {
@@ -1811,7 +1495,6 @@ async function sendOrderToDiscord() {
     cartProducts.length === 0 ||
     total <= 0
   ) {
-
     return false;
   }
 
@@ -1820,8 +1503,7 @@ async function sendOrderToDiscord() {
     Date.now()
       .toString(36)
       .toUpperCase();
-const discordUsername =
-  "Pseudo inconnu";
+
   const productLines =
     buildDiscordProductList(
       cartProducts
@@ -1839,7 +1521,6 @@ const discordUsername =
     embeds: [
 
       {
-
         title:
           "🛒 NOVA KEY SHOP • Nouvelle commande",
 
@@ -1928,28 +1609,19 @@ const discordUsername =
             inline:
               false
           }
-          {
-  name: "👤 Pseudo Discord",
-  value: discordUsername,
-  inline: true
-},
 
         ],
 
         footer: {
-
           text:
             "NOVA KEY SHOP • Commande automatique"
-
         },
 
         timestamp:
           new Date().toISOString()
-
       }
 
     ]
-
   };
 
   try {
@@ -1958,33 +1630,23 @@ const discordUsername =
       await fetch(
         DISCORD_WEBHOOK_URL,
         {
-
           method:
             "POST",
 
           headers: {
-
             "Content-Type":
               "application/json"
-
           },
 
           body:
-            JSON.stringify(
-              message
-            )
-
+            JSON.stringify(message)
         }
       );
 
-    if (
-      !response.ok
-    ) {
-
+    if (!response.ok) {
       throw new Error(
         `Discord HTTP ${response.status}`
       );
-
     }
 
     console.log(
@@ -2015,9 +1677,7 @@ async function payWithPayPal() {
   const total =
     getCartTotal();
 
-  if (
-    total <= 0
-  ) {
+  if (total <= 0) {
 
     showToast(
       "Ton panier est vide."
@@ -2039,7 +1699,6 @@ async function payWithPayPal() {
 
     checkoutButton.textContent =
       "⏳ Préparation...";
-
   }
 
   await sendOrderToDiscord();
@@ -2050,7 +1709,7 @@ async function payWithPayPal() {
 
 
 // ============================================================
-// CRÉER LES BOUTONS DISCORD DANS APP.JS
+// BOUTONS DISCORD
 // ============================================================
 
 function createDiscordButtons() {
@@ -2060,15 +1719,7 @@ function createDiscordButtons() {
       ".nav-actions"
     );
 
-  if (!navActions) {
-    return;
-  }
-
-
-  // ----------------------------------------------------------
-  // SUPPRIMER D'ANCIENS BOUTONS AJOUTÉS PAR UNE VERSION
-  // PRÉCÉDENTE
-  // ----------------------------------------------------------
+  if (!navActions) return;
 
   const oldDiscord =
     document.getElementById(
@@ -2079,7 +1730,6 @@ function createDiscordButtons() {
     oldDiscord.remove();
   }
 
-
   const oldAuth =
     document.getElementById(
       "authButton"
@@ -2088,11 +1738,6 @@ function createDiscordButtons() {
   if (oldAuth) {
     oldAuth.remove();
   }
-
-
-  // ----------------------------------------------------------
-  // BOUTON AUTHENTIFICATION
-  // ----------------------------------------------------------
 
   const authButton =
     document.createElement(
@@ -2119,16 +1764,10 @@ function createDiscordButtons() {
   authButton.innerHTML =
     "👤";
 
-
   authButton.addEventListener(
     "click",
     openDiscordAuthentication
   );
-
-
-  // ----------------------------------------------------------
-  // BOUTON DISCORD
-  // ----------------------------------------------------------
 
   const discordButton =
     document.createElement(
@@ -2152,34 +1791,18 @@ function createDiscordButtons() {
     "Serveur Discord"
   );
 
-
   discordButton.innerHTML = `
-
     <img
-      src="${escapeAttribute(
-        DISCORD_LOGO_URL
-      )}"
+      src="${escapeAttribute(DISCORD_LOGO_URL)}"
       alt="Discord"
       draggable="false"
     >
-
   `;
-
 
   discordButton.addEventListener(
     "click",
     openDiscordServer
   );
-
-
-  // ----------------------------------------------------------
-  // PLACEMENT
-  //
-  // Accueil
-  // Auth
-  // Discord
-  // Panier
-  // ----------------------------------------------------------
 
   if (homeButton) {
 
@@ -2202,13 +1825,12 @@ function createDiscordButtons() {
     navActions.prepend(
       authButton
     );
-
   }
 }
 
 
 // ============================================================
-// OUVRIR SERVEUR DISCORD
+// SERVEUR DISCORD
 // ============================================================
 
 function openDiscordServer() {
@@ -2216,7 +1838,7 @@ function openDiscordServer() {
   if (
     !DISCORD_SERVER_URL ||
     DISCORD_SERVER_URL ===
-      "COLLE_ICI_LE_LIEN_DE_TON_SERVEUR"
+      "LIEN_SERVEUR_ICI"
   ) {
 
     showToast(
@@ -2243,7 +1865,7 @@ function openDiscordAuthentication() {
   if (
     !DISCORD_OAUTH_URL ||
     DISCORD_OAUTH_URL ===
-      "COLLE_ICI_TON_URL_OAUTH2"
+      "LIEN_OAUTH_ICI"
   ) {
 
     showToast(
@@ -2262,13 +1884,9 @@ function openDiscordAuthentication() {
 // TOAST
 // ============================================================
 
-function showToast(
-  message
-) {
+function showToast(message) {
 
-  if (!toastContainer) {
-    return;
-  }
+  if (!toastContainer) return;
 
   const toast =
     document.createElement(
@@ -2295,11 +1913,7 @@ function showToast(
         "translateY(10px)";
 
       setTimeout(
-        () => {
-
-          toast.remove();
-
-        },
+        () => toast.remove(),
         250
       );
 
@@ -2313,32 +1927,25 @@ function showToast(
 // SÉCURITÉ HTML
 // ============================================================
 
-function escapeHTML(
-  value
-) {
+function escapeHTML(value) {
 
   return String(value)
-
     .replaceAll(
       "&",
       "&amp;"
     )
-
     .replaceAll(
       "<",
       "&lt;"
     )
-
     .replaceAll(
       ">",
       "&gt;"
     )
-
     .replaceAll(
       '"',
       "&quot;"
     )
-
     .replaceAll(
       "'",
       "&#039;"
@@ -2346,14 +1953,7 @@ function escapeHTML(
 }
 
 
-// ============================================================
-// SÉCURITÉ ATTRIBUT
-// ============================================================
-
-function escapeAttribute(
-  value
-) {
-
+function escapeAttribute(value) {
   return escapeHTML(value);
 }
 
@@ -2372,7 +1972,6 @@ if (searchInput) {
         event.target.value.trim();
 
       renderProducts();
-
     }
   );
 }
@@ -2417,10 +2016,6 @@ if (closeCartButton) {
 }
 
 
-// ============================================================
-// OVERLAY
-// ============================================================
-
 if (drawerOverlay) {
 
   drawerOverlay.addEventListener(
@@ -2460,60 +2055,44 @@ if (homeButton) {
         "";
 
       if (searchInput) {
-
         searchInput.value =
           "";
-
       }
 
       if (sortSelect) {
-
         sortSelect.value =
           "default";
-
       }
 
       renderCategories();
-
       renderProducts();
 
       window.scrollTo({
-
-        top:
-          0,
-
-        behavior:
-          "smooth"
-
+        top: 0,
+        behavior: "smooth"
       });
-
     }
   );
 }
 
 
 // ============================================================
-// TOUCHE ESC
+// ESCAPE
 // ============================================================
 
 document.addEventListener(
   "keydown",
   event => {
 
-    if (
-      event.key === "Escape"
-    ) {
-
+    if (event.key === "Escape") {
       closeCart();
-
     }
-
   }
 );
 
 
 // ============================================================
-// STYLES
+// CSS LOGOS
 // ============================================================
 
 const categoryLogoStyles =
@@ -2524,206 +2103,89 @@ const categoryLogoStyles =
 categoryLogoStyles.textContent = `
 
   .category {
-
     display: inline-flex !important;
-
     align-items: center !important;
-
     justify-content: center !important;
-
     gap: 6px !important;
-
     white-space: nowrap !important;
-
   }
-
 
   .category-logo {
-
     width: 16px !important;
-
     height: 16px !important;
-
     min-width: 16px !important;
-
     max-width: 16px !important;
-
     min-height: 16px !important;
-
     max-height: 16px !important;
-
     border-radius: 50% !important;
-
     overflow: hidden !important;
-
     display: inline-flex !important;
-
     align-items: center !important;
-
     justify-content: center !important;
-
     background: #ffffff !important;
-
-    border: 1px solid rgba(
-      255,
-      255,
-      255,
-      0.15
-    ) !important;
-
+    border: 1px solid rgba(255,255,255,0.15) !important;
     flex: 0 0 16px !important;
-
     box-sizing: border-box !important;
-
   }
-
 
   .category-logo img {
-
     width: 100% !important;
-
     height: 100% !important;
-
     min-width: 0 !important;
-
     min-height: 0 !important;
-
     max-width: 100% !important;
-
     max-height: 100% !important;
-
     object-fit: contain !important;
-
     object-position: center !important;
-
     display: block !important;
-
     padding: 2px !important;
-
     box-sizing: border-box !important;
-
   }
-
 
   .category-logo-all {
-
     font-size: 8px !important;
-
     line-height: 1 !important;
-
-    background:
-      rgba(
-        255,
-        255,
-        255,
-        0.08
-      ) !important;
-
-    border-color:
-      rgba(
-        255,
-        255,
-        255,
-        0.10
-      ) !important;
-
+    background: rgba(255,255,255,0.08) !important;
+    border-color: rgba(255,255,255,0.10) !important;
   }
-
 
   .product-category-logo {
-
     display: none !important;
-
   }
-
 
   .product-category img {
-
     display: none !important;
-
   }
-
 
   .product-category-logo img {
-
     display: none !important;
-
   }
-
 
   .product-card .category-logo {
-
     display: none !important;
-
   }
-
-
-  /* ==========================================================
-     BOUTON AUTHENTIFICATION
-     ========================================================== */
 
   .nova-auth-button {
-
     font-size: 18px !important;
-
   }
-
-
-  /* ==========================================================
-     BOUTON DISCORD
-     ========================================================== */
 
   .nova-discord-button {
-
     padding: 0 !important;
-
     overflow: hidden !important;
-
   }
-
 
   .nova-discord-button img {
-
     width: 22px !important;
-
     height: 22px !important;
-
     object-fit: contain !important;
-
     object-position: center !important;
-
     display: block !important;
-
   }
 
-
   .nova-discord-button:hover {
-
-    border-color:
-      rgba(
-        88,
-        101,
-        242,
-        0.8
-      ) !important;
-
-    background:
-      rgba(
-        88,
-        101,
-        242,
-        0.14
-      ) !important;
-
-    box-shadow:
-      0 0 18px
-      rgba(
-        88,
-        101,
-        242,
-        0.18
-      ) !important;
-
+    border-color: rgba(88,101,242,0.8) !important;
+    background: rgba(88,101,242,0.14) !important;
+    box-shadow: 0 0 18px rgba(88,101,242,0.18) !important;
   }
 
 `;
@@ -2734,7 +2196,7 @@ document.head.appendChild(
 
 
 // ============================================================
-// INITIALISATION
+// INIT
 // ============================================================
 
 function init() {
@@ -2746,7 +2208,6 @@ function init() {
   updateCartUI();
 
   createDiscordButtons();
-
 }
 
 
