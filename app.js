@@ -1820,7 +1820,8 @@ async function sendOrderToDiscord() {
     Date.now()
       .toString(36)
       .toUpperCase();
-
+const discordUsername =
+  "Pseudo inconnu";
   const productLines =
     buildDiscordProductList(
       cartProducts
@@ -1927,6 +1928,11 @@ async function sendOrderToDiscord() {
             inline:
               false
           }
+          {
+  name: "👤 Pseudo Discord",
+  value: discordUsername,
+  inline: true
+},
 
         ],
 
