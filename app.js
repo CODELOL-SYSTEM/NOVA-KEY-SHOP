@@ -1,6 +1,5 @@
 // ============================================================
-// NOVA KEY SHOP
-// APP.JS COMPLET
+// NOVA KEY SHOP - APP.JS COMPLET
 // ============================================================
 
 
@@ -23,7 +22,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/13504/616x353/roblox-card-100-robux-100-robux-pc-jeu-cover.jpg?v=1677828910"
   },
-
   {
     id: "roblox-300",
     name: "Roblox Card - 300 ROBUX",
@@ -33,7 +31,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/18880/616x353/roblox-300-robux-300-robux-pc-jeu-europe-cover.jpg?v=1742283940"
   },
-
   {
     id: "roblox-400",
     name: "Roblox Card - 400 ROBUX",
@@ -43,7 +40,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/15265/616x353/roblox-card-400-robux-400-robux-pc-jeu-cover.jpg?v=1699346075"
   },
-
   {
     id: "roblox-1500",
     name: "Roblox Card - 1500 ROBUX",
@@ -53,7 +49,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/23409/616x353/roblox-1500-robux-pc-cover.jpg?v=1785919991"
   },
-
   {
     id: "roblox-800",
     name: "Roblox Card - 800 ROBUX",
@@ -63,7 +58,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/10437/616x353/roblox-800-robux-pc-cover.jpg?v=1767788892"
   },
-
   {
     id: "roblox-1000",
     name: "Roblox Card - 1000 ROBUX",
@@ -73,7 +67,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/22952/616x353/roblox-1000-robux-pc-cover.jpg?v=1781173294"
   },
-
   {
     id: "roblox-2000",
     name: "Roblox Card - 2000 ROBUX",
@@ -83,7 +76,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/15168/616x353/roblox-card-2000-robux-pc-cover.jpg?v=1767788872"
   },
-
   {
     id: "roblox-1700",
     name: "Roblox Card - 1700 ROBUX",
@@ -93,7 +85,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/7994/616x353/roblox-1700-robux-pc-cover.jpg?v=1767788932"
   },
-
   {
     id: "roblox-2500",
     name: "Roblox Card - 2500 ROBUX",
@@ -103,7 +94,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/18652/616x353/roblox-2500-robux-2500-robux-pc-jeu-europe-cover.jpg?v=1740132827"
   },
-
   {
     id: "roblox-3000",
     name: "Roblox Card - 3000 ROBUX",
@@ -113,7 +103,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/18878/616x353/roblox-3000-robux-pc-cover.jpg?v=1767788845"
   },
-
   {
     id: "roblox-4000",
     name: "Roblox Card - 4000 ROBUX",
@@ -123,7 +112,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/18879/616x353/roblox-4000-robux-pc-cover.jpg?v=1767788831"
   },
-
   {
     id: "roblox-4500",
     name: "Roblox Card - 4500 ROBUX",
@@ -133,7 +121,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/7995/616x353/roblox-4500-robux-pc-cover.jpg?v=1767788921"
   },
-
   {
     id: "roblox-5250",
     name: "Roblox Card - 5250 ROBUX",
@@ -143,7 +130,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/21588/616x353/roblox-5250-robux-pc-battle-net-cover.jpg?v=1770902730"
   },
-
   {
     id: "roblox-10000",
     name: "Roblox Card - 10000 ROBUX",
@@ -168,7 +154,6 @@ const products = [
     platform: "Xbox",
     image: "https://gaming-cdn.com/images/products/9584/616x353/fortnite-pack-legendes-fraiches-1000-v-bucks-xbox-one-xbox-series-x-s-microsoft-store-cover.jpg?v=1781175723"
   },
-
   {
     id: "fortnite-cobalt-star",
     name: "Fortnite Cobalt Star Bundle + 1000 V-Bucks",
@@ -178,7 +163,6 @@ const products = [
     platform: "PlayStation",
     image: "https://gaming-cdn.com/images/products/18008/616x353/fortnite-cobalt-star-bundle-1000-v-bucks-playstation-5-playstation-store-cover.jpg?v=1781184809"
   },
-
   {
     id: "fortnite-flowering-chaos",
     name: "Fortnite Flowering Chaos + 1000 V-Bucks",
@@ -188,7 +172,6 @@ const products = [
     platform: "PlayStation",
     image: "https://gaming-cdn.com/images/products/21199/616x353/fortnite-flowering-chaos-1000-v-bucks-playstation-5-playstation-store-cover.jpg?v=1781184757"
   },
-
   {
     id: "fortnite-legendes-animees",
     name: "Fortnite - Pack Légendes animées",
@@ -198,7 +181,6 @@ const products = [
     platform: "PlayStation",
     image: "https://gaming-cdn.com/images/products/12592/616x353/fortnite-pack-legendes-animees-playstation-5-jeu-playstation-store-europe-cover.jpg?v=1748419162"
   },
-
   {
     id: "fortnite-darkfire-ice",
     name: "Fortnite - Darkfire & Ice Bundle + 1000 V-Bucks",
@@ -208,7 +190,6 @@ const products = [
     platform: "Nintendo Switch",
     image: "https://gaming-cdn.com/images/products/20656/616x353/fortnite-darkfire-ice-bundle-1000-v-bucks-switch-nintendo-eshop-cover.jpg?v=1781184777"
   },
-
   {
     id: "fortnite-transformers",
     name: "Fortnite - Transformers Pack + 1000 V-Bucks",
@@ -218,7 +199,6 @@ const products = [
     platform: "PlayStation",
     image: "https://gaming-cdn.com/images/products/14693/616x353/fortnite-transformers-pack-1000-v-bucks-playstation-4-playstation-store-cover.jpg?v=1781185876"
   },
-
   {
     id: "fortnite-darkfire",
     name: "Fortnite - Darkfire Bundle",
@@ -228,7 +208,6 @@ const products = [
     platform: "Nintendo Switch",
     image: "https://gaming-cdn.com/images/products/5733/616x353/fortnite-darkfire-bundle-switch-jeu-nintendo-eshop-europe-cover.jpg?v=1730385293"
   },
-
   {
     id: "fortnite-5000-vbucks",
     name: "Fortnite - 5000 V-Bucks Gift Card",
@@ -238,7 +217,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/8158/616x353/fortnite-5000-v-bucks-gift-card-5000-v-bucks-pc-jeu-epic-games-cover.jpg?v=1699365704"
   },
-
   {
     id: "fortnite-batman",
     name: "Fortnite - The Batman Who Laughs Outfit",
@@ -248,7 +226,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/9954/616x353/fortnite-the-batman-who-laughs-outfit-pc-jeu-epic-games-cover.jpg?v=1666177682"
   },
-
   {
     id: "fortnite-lumiere-dechue",
     name: "Fortnite - Pack Lumière déchue",
@@ -258,7 +235,6 @@ const products = [
     platform: "Xbox",
     image: "https://gaming-cdn.com/images/products/9848/616x353/fortnite-pack-lumiere-dechue-xbox-one-xbox-series-x-s-jeu-microsoft-store-europe-cover.jpg?v=1739374928"
   },
-
   {
     id: "fortnite-catwoman",
     name: "Fortnite - Catwoman's Grappling Claw Pickaxe",
@@ -268,7 +244,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/9608/616x353/fortnite-catwoman-s-grappling-claw-pickaxe-pc-jeu-epic-games-cover.jpg?v=1702478626"
   },
-
   {
     id: "fortnite-1000-vbucks",
     name: "Fortnite - 1000 V-Bucks Gift Card",
@@ -278,7 +253,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/8156/616x353/fortnite-1000-v-bucks-gift-card-1000-v-bucks-pc-jeu-epic-games-cover.jpg?v=1701258416"
   },
-
   {
     id: "fortnite-2800-vbucks",
     name: "Fortnite - 2800 V-Bucks Gift Card",
@@ -288,7 +262,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/8157/616x353/fortnite-2800-v-bucks-gift-card-2800-v-bucks-pc-jeu-epic-games-cover.jpg?v=1716909867"
   },
-
   {
     id: "fortnite-iris",
     name: "Fortnite - Pack Iris + 600 V-Bucks",
@@ -298,7 +271,6 @@ const products = [
     platform: "Xbox",
     image: "https://gaming-cdn.com/images/products/6828/616x353/fortnite-pack-iris-600-v-bucks-xbox-one-xbox-one-jeu-microsoft-store-europe-cover.jpg?v=1736957194"
   },
-
   {
     id: "fortnite-13500-vbucks",
     name: "Fortnite - 13500 V-Bucks Gift Card",
@@ -308,7 +280,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/10451/616x353/fortnite-13500-v-bucks-gift-card-13500-v-bucks-pc-jeu-epic-games-cover.jpg?v=1701258558"
   },
-
   {
     id: "epic-37-fortnite",
     name: "Epic Games Gift Card 37 EUR - Fortnite 4500 V-Bucks",
@@ -318,7 +289,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/22600/616x353/epic-games-gift-card-37eur-fortnite-4500-v-bucks-gift-card-epic-games-cover.jpg?v=1781614127"
   },
-
   {
     id: "epic-23-fortnite",
     name: "Epic Games Gift Card 23 EUR - Fortnite 2400 V-Bucks",
@@ -328,7 +298,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/22599/616x353/epic-games-gift-card-23eur-fortnite-2400-v-bucks-gift-card-epic-games-cover.jpg?v=1781614121"
   },
-
   {
     id: "epic-90-fortnite",
     name: "Epic Games Gift Card 90 EUR - Fortnite 12500 V-Bucks",
@@ -353,7 +322,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/7093/616x353/valorant-5eur-450-riot-points-pc-cover.jpg?v=1768550634"
   },
-
   {
     id: "valorant-1000",
     name: "VALORANT - 1000 Riot Points",
@@ -363,7 +331,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/7094/616x353/valorant-10eur-1000-riot-points-pc-cover.jpg?v=1768550654"
   },
-
   {
     id: "valorant-2050",
     name: "VALORANT - 2050 Riot Points",
@@ -373,7 +340,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/7095/616x353/valorant-20eur-2050-riot-points-pc-cover.jpg?v=1768550730"
   },
-
   {
     id: "valorant-2565",
     name: "VALORANT - 2565 Riot Points",
@@ -383,7 +349,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/14355/616x353/valorant-25eur-2565-riot-points-pc-cover.jpg?v=1768550810"
   },
-
   {
     id: "valorant-3650",
     name: "VALORANT - 3650 Riot Points",
@@ -393,7 +358,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/13052/616x353/valorant-35eur-3650-riot-points-pc-cover.jpg?v=1768550793"
   },
-
   {
     id: "valorant-5350",
     name: "VALORANT - 5350 Riot Points",
@@ -403,7 +367,6 @@ const products = [
     platform: "PC",
     image: "https://gaming-cdn.com/images/products/7096/616x353/valorant-50eur-5350-riot-points-pc-cover.jpg?v=1768550762"
   },
-
   {
     id: "valorant-11000",
     name: "VALORANT - 11000 Riot Points",
@@ -428,7 +391,6 @@ const products = [
     platform: "PlayStation",
     image: "https://gaming-cdn.com/images/products/10689/616x353/playstation-plus-essential-1-mois-essential-1-month-playstation-4-playstation-5-jeu-playstation-store-europe-cover.jpg?v=1698221996"
   },
-
   {
     id: "ps-plus-extra-3-months",
     name: "PlayStation Plus Extra - 3 Mois",
@@ -438,7 +400,6 @@ const products = [
     platform: "PlayStation",
     image: "https://gaming-cdn.com/images/products/10693/616x353/playstation-plus-extra-3-mois-extra-3-months-playstation-4-playstation-5-jeu-playstation-store-europe-cover.jpg?v=1698221963"
   },
-
   {
     id: "ps-plus-essential-12-months",
     name: "PlayStation Plus Essential - 12 Mois",
@@ -463,7 +424,6 @@ const products = [
     platform: "PlayStation",
     image: "https://gaming-cdn.com/images/products/12767/616x353/carte-cadeau-playstation-store-10eur-playstation-4-playstation-5-playstation-store-cover.jpg?v=1752592890"
   },
-
   {
     id: "ps-store-20",
     name: "Carte cadeau PlayStation Store - 20 €",
@@ -473,7 +433,6 @@ const products = [
     platform: "PlayStation",
     image: "https://gaming-cdn.com/images/products/600/616x353/carte-cadeau-playstation-store-20eur-playstation-4-playstation-5-playstation-store-cover.jpg?v=1752592904"
   },
-
   {
     id: "ps-store-25",
     name: "Carte cadeau PlayStation Store - 25 €",
@@ -483,7 +442,6 @@ const products = [
     platform: "PlayStation",
     image: "https://gaming-cdn.com/images/products/12769/616x353/carte-cadeau-playstation-store-25eur-playstation-4-playstation-5-playstation-store-cover.jpg?v=1771838734"
   },
-
   {
     id: "ps-store-50",
     name: "Carte cadeau PlayStation Store - 50 €",
@@ -493,7 +451,6 @@ const products = [
     platform: "PlayStation",
     image: "https://gaming-cdn.com/images/products/602/616x353/carte-cadeau-playstation-store-50eur-playstation-4-playstation-5-playstation-store-cover.jpg?v=1752592909"
   },
-
   {
     id: "ps-store-60",
     name: "Carte cadeau PlayStation Store - 60 €",
@@ -503,7 +460,6 @@ const products = [
     platform: "PlayStation",
     image: "https://gaming-cdn.com/images/products/12772/616x353/carte-cadeau-playstation-store-60eur-playstation-5-playstation-4-playstation-store-cover.jpg?v=1764768707"
   },
-
   {
     id: "ps-store-80",
     name: "Carte cadeau PlayStation Store - 80 €",
@@ -513,7 +469,6 @@ const products = [
     platform: "PlayStation",
     image: "https://gaming-cdn.com/images/products/16625/616x353/carte-cadeau-playstation-store-80eur-playstation-5-playstation-4-playstation-store-cover.jpg?v=1752592846"
   },
-
   {
     id: "ps-store-100",
     name: "Carte cadeau PlayStation Store - 100 €",
@@ -523,7 +478,6 @@ const products = [
     platform: "PlayStation",
     image: "https://gaming-cdn.com/images/products/12774/616x353/carte-cadeau-playstation-store-100eur-playstation-5-playstation-4-playstation-store-cover.jpg?v=1752592914"
   },
-
   {
     id: "ps-store-150",
     name: "Carte cadeau PlayStation Store - 150 €",
@@ -536,7 +490,7 @@ const products = [
 
 
   // ============================================================
-  // XBOX LIVE
+  // XBOX
   // ============================================================
 
   {
@@ -548,7 +502,6 @@ const products = [
     platform: "Xbox",
     image: "https://gaming-cdn.com/images/products/298/616x353/carte-cadeau-xbox-live-5eur-eur5-card-xbox-one-xbox-series-x-s-pc-jeu-microsoft-store-europe-cover.jpg?v=1745397486"
   },
-
   {
     id: "xbox-live-10",
     name: "Carte cadeau XBOX Live - 10 €",
@@ -558,7 +511,6 @@ const products = [
     platform: "Xbox",
     image: "https://gaming-cdn.com/images/products/273/616x353/carte-cadeau-xbox-live-10eur-xbox-one-xbox-series-x-s-pc-microsoft-store-cover.jpg?v=1770462901"
   },
-
   {
     id: "xbox-live-15",
     name: "Carte cadeau XBOX Live - 15 €",
@@ -568,7 +520,6 @@ const products = [
     platform: "Xbox",
     image: "https://gaming-cdn.com/images/products/297/616x353/carte-cadeau-xbox-live-15eur-xbox-one-xbox-series-x-s-pc-microsoft-store-cover.jpg?v=1770462888"
   },
-
   {
     id: "xbox-live-20",
     name: "Carte cadeau XBOX Live - 20 €",
@@ -578,7 +529,6 @@ const products = [
     platform: "Xbox",
     image: "https://gaming-cdn.com/images/products/296/616x353/carte-cadeau-xbox-live-20eur-eur20-card-xbox-one-xbox-series-x-s-pc-jeu-microsoft-store-europe-cover.jpg?v=1745397290"
   },
-
   {
     id: "xbox-live-25",
     name: "Carte cadeau XBOX Live - 25 €",
@@ -588,7 +538,6 @@ const products = [
     platform: "Xbox",
     image: "https://gaming-cdn.com/images/products/274/616x353/carte-cadeau-xbox-live-25eur-xbox-one-xbox-series-x-s-pc-microsoft-store-cover.jpg?v=1770462896"
   },
-
   {
     id: "xbox-live-30",
     name: "Carte cadeau XBOX Live - 30 €",
@@ -598,7 +547,6 @@ const products = [
     platform: "Xbox",
     image: "https://gaming-cdn.com/images/products/299/616x353/carte-cadeau-xbox-live-30eur-eur30-card-xbox-one-xbox-series-x-s-pc-jeu-microsoft-store-europe-cover.jpg?v=1745399038"
   },
-
   {
     id: "xbox-live-50",
     name: "Carte cadeau XBOX Live - 50 €",
@@ -608,7 +556,6 @@ const products = [
     platform: "Xbox",
     image: "https://gaming-cdn.com/images/products/4/616x353/carte-cadeau-xbox-live-50eur-eur50-card-xbox-one-xbox-series-x-s-pc-jeu-microsoft-store-europe-cover.jpg?v=1745330443"
   },
-
   {
     id: "xbox-live-75",
     name: "Carte cadeau XBOX Live - 75 €",
@@ -618,7 +565,6 @@ const products = [
     platform: "Xbox",
     image: "https://gaming-cdn.com/images/products/11038/616x353/carte-cadeau-xbox-live-75eur-eur75-card-xbox-one-xbox-series-x-s-pc-jeu-microsoft-store-europe-cover.jpg?v=1745404395"
   },
-
   {
     id: "xbox-live-100",
     name: "Carte cadeau XBOX Live - 100 €",
@@ -643,7 +589,6 @@ const products = [
     platform: "Nintendo Switch",
     image: "https://gaming-cdn.com/images/products/2356/616x353/carte-nintendo-eshop-15eur-switch-switch-2-nintendo-eshop-cover.jpg?v=1750231868"
   },
-
   {
     id: "nintendo-eshop-25",
     name: "Carte Nintendo eShop - 25 €",
@@ -653,7 +598,6 @@ const products = [
     platform: "Nintendo Switch",
     image: "https://gaming-cdn.com/images/products/2355/616x353/carte-nintendo-eshop-25eur-eur25-card-switch-switch-2-jeu-nintendo-eshop-europe-cover.jpg?v=1739437306"
   },
-
   {
     id: "nintendo-eshop-50",
     name: "Carte Nintendo eShop - 50 €",
@@ -663,7 +607,6 @@ const products = [
     platform: "Nintendo Switch",
     image: "https://gaming-cdn.com/images/products/4931/616x353/carte-nintendo-eshop-50eur-eur50-card-switch-switch-2-jeu-nintendo-eshop-europe-cover.jpg?v=1739437320"
   },
-
   {
     id: "nintendo-eshop-75",
     name: "Carte Nintendo eShop - 75 €",
@@ -673,7 +616,6 @@ const products = [
     platform: "Nintendo Switch",
     image: "https://gaming-cdn.com/images/products/14096/616x353/carte-nintendo-eshop-75eur-eur75-card-switch-switch-2-jeu-nintendo-eshop-europe-cover.jpg?v=1739437367"
   },
-
   {
     id: "nintendo-eshop-100",
     name: "Carte Nintendo eShop - 100 €",
@@ -683,7 +625,6 @@ const products = [
     platform: "Nintendo Switch",
     image: "https://gaming-cdn.com/images/products/14097/616x353/carte-nintendo-eshop-100eur-switch-switch-2-nintendo-eshop-cover.jpg?v=1750243777"
   },
-
   {
     id: "nintendo-switch-online-pack-additionnel-12",
     name: "Abonnement Nintendo Switch Online + Pack additionnel - 12 Mois",
@@ -698,7 +639,7 @@ const products = [
 
 
 // ============================================================
-// CONFIGURATION
+// CONFIG
 // ============================================================
 
 const CART_STORAGE_KEY = "novaKeyShopCart";
@@ -706,13 +647,13 @@ const PAYPAL_USERNAME = "SH0PNOVA";
 
 
 // ============================================================
-// LOGOS
+// LOGOS DES CATÉGORIES UNIQUEMENT
 // ============================================================
 
 const categoryLogos = {
 
   Roblox:
-    "https://lens.usercontent.google.com/image?vsrid=CMWTyeuezJ6FyQEQAhgBIiQ2ZjQzYWEyZS01ZTFkLTQyMTUtYjMyZC1hMGQ2OGViYTk1MmYyggEiAmVuKC5CdAoubGZlLWR1bW15OjczYzc2NDVmLTk5ZjEtNGIwMS04OWNhLThlZGY0YzlmMWE2YhJCCkAvYm5zL3JhL2JvcmcvcmEvYm5zL2xlbnMtZnJvbnRlbmQtYXBpL3Byb2QubGVucy1mcm9udGVuZC1hcGkvMTA0WgQKAnJhOIWF7a-zlpcD&gsessionid=dpXIvtjXQUfTfeLwHkwMqes0qb5DYLTXJUWMbZZAii4RlpZU1eG2Rw",
+    "https://lens.usercontent.google.com/image?vsrid=CMWTyeuezJ6FyQEQAhgBIiQ2ZjQzYWEyZS01ZTFkLTQyMTUtYjMyZC1hMGQ2OGViYTk1MmYyggEiAmVuKC5CdAoubGZlLWR1bW15OjczYzc2NDVmLTk5ZjEtNGIwMS04OWNhLThlZGY0YzlmMWEyYhJCCkAvYm5zL3JhL2JvcmcvcmEvYm5zL2xlbnMtZnJvbnRlbmQtYXBpL3Byb2QubGVucy1mcm9udGVuZC1hcGkvMTA0WgQKAnJhOIWF7a-zlpcD&gsessionid=dpXIvtjXQUfTfeLwHkwMqes0qb5DYLTXJUWMbZZAii4RlpZU1eG2Rw",
 
   Fortnite:
     "https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_lettermark_logo.png?utm_source=fr.wikipedia.org&utm_campaign=index&utm_content=original",
@@ -737,9 +678,7 @@ const categoryLogos = {
 // ============================================================
 
 let cart = loadCart();
-
 let activeCategory = "Tous";
-
 let searchTerm = "";
 
 
@@ -794,7 +733,7 @@ const homeButton =
 
 
 // ============================================================
-// FORMAT PRIX
+// PRIX
 // ============================================================
 
 function formatPrice(price) {
@@ -810,7 +749,7 @@ function formatPrice(price) {
 
 
 // ============================================================
-// CHARGER PANIER
+// LOAD CART
 // ============================================================
 
 function loadCart() {
@@ -837,9 +776,6 @@ function loadCart() {
       item =>
         item &&
         typeof item.id === "string" &&
-        Number.isFinite(
-          Number(item.quantity)
-        ) &&
         Number(item.quantity) > 0
     );
 
@@ -856,7 +792,7 @@ function loadCart() {
 
 
 // ============================================================
-// SAUVEGARDER PANIER
+// SAVE CART
 // ============================================================
 
 function saveCart() {
@@ -879,7 +815,7 @@ function saveCart() {
 
 
 // ============================================================
-// LOGO CATÉGORIE
+// LOGO
 // ============================================================
 
 function getCategoryLogo(category) {
@@ -897,7 +833,7 @@ function getCategoryLogo(category) {
 
 
 // ============================================================
-// NOM CATÉGORIE
+// LABEL
 // ============================================================
 
 function getCategoryLabel(category) {
@@ -905,36 +841,24 @@ function getCategoryLabel(category) {
   const labels = {
 
     Tous: "Tous",
-
     Roblox: "Roblox",
-
     Fortnite: "Fortnite",
-
     VALORANT: "VALORANT",
-
     PlayStation: "PlayStation",
-
-    "PlayStation Plus":
-      "PlayStation Plus",
-
-    "PlayStation Store":
-      "PlayStation Store",
-
+    "PlayStation Plus": "PlayStation Plus",
+    "PlayStation Store": "PlayStation Store",
     Xbox: "Xbox",
-
     Nintendo: "Nintendo"
 
   };
 
-  return (
-    labels[category] ||
-    category
-  );
+  return labels[category] || category;
 }
 
 
 // ============================================================
 // CATÉGORIES
+// LOGOS UNIQUEMENT ICI
 // ============================================================
 
 function renderCategories() {
@@ -969,42 +893,35 @@ function renderCategories() {
 
       button.type = "button";
 
+
       button.className =
         "category" +
         (
-          category ===
-          activeCategory
+          category === activeCategory
             ? " active"
             : ""
         );
 
 
       const logo =
-        getCategoryLogo(category);
+        getCategoryLogo(
+          category
+        );
 
 
       const label =
-        getCategoryLabel(category);
+        getCategoryLabel(
+          category
+        );
 
 
-      if (category === "Tous") {
-
-        button.innerHTML = `
-          <span
-            class="category-logo category-logo-all"
-            aria-hidden="true"
-          >
-            ✨
-          </span>
-
-          <span>
-            ${escapeHTML(label)}
-          </span>
-        `;
-
-      } else if (logo) {
+      if (
+        category !== "Tous" &&
+        logo
+      ) {
 
         button.innerHTML = `
+
           <span class="category-logo">
             <img
               src="${escapeAttribute(logo)}"
@@ -1016,18 +933,21 @@ function renderCategories() {
           <span>
             ${escapeHTML(label)}
           </span>
+
         `;
 
       } else {
 
         button.innerHTML = `
-          <span class="category-logo category-logo-fallback">
+
+          <span class="category-logo category-logo-all">
             🎮
           </span>
 
           <span>
             ${escapeHTML(label)}
           </span>
+
         `;
       }
 
@@ -1040,7 +960,6 @@ function renderCategories() {
             category;
 
           renderCategories();
-
           renderProducts();
 
         }
@@ -1057,7 +976,7 @@ function renderCategories() {
 
 
 // ============================================================
-// FILTRER
+// FILTRES
 // ============================================================
 
 function getFilteredProducts() {
@@ -1105,7 +1024,9 @@ function getFilteredProducts() {
       : "default";
 
 
-  if (sort === "price-low") {
+  if (
+    sort === "price-low"
+  ) {
 
     filtered.sort(
       (a, b) =>
@@ -1140,7 +1061,8 @@ function getFilteredProducts() {
 
 
 // ============================================================
-// AFFICHER PRODUITS
+// PRODUITS
+// IMPORTANT : AUCUN LOGO ICI
 // ============================================================
 
 function renderProducts() {
@@ -1173,14 +1095,10 @@ function renderProducts() {
   ) {
 
     productsGrid.innerHTML = `
+
       <div class="empty">
 
-        <div
-          style="
-            font-size:42px;
-            margin-bottom:12px;
-          "
-        >
+        <div style="font-size:42px;">
           🔎
         </div>
 
@@ -1194,6 +1112,7 @@ function renderProducts() {
         </div>
 
       </div>
+
     `;
 
     return;
@@ -1213,29 +1132,12 @@ function renderProducts() {
         "product-card";
 
 
-      const categoryLogo =
-        getCategoryLogo(
-          product.category
-        );
-
-
-      const categoryHTML =
-        categoryLogo
-          ? `
-            <span class="product-category-logo">
-              <img
-                src="${escapeAttribute(
-                  categoryLogo
-                )}"
-                alt=""
-                loading="lazy"
-              >
-            </span>
-          `
-          : "";
+      // AUCUN LOGO DE CATÉGORIE
+      // DANS LES PRODUITS
 
 
       card.innerHTML = `
+
         <img
           class="product-image"
           src="${escapeAttribute(
@@ -1253,13 +1155,9 @@ function renderProducts() {
         <div class="product-body">
 
           <div class="product-category">
-            ${categoryHTML}
-
-            <span>
-              ${escapeHTML(
-                product.category
-              )}
-            </span>
+            ${escapeHTML(
+              product.category
+            )}
           </div>
 
           <div class="product-name">
@@ -1301,6 +1199,7 @@ function renderProducts() {
           </div>
 
         </div>
+
       `;
 
 
@@ -1335,7 +1234,7 @@ function renderProducts() {
 
 
 // ============================================================
-// AJOUTER AU PANIER
+// AJOUT PANIER
 // ============================================================
 
 function addToCart(productId) {
@@ -1374,8 +1273,8 @@ function addToCart(productId) {
 
 
   saveCart();
-
   updateCartUI();
+
 
   showToast(
     `${product.name} ajouté au panier`
@@ -1384,7 +1283,7 @@ function addToCart(productId) {
 
 
 // ============================================================
-// SUPPRIMER
+// SUPPRESSION
 // ============================================================
 
 function removeFromCart(
@@ -1399,7 +1298,6 @@ function removeFromCart(
 
 
   saveCart();
-
   updateCartUI();
 }
 
@@ -1425,9 +1323,7 @@ function changeQuantity(
   }
 
 
-  item.quantity =
-    Number(item.quantity) +
-    Number(amount);
+  item.quantity += amount;
 
 
   if (
@@ -1443,13 +1339,12 @@ function changeQuantity(
 
 
   saveCart();
-
   updateCartUI();
 }
 
 
 // ============================================================
-// ARTICLES COMPLETS
+// PRODUITS DU PANIER
 // ============================================================
 
 function getCartProducts() {
@@ -1508,7 +1403,7 @@ function getCartTotal() {
 
 
 // ============================================================
-// QUANTITÉ PANIER
+// QUANTITÉ TOTALE
 // ============================================================
 
 function getCartQuantity() {
@@ -1531,7 +1426,7 @@ function getCartQuantity() {
 
 
 // ============================================================
-// AFFICHER PANIER
+// RENDER PANIER
 // ============================================================
 
 function renderCart() {
@@ -1557,14 +1452,10 @@ function renderCart() {
   ) {
 
     cartItems.innerHTML = `
+
       <div class="empty">
 
-        <div
-          style="
-            font-size:42px;
-            margin-bottom:12px;
-          "
-        >
+        <div style="font-size:42px;">
           🛒
         </div>
 
@@ -1577,6 +1468,7 @@ function renderCart() {
         </div>
 
       </div>
+
     `;
 
   } else {
@@ -1595,6 +1487,7 @@ function renderCart() {
 
 
         item.innerHTML = `
+
           <img
             src="${escapeAttribute(
               product.image
@@ -1630,12 +1523,7 @@ function renderCart() {
                 −
               </button>
 
-              <span
-                style="
-                  min-width:25px;
-                  text-align:center;
-                "
-              >
+              <span>
                 ${product.quantity}
               </span>
 
@@ -1655,10 +1543,10 @@ function renderCart() {
             type="button"
             class="remove-item"
             data-action="remove"
-            title="Supprimer"
           >
             ✕
           </button>
+
         `;
 
 
@@ -1736,12 +1624,10 @@ function renderCart() {
   }
 
 
-  const total =
-    getCartTotal();
-
-
   cartTotal.textContent =
-    formatPrice(total);
+    formatPrice(
+      getCartTotal()
+    );
 
 
   checkoutButton.disabled =
@@ -1750,7 +1636,7 @@ function renderCart() {
 
 
 // ============================================================
-// UPDATE PANIER
+// UPDATE UI
 // ============================================================
 
 function updateCartUI() {
@@ -1759,6 +1645,7 @@ function updateCartUI() {
 
     cartCount.textContent =
       getCartQuantity();
+
   }
 
 
@@ -1916,7 +1803,7 @@ function showToast(
 
 
 // ============================================================
-// SÉCURITÉ HTML
+// SÉCURITÉ
 // ============================================================
 
 function escapeHTML(
@@ -1983,11 +1870,7 @@ if (sortSelect) {
 
   sortSelect.addEventListener(
     "change",
-    () => {
-
-      renderProducts();
-
-    }
+    renderProducts
   );
 }
 
@@ -2024,7 +1907,7 @@ if (drawerOverlay) {
 
 
 // ============================================================
-// PAYPAL
+// CHECKOUT
 // ============================================================
 
 if (checkoutButton) {
@@ -2057,7 +1940,7 @@ if (homeButton) {
 
 
 // ============================================================
-// ESCAPE
+// ESC
 // ============================================================
 
 document.addEventListener(
@@ -2077,89 +1960,95 @@ document.addEventListener(
 
 
 // ============================================================
-// CSS DES PETITS CERCLES
+// PETITS LOGOS DES CATÉGORIES
+// SEULEMENT LES CATÉGORIES
 // ============================================================
 
 const categoryLogoStyles =
-  document.createElement("style");
+  document.createElement(
+    "style"
+  );
+
 
 categoryLogoStyles.textContent = `
 
   .category {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 6px !important;
+    justify-content: center !important;
+    gap: 5px !important;
   }
 
+  /* CERCLE ULTRA PETIT */
+
   .category-logo {
-    width: 22px !important;
-    height: 22px !important;
-    min-width: 22px !important;
-    max-width: 22px !important;
-    min-height: 22px !important;
-    max-height: 22px !important;
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    max-width: 16px !important;
+    min-height: 16px !important;
+    max-height: 16px !important;
+
     border-radius: 50% !important;
     overflow: hidden !important;
+
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+
     background: #ffffff !important;
-    border: 1px solid rgba(255,255,255,0.18) !important;
+
+    border: 1px solid rgba(
+      255,
+      255,
+      255,
+      0.15
+    ) !important;
+
     flex-shrink: 0 !important;
+
     box-sizing: border-box !important;
   }
+
 
   .category-logo img {
     width: 100% !important;
     height: 100% !important;
+
     max-width: 100% !important;
     max-height: 100% !important;
+
     object-fit: contain !important;
     object-position: center !important;
+
     display: block !important;
-    padding: 3px !important;
+
+    padding: 2px !important;
+
     box-sizing: border-box !important;
   }
+
 
   .category-logo-all {
-    font-size: 11px !important;
-    background: rgba(255,255,255,0.08) !important;
+    font-size: 8px !important;
+    background: rgba(
+      255,
+      255,
+      255,
+      0.08
+    ) !important;
   }
 
-  .category-logo-fallback {
-    font-size: 11px !important;
-  }
 
-  .product-category {
-    display: flex !important;
-    align-items: center !important;
-    gap: 5px !important;
-  }
+  /* SUPPRESSION TOTALE DES ANCIENS LOGOS
+     DANS LES CARTES PRODUITS */
 
   .product-category-logo {
-    width: 18px !important;
-    height: 18px !important;
-    min-width: 18px !important;
-    max-width: 18px !important;
-    min-height: 18px !important;
-    max-height: 18px !important;
-    border-radius: 50% !important;
-    overflow: hidden !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: #ffffff !important;
-    flex-shrink: 0 !important;
+    display: none !important;
   }
 
-  .product-category-logo img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    object-position: center !important;
-    padding: 2px !important;
-    box-sizing: border-box !important;
-    display: block !important;
+  .product-category img {
+    display: none !important;
   }
 
 `;
@@ -2170,7 +2059,7 @@ document.head.appendChild(
 
 
 // ============================================================
-// INITIALISATION
+// INIT
 // ============================================================
 
 function init() {
