@@ -1,6 +1,6 @@
 // ============================================================
 // NOVA KEY SHOP
-// APP.JS
+// APP.JS COMPLET
 // ============================================================
 
 
@@ -10,13 +10,18 @@
 
 const products = [
 
+  // ==========================================================
+  // ROBLOX
+  // ==========================================================
+
   {
     id: "roblox-100",
     name: "Roblox Card - 100 ROBUX",
     price: 1.19,
     category: "Roblox",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/13504/616x353/roblox-card-100-robux-100-robux-pc-jeu-cover.jpg?v=1677828910"
+    image:
+      "https://gaming-cdn.com/images/products/13504/616x353/roblox-card-100-robux-100-robux-pc-jeu-cover.jpg?v=1677828910"
   },
 
   {
@@ -25,7 +30,8 @@ const products = [
     price: 3.95,
     category: "Roblox",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/18880/616x353/roblox-300-robux-300-robux-pc-jeu-europe-cover.jpg?v=1742283940"
+    image:
+      "https://gaming-cdn.com/images/products/18880/616x353/roblox-300-robux-300-robux-pc-jeu-europe-cover.jpg?v=1742283940"
   },
 
   {
@@ -34,7 +40,8 @@ const products = [
     price: 6.49,
     category: "Roblox",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/15265/616x353/roblox-card-400-robux-400-robux-pc-jeu-cover.jpg?v=1699346075"
+    image:
+      "https://gaming-cdn.com/images/products/15265/616x353/roblox-card-400-robux-400-robux-pc-jeu-cover.jpg?v=1699346075"
   },
 
   {
@@ -43,7 +50,8 @@ const products = [
     price: 9.59,
     category: "Roblox",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/23409/616x353/roblox-1500-robux-pc-cover.jpg?v=1785919991"
+    image:
+      "https://gaming-cdn.com/images/products/23409/616x353/roblox-1500-robux-pc-cover.jpg?v=1785919991"
   },
 
   {
@@ -52,7 +60,8 @@ const products = [
     price: 9.91,
     category: "Roblox",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/10437/616x353/roblox-800-robux-pc-cover.jpg?v=1767788892"
+    image:
+      "https://gaming-cdn.com/images/products/10437/616x353/roblox-800-robux-pc-cover.jpg?v=1767788892"
   },
 
   {
@@ -61,7 +70,8 @@ const products = [
     price: 10.49,
     category: "Roblox",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/22952/616x353/roblox-1000-robux-pc-cover.jpg?v=1781173294"
+    image:
+      "https://gaming-cdn.com/images/products/22952/616x353/roblox-1000-robux-pc-cover.jpg?v=1781173294"
   },
 
   {
@@ -70,7 +80,8 @@ const products = [
     price: 21.99,
     category: "Roblox",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/15168/616x353/roblox-card-2000-robux-pc-cover.jpg?v=1767788872"
+    image:
+      "https://gaming-cdn.com/images/products/15168/616x353/roblox-card-2000-robux-pc-cover.jpg?v=1767788872"
   },
 
   {
@@ -79,7 +90,8 @@ const products = [
     price: 23.99,
     category: "Roblox",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/7994/616x353/roblox-1700-robux-pc-cover.jpg?v=1767788932"
+    image:
+      "https://gaming-cdn.com/images/products/7994/616x353/roblox-1700-robux-pc-cover.jpg?v=1767788932"
   },
 
   {
@@ -88,7 +100,8 @@ const products = [
     price: 26.99,
     category: "Roblox",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/18652/616x353/roblox-2500-robux-2500-robux-pc-jeu-europe-cover.jpg?v=1740132827"
+    image:
+      "https://gaming-cdn.com/images/products/18652/616x353/roblox-2500-robux-2500-robux-pc-jeu-europe-cover.jpg?v=1740132827"
   },
 
   {
@@ -97,7 +110,8 @@ const products = [
     price: 34.99,
     category: "Roblox",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/18878/616x353/roblox-3000-robux-pc-cover.jpg?v=1767788845"
+    image:
+      "https://gaming-cdn.com/images/products/18878/616x353/roblox-3000-robux-pc-cover.jpg?v=1767788845"
   },
 
   {
@@ -106,7 +120,8 @@ const products = [
     price: 39.99,
     category: "Roblox",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/18879/616x353/roblox-4000-robux-pc-cover.jpg?v=1767788831"
+    image:
+      "https://gaming-cdn.com/images/products/18879/616x353/roblox-4000-robux-pc-cover.jpg?v=1767788831"
   },
 
   {
@@ -115,7 +130,8 @@ const products = [
     price: 44.99,
     category: "Roblox",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/7995/616x353/roblox-4500-robux-pc-cover.jpg?v=1767788921"
+    image:
+      "https://gaming-cdn.com/images/products/7995/616x353/roblox-4500-robux-pc-cover.jpg?v=1767788921"
   },
 
   {
@@ -124,7 +140,8 @@ const products = [
     price: 51.99,
     category: "Roblox",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/21588/616x353/roblox-5250-robux-pc-battle-net-cover.jpg?v=1770902730"
+    image:
+      "https://gaming-cdn.com/images/products/21588/616x353/roblox-5250-robux-pc-battle-net-cover.jpg?v=1770902730"
   },
 
   {
@@ -133,7 +150,193 @@ const products = [
     price: 89.99,
     category: "Roblox",
     platform: "PC",
-    image: "https://gaming-cdn.com/images/products/10435/616x353/roblox-10000-robux-pc-cover.jpg?v=1767788900"
+    image:
+      "https://gaming-cdn.com/images/products/10435/616x353/roblox-10000-robux-pc-cover.jpg?v=1767788900"
+  },
+
+
+  // ==========================================================
+  // FORTNITE
+  // ==========================================================
+
+  {
+    id: "fortnite-legendes-fraiches",
+    name: "Fortnite Pack Légendes fraîches + 1000 V-Bucks",
+    price: 6.89,
+    category: "Fortnite",
+    platform: "Xbox",
+    image:
+      "https://gaming-cdn.com/images/products/9584/616x353/fortnite-pack-legendes-fraiches-1000-v-bucks-xbox-one-xbox-series-x-s-microsoft-store-cover.jpg?v=1781175723"
+  },
+
+  {
+    id: "fortnite-cobalt-star",
+    name: "Fortnite Cobalt Star Bundle + 1000 V-Bucks",
+    price: 15.99,
+    category: "Fortnite",
+    platform: "PlayStation 5",
+    image:
+      "https://gaming-cdn.com/images/products/18008/616x353/fortnite-cobalt-star-bundle-1000-v-bucks-playstation-5-playstation-store-cover.jpg?v=1781184809"
+  },
+
+  {
+    id: "fortnite-flowering-chaos",
+    name: "Fortnite Flowering Chaos + 1000 V-Bucks",
+    price: 12.69,
+    category: "Fortnite",
+    platform: "PlayStation 5",
+    image:
+      "https://gaming-cdn.com/images/products/21199/616x353/fortnite-flowering-chaos-1000-v-bucks-playstation-5-playstation-store-cover.jpg?v=1781184757"
+  },
+
+  {
+    id: "fortnite-legendes-animees",
+    name: "Fortnite - Pack Légendes animées",
+    price: 10.99,
+    category: "Fortnite",
+    platform: "PlayStation 5",
+    image:
+      "https://gaming-cdn.com/images/products/12592/616x353/fortnite-pack-legendes-animees-playstation-5-jeu-playstation-store-europe-cover.jpg?v=1748419162"
+  },
+
+  {
+    id: "fortnite-darkfire-ice",
+    name: "Fortnite - Darkfire & Ice Bundle + 1000 V-Bucks",
+    price: 17.19,
+    category: "Fortnite",
+    platform: "Nintendo Switch",
+    image:
+      "https://gaming-cdn.com/images/products/20656/616x353/fortnite-darkfire-ice-bundle-1000-v-bucks-switch-nintendo-eshop-cover.jpg?v=1781184777"
+  },
+
+  {
+    id: "fortnite-transformers",
+    name: "Fortnite - Transformers Pack + 1000 V-Bucks",
+    price: 15.99,
+    category: "Fortnite",
+    platform: "PlayStation 4",
+    image:
+      "https://gaming-cdn.com/images/products/14693/616x353/fortnite-transformers-pack-1000-v-bucks-playstation-4-playstation-store-cover.jpg?v=1781185876"
+  },
+
+  {
+    id: "fortnite-darkfire",
+    name: "Fortnite - Darkfire Bundle",
+    price: 19.99,
+    category: "Fortnite",
+    platform: "Nintendo Switch",
+    image:
+      "https://gaming-cdn.com/images/products/5733/616x353/fortnite-darkfire-bundle-switch-jeu-nintendo-eshop-europe-cover.jpg?v=1730385293"
+  },
+
+  {
+    id: "fortnite-5000-vbucks",
+    name: "Fortnite - 5000 V-Bucks Gift Card (Epic Games)",
+    price: 36.20,
+    category: "Fortnite",
+    platform: "PC",
+    image:
+      "https://gaming-cdn.com/images/products/8158/616x353/fortnite-5000-v-bucks-gift-card-5000-v-bucks-pc-jeu-epic-games-cover.jpg?v=1699365704"
+  },
+
+  {
+    id: "fortnite-batman",
+    name: "Fortnite - The Batman Who Laughs Outfit",
+    price: 8.99,
+    category: "Fortnite",
+    platform: "PC",
+    image:
+      "https://gaming-cdn.com/images/products/9954/616x353/fortnite-the-batman-who-laughs-outfit-pc-jeu-epic-games-cover.jpg?v=1666177682"
+  },
+
+  {
+    id: "fortnite-lumiere-dechue",
+    name: "Fortnite - Pack Lumière déchue",
+    price: 3.60,
+    category: "Fortnite",
+    platform: "Xbox",
+    image:
+      "https://gaming-cdn.com/images/products/9848/616x353/fortnite-pack-lumiere-dechue-xbox-one-xbox-series-x-s-jeu-microsoft-store-europe-cover.jpg?v=1739374928"
+  },
+
+  {
+    id: "fortnite-catwoman",
+    name: "Fortnite - Catwoman's Grappling Claw Pickaxe",
+    price: 8.99,
+    category: "Fortnite",
+    platform: "PC",
+    image:
+      "https://gaming-cdn.com/images/products/9608/616x353/fortnite-catwoman-s-grappling-claw-pickaxe-pc-jeu-epic-games-cover.jpg?v=1702478626"
+  },
+
+  {
+    id: "fortnite-1000-vbucks",
+    name: "Fortnite - 1000 V-Bucks Gift Card (Epic Games)",
+    price: 8.59,
+    category: "Fortnite",
+    platform: "PC",
+    image:
+      "https://gaming-cdn.com/images/products/8156/616x353/fortnite-1000-v-bucks-gift-card-1000-v-bucks-pc-jeu-epic-games-cover.jpg?v=1701258416"
+  },
+
+  {
+    id: "fortnite-2800-vbucks",
+    name: "Fortnite - 2800 V-Bucks Gift Card (Epic Games)",
+    price: 22.69,
+    category: "Fortnite",
+    platform: "PC",
+    image:
+      "https://gaming-cdn.com/images/products/8157/616x353/fortnite-2800-v-bucks-gift-card-2800-v-bucks-pc-jeu-epic-games-cover.jpg?v=1716909867"
+  },
+
+  {
+    id: "fortnite-iris",
+    name: "Fortnite - Pack Iris + 600 V-Bucks",
+    price: 2.77,
+    category: "Fortnite",
+    platform: "Xbox",
+    image:
+      "https://gaming-cdn.com/images/products/6828/616x353/fortnite-pack-iris-600-v-bucks-xbox-one-xbox-one-jeu-microsoft-store-europe-cover.jpg?v=1736957194"
+  },
+
+  {
+    id: "fortnite-13500-vbucks",
+    name: "Fortnite - 13500 V-Bucks Gift Card (Epic Games)",
+    price: 82.99,
+    category: "Fortnite",
+    platform: "PC",
+    image:
+      "https://gaming-cdn.com/images/products/10451/616x353/fortnite-13500-v-bucks-gift-card-13500-v-bucks-pc-jeu-epic-games-cover.jpg?v=1701258558"
+  },
+
+  {
+    id: "epic-37-fortnite",
+    name: "Epic Games Gift Card 37 EUR - Fortnite 4500 V-Bucks",
+    price: 35.89,
+    category: "Fortnite",
+    platform: "PC",
+    image:
+      "https://gaming-cdn.com/images/products/22600/616x353/epic-games-gift-card-37eur-fortnite-4500-v-bucks-gift-card-epic-games-cover.jpg?v=1781614127"
+  },
+
+  {
+    id: "epic-23-fortnite",
+    name: "Epic Games Gift Card 23 EUR - Fortnite 2400 V-Bucks",
+    price: 22.31,
+    category: "Fortnite",
+    platform: "PC",
+    image:
+      "https://gaming-cdn.com/images/products/22599/616x353/epic-games-gift-card-23eur-fortnite-2400-v-bucks-gift-card-epic-games-cover.jpg?v=1781614121"
+  },
+
+  {
+    id: "epic-90-fortnite",
+    name: "Epic Games Gift Card 90 EUR - Fortnite 12500 V-Bucks",
+    price: 87.30,
+    category: "Fortnite",
+    platform: "PC",
+    image:
+      "https://gaming-cdn.com/images/products/22586/616x353/epic-games-gift-card-90eur-fortnite-12500-v-bucks-gift-card-epic-games-cover.jpg?v=1778169070"
   }
 
 ];
@@ -143,9 +346,11 @@ const products = [
 // CONFIGURATION
 // ============================================================
 
-const CART_STORAGE_KEY = "novaKeyShopCart";
+const CART_STORAGE_KEY =
+  "novaKeyShopCart";
 
-const PAYPAL_USERNAME = "SH0PNOVA";
+const PAYPAL_USERNAME =
+  "SH0PNOVA";
 
 
 // ============================================================
@@ -164,49 +369,79 @@ let searchTerm = "";
 // ============================================================
 
 const productsGrid =
-  document.getElementById("productsGrid");
+  document.getElementById(
+    "productsGrid"
+  );
 
 const categoriesContainer =
-  document.getElementById("categories");
+  document.getElementById(
+    "categories"
+  );
 
 const searchInput =
-  document.getElementById("searchInput");
+  document.getElementById(
+    "searchInput"
+  );
 
 const sortSelect =
-  document.getElementById("sortSelect");
+  document.getElementById(
+    "sortSelect"
+  );
 
 const resultCount =
-  document.getElementById("resultCount");
+  document.getElementById(
+    "resultCount"
+  );
 
 const cartButton =
-  document.getElementById("cartButton");
+  document.getElementById(
+    "cartButton"
+  );
 
 const cartCount =
-  document.getElementById("cartCount");
+  document.getElementById(
+    "cartCount"
+  );
 
 const cartDrawer =
-  document.getElementById("cartDrawer");
+  document.getElementById(
+    "cartDrawer"
+  );
 
 const drawerOverlay =
-  document.getElementById("drawerOverlay");
+  document.getElementById(
+    "drawerOverlay"
+  );
 
 const closeCartButton =
-  document.getElementById("closeCart");
+  document.getElementById(
+    "closeCart"
+  );
 
 const cartItems =
-  document.getElementById("cartItems");
+  document.getElementById(
+    "cartItems"
+  );
 
 const cartTotal =
-  document.getElementById("cartTotal");
+  document.getElementById(
+    "cartTotal"
+  );
 
 const checkoutButton =
-  document.getElementById("checkoutButton");
+  document.getElementById(
+    "checkoutButton"
+  );
 
 const toastContainer =
-  document.getElementById("toastContainer");
+  document.getElementById(
+    "toastContainer"
+  );
 
 const homeButton =
-  document.getElementById("homeButton");
+  document.getElementById(
+    "homeButton"
+  );
 
 
 // ============================================================
@@ -226,7 +461,7 @@ function formatPrice(price) {
 
 
 // ============================================================
-// CHARGER LE PANIER
+// CHARGER PANIER
 // ============================================================
 
 function loadCart() {
@@ -254,7 +489,7 @@ function loadCart() {
   } catch (error) {
 
     console.error(
-      "Impossible de charger le panier :",
+      "Erreur chargement panier :",
       error
     );
 
@@ -264,7 +499,7 @@ function loadCart() {
 
 
 // ============================================================
-// SAUVEGARDER LE PANIER
+// SAUVEGARDER PANIER
 // ============================================================
 
 function saveCart() {
@@ -279,7 +514,7 @@ function saveCart() {
   } catch (error) {
 
     console.error(
-      "Impossible de sauvegarder le panier :",
+      "Erreur sauvegarde panier :",
       error
     );
   }
@@ -296,31 +531,56 @@ function renderCategories() {
     "Tous",
     ...new Set(
       products.map(
-        product => product.category
+        product =>
+          product.category
       )
     )
   ];
 
-  categoriesContainer.innerHTML = "";
+  categoriesContainer.innerHTML =
+    "";
 
   categories.forEach(
     category => {
 
       const button =
-        document.createElement("button");
+        document.createElement(
+          "button"
+        );
 
       button.className =
         "category" +
         (
-          category === activeCategory
+          category ===
+          activeCategory
             ? " active"
             : ""
         );
 
-      button.textContent =
-        category === "Tous"
-          ? "✨ Tous"
-          : category;
+      if (category === "Tous") {
+
+        button.textContent =
+          "✨ Tous";
+
+      } else if (
+        category === "Roblox"
+      ) {
+
+        button.textContent =
+          "🎮 Roblox";
+
+      } else if (
+        category === "Fortnite"
+      ) {
+
+        button.textContent =
+          "🟣 Fortnite";
+
+      } else {
+
+        button.textContent =
+          category;
+      }
 
       button.addEventListener(
         "click",
@@ -345,7 +605,7 @@ function renderCategories() {
 
 
 // ============================================================
-// FILTRER LES PRODUITS
+// FILTRER
 // ============================================================
 
 function getFilteredProducts() {
@@ -392,14 +652,18 @@ function getFilteredProducts() {
         a.price - b.price
     );
 
-  } else if (sort === "price-high") {
+  } else if (
+    sort === "price-high"
+  ) {
 
     filtered.sort(
       (a, b) =>
         b.price - a.price
     );
 
-  } else if (sort === "name") {
+  } else if (
+    sort === "name"
+  ) {
 
     filtered.sort(
       (a, b) =>
@@ -416,7 +680,7 @@ function getFilteredProducts() {
 
 
 // ============================================================
-// AFFICHER LES PRODUITS
+// AFFICHER PRODUITS
 // ============================================================
 
 function renderProducts() {
@@ -424,7 +688,8 @@ function renderProducts() {
   const filtered =
     getFilteredProducts();
 
-  productsGrid.innerHTML = "";
+  productsGrid.innerHTML =
+    "";
 
 
   resultCount.textContent =
@@ -435,7 +700,9 @@ function renderProducts() {
     }`;
 
 
-  if (filtered.length === 0) {
+  if (
+    filtered.length === 0
+  ) {
 
     productsGrid.innerHTML = `
       <div class="empty">
@@ -543,16 +810,20 @@ function renderProducts() {
 
       addButton.addEventListener(
         "click",
-        () =>
+        () => {
+
           addToCart(
             product.id
-          )
+          );
+
+        }
       );
 
 
       productsGrid.appendChild(
         card
       );
+
     }
   );
 }
@@ -593,7 +864,6 @@ function addToCart(productId) {
       id: product.id,
       quantity: 1
     });
-
   }
 
 
@@ -608,10 +878,12 @@ function addToCart(productId) {
 
 
 // ============================================================
-// SUPPRIMER DU PANIER
+// SUPPRIMER
 // ============================================================
 
-function removeFromCart(productId) {
+function removeFromCart(
+  productId
+) {
 
   cart =
     cart.filter(
@@ -626,7 +898,7 @@ function removeFromCart(productId) {
 
 
 // ============================================================
-// MODIFIER QUANTITÉ
+// QUANTITÉ
 // ============================================================
 
 function changeQuantity(
@@ -666,7 +938,7 @@ function changeQuantity(
 
 
 // ============================================================
-// PRODUITS DU PANIER
+// ARTICLES COMPLETS
 // ============================================================
 
 function getCartProducts() {
@@ -698,7 +970,7 @@ function getCartProducts() {
 
 
 // ============================================================
-// TOTAL DU PANIER
+// TOTAL
 // ============================================================
 
 function getCartTotal() {
@@ -708,17 +980,22 @@ function getCartTotal() {
       (
         total,
         product
-      ) =>
-        total +
-        product.price *
-        product.quantity,
+      ) => {
+
+        return (
+          total +
+          product.price *
+          product.quantity
+        );
+
+      },
       0
     );
 }
 
 
 // ============================================================
-// QUANTITÉ TOTALE
+// QUANTITÉ PANIER
 // ============================================================
 
 function getCartQuantity() {
@@ -727,16 +1004,21 @@ function getCartQuantity() {
     (
       total,
       item
-    ) =>
-      total +
-      item.quantity,
+    ) => {
+
+      return (
+        total +
+        item.quantity
+      );
+
+    },
     0
   );
 }
 
 
 // ============================================================
-// AFFICHER LE PANIER
+// AFFICHER PANIER
 // ============================================================
 
 function renderCart() {
@@ -745,7 +1027,8 @@ function renderCart() {
     getCartProducts();
 
 
-  cartItems.innerHTML = "";
+  cartItems.innerHTML =
+    "";
 
 
   if (
@@ -814,31 +1097,17 @@ function renderCart() {
               × ${product.quantity}
             </div>
 
-            <div
-              style="
-                display:flex;
-                gap:6px;
-                margin-top:8px;
-              "
-            >
+            <div class="quantity-controls">
 
               <button
-                class="close-btn"
-                style="
-                  width:28px;
-                  height:28px;
-                "
+                class="quantity-btn"
                 data-action="minus"
               >
                 −
               </button>
 
               <button
-                class="close-btn"
-                style="
-                  width:28px;
-                  height:28px;
-                "
+                class="quantity-btn"
                 data-action="plus"
               >
                 +
@@ -864,11 +1133,14 @@ function renderCart() {
           )
           .addEventListener(
             "click",
-            () =>
+            () => {
+
               changeQuantity(
                 product.id,
                 -1
-              )
+              );
+
+            }
           );
 
 
@@ -878,11 +1150,14 @@ function renderCart() {
           )
           .addEventListener(
             "click",
-            () =>
+            () => {
+
               changeQuantity(
                 product.id,
                 1
-              )
+              );
+
+            }
           );
 
 
@@ -892,10 +1167,13 @@ function renderCart() {
           )
           .addEventListener(
             "click",
-            () =>
+            () => {
+
               removeFromCart(
                 product.id
-              )
+              );
+
+            }
           );
 
 
@@ -922,7 +1200,7 @@ function renderCart() {
 
 
 // ============================================================
-// METTRE À JOUR L'INTERFACE DU PANIER
+// UPDATE PANIER
 // ============================================================
 
 function updateCartUI() {
@@ -935,7 +1213,7 @@ function updateCartUI() {
 
 
 // ============================================================
-// OUVRIR LE PANIER
+// OUVRIR PANIER
 // ============================================================
 
 function openCart() {
@@ -954,7 +1232,7 @@ function openCart() {
 
 
 // ============================================================
-// FERMER LE PANIER
+// FERMER PANIER
 // ============================================================
 
 function closeCart() {
@@ -973,7 +1251,7 @@ function closeCart() {
 
 
 // ============================================================
-// PAIEMENT PAYPAL
+// PAYPAL
 // ============================================================
 
 function payWithPayPal() {
@@ -982,7 +1260,9 @@ function payWithPayPal() {
     getCartTotal();
 
 
-  if (total <= 0) {
+  if (
+    total <= 0
+  ) {
 
     showToast(
       "Ton panier est vide."
@@ -995,11 +1275,11 @@ function payWithPayPal() {
   /*
    * Exemple :
    *
-   * total = 31.48
+   * Total = 15.99 €
    *
-   * URL :
+   * URL générée :
    *
-   * https://paypal.me/SH0PNOVA/31.48
+   * https://paypal.me/SH0PNOVA/15.99
    */
 
 
@@ -1020,7 +1300,9 @@ function payWithPayPal() {
 // TOAST
 // ============================================================
 
-function showToast(message) {
+function showToast(
+  message
+) {
 
   const toast =
     document.createElement(
@@ -1050,8 +1332,11 @@ function showToast(message) {
 
 
       setTimeout(
-        () =>
-          toast.remove(),
+        () => {
+
+          toast.remove();
+
+        },
         250
       );
 
@@ -1065,7 +1350,9 @@ function showToast(message) {
 // SÉCURITÉ HTML
 // ============================================================
 
-function escapeHTML(value) {
+function escapeHTML(
+  value
+) {
 
   return String(value)
     .replaceAll(
@@ -1091,7 +1378,9 @@ function escapeHTML(value) {
 }
 
 
-function escapeAttribute(value) {
+function escapeAttribute(
+  value
+) {
 
   return escapeHTML(value);
 }
@@ -1109,6 +1398,7 @@ searchInput.addEventListener(
       event.target.value.trim();
 
     renderProducts();
+
   }
 );
 
@@ -1122,12 +1412,13 @@ sortSelect.addEventListener(
   () => {
 
     renderProducts();
+
   }
 );
 
 
 // ============================================================
-// OUVRIR PANIER
+// PANIER
 // ============================================================
 
 cartButton.addEventListener(
@@ -1135,10 +1426,6 @@ cartButton.addEventListener(
   openCart
 );
 
-
-// ============================================================
-// FERMER PANIER
-// ============================================================
 
 closeCartButton.addEventListener(
   "click",
@@ -1153,7 +1440,7 @@ drawerOverlay.addEventListener(
 
 
 // ============================================================
-// BOUTON PAYPAL
+// PAYPAL
 // ============================================================
 
 checkoutButton.addEventListener(
@@ -1163,7 +1450,7 @@ checkoutButton.addEventListener(
 
 
 // ============================================================
-// BOUTON ACCUEIL
+// ACCUEIL
 // ============================================================
 
 homeButton.addEventListener(
@@ -1180,7 +1467,7 @@ homeButton.addEventListener(
 
 
 // ============================================================
-// TOUCHE ESCAPE
+// ESCAPE
 // ============================================================
 
 document.addEventListener(
@@ -1194,6 +1481,7 @@ document.addEventListener(
       closeCart();
 
     }
+
   }
 );
 
