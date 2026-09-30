@@ -6,11 +6,6 @@
 
   <title>NOVA KEY SHOP</title>
 
-  <meta
-    name="description"
-    content="NOVA KEY SHOP - Jeux, cartes cadeaux et contenus numériques."
-  >
-
   <style>
     * {
       box-sizing: border-box;
@@ -35,8 +30,16 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at 20% 0%, rgba(124,60,255,0.16), transparent 30%),
-        radial-gradient(circle at 90% 20%, rgba(82,44,180,0.12), transparent 28%),
+        radial-gradient(
+          circle at 20% 0%,
+          rgba(124,60,255,0.16),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(82,44,180,0.12),
+          transparent 28%
+        ),
         var(--bg);
       color: var(--text);
       min-height: 100vh;
@@ -68,18 +71,18 @@
       top: 0;
       z-index: 50;
       backdrop-filter: blur(18px);
-      background: rgba(7,7,11,0.86);
+      background: rgba(7,7,11,0.88);
       border-bottom: 1px solid var(--border);
     }
 
     .navbar {
       max-width: 1400px;
       margin: auto;
-      height: 76px;
-      padding: 0 24px;
+      min-height: 76px;
+      padding: 12px 24px;
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 20px;
     }
 
     .logo {
@@ -88,7 +91,6 @@
       gap: 10px;
       font-size: 21px;
       font-weight: 900;
-      letter-spacing: -0.5px;
       white-space: nowrap;
     }
 
@@ -98,8 +100,13 @@
       border-radius: 11px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, #7c3cff, #a96dff);
-      box-shadow: 0 0 28px rgba(124,60,255,0.4);
+      background: linear-gradient(
+        135deg,
+        #7c3cff,
+        #a96dff
+      );
+      box-shadow:
+        0 0 28px rgba(124,60,255,0.4);
     }
 
     .search {
@@ -121,7 +128,8 @@
 
     .search input:focus {
       border-color: rgba(124,60,255,0.7);
-      box-shadow: 0 0 0 3px rgba(124,60,255,0.1);
+      box-shadow:
+        0 0 0 3px rgba(124,60,255,0.1);
     }
 
     .search-icon {
@@ -188,8 +196,16 @@
       padding: 55px;
       position: relative;
       background:
-        radial-gradient(circle at 85% 30%, rgba(124,60,255,0.34), transparent 30%),
-        linear-gradient(135deg, #11111a, #09090e);
+        radial-gradient(
+          circle at 85% 30%,
+          rgba(124,60,255,0.34),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #11111a,
+          #09090e
+        );
       display: flex;
       align-items: center;
     }
@@ -304,22 +320,33 @@
 
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
       gap: 18px;
     }
 
     .product-card {
-      background: linear-gradient(180deg, #12121b, #0e0e15);
+      background:
+        linear-gradient(
+          180deg,
+          #12121b,
+          #0e0e15
+        );
       border: 1px solid var(--border);
       border-radius: 17px;
       overflow: hidden;
-      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      transition:
+        transform 0.2s,
+        border-color 0.2s,
+        box-shadow 0.2s;
     }
 
     .product-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(124,60,255,0.45);
-      box-shadow: 0 18px 45px rgba(0,0,0,0.28);
+      border-color:
+        rgba(124,60,255,0.45);
+      box-shadow:
+        0 18px 45px rgba(0,0,0,0.28);
     }
 
     .product-image {
@@ -465,7 +492,8 @@
 
     .cart-item {
       display: grid;
-      grid-template-columns: 70px 1fr auto;
+      grid-template-columns:
+        70px 1fr auto;
       gap: 12px;
       align-items: center;
       padding: 12px;
@@ -492,6 +520,21 @@
       margin-top: 5px;
       font-size: 12px;
       color: #aaaabd;
+    }
+
+    .quantity-controls {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .quantity-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #15151f;
+      color: white;
     }
 
     .remove-item {
@@ -524,17 +567,36 @@
 
     .checkout-btn {
       width: 100%;
-      height: 48px;
+      min-height: 50px;
       border: 0;
       border-radius: 12px;
       color: white;
-      background: linear-gradient(135deg, #7c3cff, #955cff);
+      background:
+        linear-gradient(
+          135deg,
+          #ffc439,
+          #f5a800
+        );
       font-weight: 900;
+      transition: 0.2s;
+    }
+
+    .checkout-btn:hover:not(:disabled) {
+      transform: translateY(-1px);
+      filter: brightness(1.06);
     }
 
     .checkout-btn:disabled {
       opacity: 0.4;
       cursor: not-allowed;
+    }
+
+    .paypal-info {
+      color: #77778a;
+      font-size: 11px;
+      line-height: 1.5;
+      text-align: center;
+      margin-top: 10px;
     }
 
     .toast-container {
@@ -552,7 +614,8 @@
       border-radius: 12px;
       background: #181820;
       border: 1px solid var(--border);
-      box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+      box-shadow:
+        0 12px 35px rgba(0,0,0,0.35);
       font-size: 13px;
       animation: toastIn 0.25s ease;
     }
@@ -562,6 +625,7 @@
         transform: translateY(15px);
         opacity: 0;
       }
+
       to {
         transform: translateY(0);
         opacity: 1;
@@ -570,17 +634,13 @@
 
     @media (max-width: 1050px) {
       .products-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .navbar {
-        gap: 12px;
+        grid-template-columns:
+          repeat(3, minmax(0, 1fr));
       }
     }
 
     @media (max-width: 760px) {
       .navbar {
-        height: auto;
         min-height: 70px;
         flex-wrap: wrap;
         padding: 12px 15px;
@@ -605,7 +665,8 @@
       }
 
       .products-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
         gap: 12px;
       }
 
@@ -659,6 +720,7 @@
 
       <div class="search">
         <span class="search-icon">⌕</span>
+
         <input
           id="searchInput"
           type="search"
@@ -668,6 +730,7 @@
       </div>
 
       <div class="nav-actions">
+
         <button
           class="nav-btn"
           id="homeButton"
@@ -682,6 +745,7 @@
           title="Panier"
         >
           🛒
+
           <span
             class="cart-count"
             id="cartCount"
@@ -689,6 +753,7 @@
             0
           </span>
         </button>
+
       </div>
 
     </nav>
@@ -697,6 +762,7 @@
   <main>
 
     <section class="hero">
+
       <div class="hero-content">
 
         <div class="hero-badge">
@@ -709,11 +775,13 @@
         </h1>
 
         <p>
-          Retrouve tes jeux, cartes cadeaux et contenus numériques
-          dans une boutique simple, rapide et moderne.
+          Retrouve tes jeux, cartes cadeaux,
+          V-Bucks, Robux et contenus numériques
+          dans une boutique simple et rapide.
         </p>
 
       </div>
+
     </section>
 
     <div class="section-head">
@@ -738,10 +806,21 @@
         class="sort"
         id="sortSelect"
       >
-        <option value="default">Trier : recommandé</option>
-        <option value="price-low">Prix croissant</option>
-        <option value="price-high">Prix décroissant</option>
-        <option value="name">Nom A-Z</option>
+        <option value="default">
+          Trier : recommandé
+        </option>
+
+        <option value="price-low">
+          Prix croissant
+        </option>
+
+        <option value="price-high">
+          Prix décroissant
+        </option>
+
+        <option value="name">
+          Nom A-Z
+        </option>
       </select>
 
     </div>
@@ -768,7 +847,10 @@
   >
 
     <div class="drawer-head">
-      <h2>🛒 Ton panier</h2>
+
+      <h2>
+        🛒 Ton panier
+      </h2>
 
       <button
         class="close-btn"
@@ -776,6 +858,7 @@
       >
         ✕
       </button>
+
     </div>
 
     <div
@@ -786,7 +869,10 @@
     <div class="drawer-bottom">
 
       <div class="total-line">
-        <span>Total</span>
+
+        <span>
+          Total
+        </span>
 
         <span
           class="total"
@@ -794,6 +880,7 @@
         >
           0,00 €
         </span>
+
       </div>
 
       <button
@@ -801,8 +888,13 @@
         id="checkoutButton"
         disabled
       >
-        Continuer
+        💳 Payer avec PayPal
       </button>
+
+      <div class="paypal-info">
+        Le montant du panier sera automatiquement
+        ajouté à ton lien PayPal.
+      </div>
 
     </div>
 
