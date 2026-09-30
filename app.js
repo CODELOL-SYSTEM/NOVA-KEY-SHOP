@@ -485,7 +485,7 @@ const products = [
     category: "PlayStation Store",
     type: "Carte cadeau",
     platform: "PlayStation",
-    image: "https://gaming-cdn.com/images/products/21246/616x353/carte-cadeau-playstation-store-150eur-playstation-5-playstation-store-cover.jpg?v=1764260665"
+    image: "https://gaming-cdn.com/images/products/21246/616x353/carte-cadeau-playstation-store-150eur-playstation-5-playstation-4-playstation-store-cover.jpg?v=1764260665"
   },
 
 
@@ -642,33 +642,69 @@ const products = [
 // CONFIGURATION
 // ============================================================
 
-const CART_STORAGE_KEY =
-  "novaKeyShopCart";
+const CART_STORAGE_KEY = "novaKeyShopCart";
 
-const PAYPAL_USERNAME =
-  "SH0PNOVA";
+const PAYPAL_USERNAME = "SH0PNOVA";
 
 
 // ============================================================
 // DISCORD
 // ============================================================
-// IMPORTANT :
-// DISCORD_BOT_ID = ID DU BOT POUR TON AUTHENTIFICATION
-// DISCORD_WEBHOOK_URL = WEBHOOK QUI REÇOIT LES COMMANDES
 //
-// NE METS JAMAIS LE BOT TOKEN DANS CE FICHIER.
+// IMPORTANT
+//
+// BOT ID = identifiant public de ton application Discord.
+// WEBHOOK = reçoit automatiquement les commandes.
+//
+// NE METS JAMAIS LE TOKEN DU BOT ICI.
+//
+// Pour l'authentification Discord réelle, configure aussi
+// DISCORD_OAUTH_URL avec ton URL OAuth2 Discord.
 // ============================================================
 
-const DISCORD_BOT_ID =
-  "1554855867973771354";
+const DISCORD_BOT_ID = "1554855867973771354";
 
-const DISCORD_WEBHOOK_URL =
-  "https://discord.com/api/webhooks/1554854634986938398/VnSuCzFU5YRfcRVIqX-Uu2PYtWxgYKI9Zsbv12VmERRQGOP_hhLsbLGw80CNEbhwtzQh";
+const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1554854634986938398/VnSuCzFU5YRfcRVIqX-Uu2PYtWxgYKI9Zsbv12VmERRQGOP_hhLsbLGw80CNEbhwtzQh";
+
+
+// ------------------------------------------------------------
+// URL DU SERVEUR DISCORD
+// ------------------------------------------------------------
+//
+// Mets ici le lien d'invitation de ton serveur.
+// Exemple : https://discord.gg/xxxxxx
+//
+// NE METS PAS LE WEBHOOK ICI.
+// ------------------------------------------------------------
+
+const DISCORD_SERVER_URL = "https://discord.gg/73jCJ2tNV";
+
+
+// ------------------------------------------------------------
+// AUTHENTIFICATION DISCORD
+// ------------------------------------------------------------
+//
+// Pour une vraie connexion Discord, il faut créer OAuth2
+// dans le Developer Portal Discord.
+//
+// Le Bot ID seul ne permet PAS de connecter un utilisateur.
+//
+// Mets ici ton URL OAuth2 complète.
+// ------------------------------------------------------------
+
+const DISCORD_OAUTH_URL = "https://discord.com/oauth2/authorize?client_id=1554855867973771354&permissions=0&response_type=code&redirect_uri=https%3A%2F%2Fcodelol-system.github.io%2FNOVA-KEY-SHOP%2F&integration_type=0&scope=identify+connections+email+guilds+guilds.members.read+applications.commands.permissions.update+openid+applications.entitlements+guilds.join+gdm.join+rpc.voice.read+rpc+rpc.video.read+rpc.screenshare.read+rpc.activities.write+messages.read+applications.commands+role_connections.write+applications.store.update+applications.builds.read+webhook.incoming+rpc.screenshare.write+rpc.video.write+rpc.voice.write+bot+rpc.notifications.read";
+
+
+// ============================================================
+// LOGO DISCORD
+// ============================================================
+
+const DISCORD_LOGO_URL =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0hYuyxdAgrKOlEeGtlGDAqvmeYqyzLYr57DWV6uoljg&s=10";
 
 
 // ============================================================
 // LOGOS DES CATÉGORIES
-// IMPORTANT : LOGOS UNIQUEMENT DANS LES CATÉGORIES
 // ============================================================
 
 const categoryLogos = {
@@ -698,14 +734,11 @@ const categoryLogos = {
 // ÉTAT
 // ============================================================
 
-let cart =
-  loadCart();
+let cart = loadCart();
 
-let activeCategory =
-  "Tous";
+let activeCategory = "Tous";
 
-let searchTerm =
-  "";
+let searchTerm = "";
 
 
 // ============================================================
@@ -713,79 +746,49 @@ let searchTerm =
 // ============================================================
 
 const productsGrid =
-  document.getElementById(
-    "productsGrid"
-  );
+  document.getElementById("productsGrid");
 
 const categoriesContainer =
-  document.getElementById(
-    "categories"
-  );
+  document.getElementById("categories");
 
 const searchInput =
-  document.getElementById(
-    "searchInput"
-  );
+  document.getElementById("searchInput");
 
 const sortSelect =
-  document.getElementById(
-    "sortSelect"
-  );
+  document.getElementById("sortSelect");
 
 const resultCount =
-  document.getElementById(
-    "resultCount"
-  );
+  document.getElementById("resultCount");
 
 const cartButton =
-  document.getElementById(
-    "cartButton"
-  );
+  document.getElementById("cartButton");
 
 const cartCount =
-  document.getElementById(
-    "cartCount"
-  );
+  document.getElementById("cartCount");
 
 const cartDrawer =
-  document.getElementById(
-    "cartDrawer"
-  );
+  document.getElementById("cartDrawer");
 
 const drawerOverlay =
-  document.getElementById(
-    "drawerOverlay"
-  );
+  document.getElementById("drawerOverlay");
 
 const closeCartButton =
-  document.getElementById(
-    "closeCart"
-  );
+  document.getElementById("closeCart");
 
 const cartItems =
-  document.getElementById(
-    "cartItems"
-  );
+  document.getElementById("cartItems");
 
 const cartTotal =
-  document.getElementById(
-    "cartTotal"
-  );
+  document.getElementById("cartTotal");
 
 const checkoutButton =
-  document.getElementById(
-    "checkoutButton"
-  );
+  document.getElementById("checkoutButton");
 
 const toastContainer =
-  document.getElementById(
-    "toastContainer"
-  );
+  document.getElementById("toastContainer");
 
 const homeButton =
-  document.getElementById(
-    "homeButton"
-  );
+  document.getElementById("homeButton");
 
 
 // ============================================================
@@ -871,7 +874,7 @@ function saveCart() {
 
 
 // ============================================================
-// RÉCUPÉRER LE LOGO D'UNE CATÉGORIE
+// LOGO CATÉGORIE
 // ============================================================
 
 function getCategoryLogo(category) {
@@ -889,7 +892,7 @@ function getCategoryLogo(category) {
 
 
 // ============================================================
-// NOM AFFICHÉ DES CATÉGORIES
+// NOM CATÉGORIE
 // ============================================================
 
 function getCategoryLabel(category) {
@@ -924,7 +927,6 @@ function getCategoryLabel(category) {
 
 // ============================================================
 // CATÉGORIES
-// LOGOS UNIQUEMENT ICI
 // ============================================================
 
 function renderCategories() {
@@ -932,7 +934,6 @@ function renderCategories() {
   if (!categoriesContainer) {
     return;
   }
-
 
   const categories = [
 
@@ -947,23 +948,15 @@ function renderCategories() {
 
   ];
 
-
-  categoriesContainer.innerHTML =
-    "";
-
+  categoriesContainer.innerHTML = "";
 
   categories.forEach(
     category => {
 
       const button =
-        document.createElement(
-          "button"
-        );
+        document.createElement("button");
 
-
-      button.type =
-        "button";
-
+      button.type = "button";
 
       button.className =
         "category" +
@@ -973,22 +966,11 @@ function renderCategories() {
             : ""
         );
 
-
       const logo =
-        getCategoryLogo(
-          category
-        );
-
+        getCategoryLogo(category);
 
       const label =
-        getCategoryLabel(
-          category
-        );
-
-
-      // --------------------------------------------------------
-      // CATÉGORIE "TOUS"
-      // --------------------------------------------------------
+        getCategoryLabel(category);
 
       if (category === "Tous") {
 
@@ -1004,14 +986,7 @@ function renderCategories() {
 
         `;
 
-      }
-
-
-      // --------------------------------------------------------
-      // AUTRES CATÉGORIES AVEC LOGO
-      // --------------------------------------------------------
-
-      else if (logo) {
+      } else if (logo) {
 
         button.innerHTML = `
 
@@ -1032,14 +1007,7 @@ function renderCategories() {
 
         `;
 
-      }
-
-
-      // --------------------------------------------------------
-      // SÉCURITÉ SI AUCUN LOGO
-      // --------------------------------------------------------
-
-      else {
+      } else {
 
         button.innerHTML = `
 
@@ -1049,7 +1017,6 @@ function renderCategories() {
 
         `;
       }
-
 
       button.addEventListener(
         "click",
@@ -1064,7 +1031,6 @@ function renderCategories() {
 
         }
       );
-
 
       categoriesContainer.appendChild(
         button
@@ -1090,7 +1056,6 @@ function getFilteredProducts() {
           product.category ===
             activeCategory;
 
-
         const searchableText =
           (
             product.name +
@@ -1102,12 +1067,10 @@ function getFilteredProducts() {
             product.platform
           ).toLowerCase();
 
-
         const matchesSearch =
           searchableText.includes(
             searchTerm.toLowerCase()
           );
-
 
         return (
           matchesCategory &&
@@ -1117,52 +1080,26 @@ function getFilteredProducts() {
       }
     );
 
-
   const sort =
     sortSelect
       ? sortSelect.value
       : "default";
 
-
-  // ----------------------------------------------------------
-  // PRIX CROISSANT
-  // ----------------------------------------------------------
-
-  if (
-    sort === "price-low"
-  ) {
+  if (sort === "price-low") {
 
     filtered.sort(
       (a, b) =>
         a.price - b.price
     );
 
-  }
-
-
-  // ----------------------------------------------------------
-  // PRIX DÉCROISSANT
-  // ----------------------------------------------------------
-
-  else if (
-    sort === "price-high"
-  ) {
+  } else if (sort === "price-high") {
 
     filtered.sort(
       (a, b) =>
         b.price - a.price
     );
 
-  }
-
-
-  // ----------------------------------------------------------
-  // NOM A-Z
-  // ----------------------------------------------------------
-
-  else if (
-    sort === "name"
-  ) {
+  } else if (sort === "name") {
 
     filtered.sort(
       (a, b) =>
@@ -1174,14 +1111,12 @@ function getFilteredProducts() {
 
   }
 
-
   return filtered;
 }
 
 
 // ============================================================
 // AFFICHER LES PRODUITS
-// IMPORTANT : AUCUN LOGO DE CATÉGORIE ICI
 // ============================================================
 
 function renderProducts() {
@@ -1190,14 +1125,10 @@ function renderProducts() {
     return;
   }
 
-
   const filtered =
     getFilteredProducts();
 
-
-  productsGrid.innerHTML =
-    "";
-
+  productsGrid.innerHTML = "";
 
   if (resultCount) {
 
@@ -1210,14 +1141,7 @@ function renderProducts() {
 
   }
 
-
-  // ----------------------------------------------------------
-  // AUCUN RÉSULTAT
-  // ----------------------------------------------------------
-
-  if (
-    filtered.length === 0
-  ) {
+  if (filtered.length === 0) {
 
     productsGrid.innerHTML = `
 
@@ -1243,23 +1167,14 @@ function renderProducts() {
     return;
   }
 
-
-  // ----------------------------------------------------------
-  // PRODUITS
-  // ----------------------------------------------------------
-
   filtered.forEach(
     product => {
 
       const card =
-        document.createElement(
-          "article"
-        );
-
+        document.createElement("article");
 
       card.className =
         "product-card";
-
 
       card.innerHTML = `
 
@@ -1328,12 +1243,10 @@ function renderProducts() {
 
       `;
 
-
       const addButton =
         card.querySelector(
           ".add-btn"
         );
-
 
       if (addButton) {
 
@@ -1349,7 +1262,6 @@ function renderProducts() {
         );
 
       }
-
 
       productsGrid.appendChild(
         card
@@ -1372,18 +1284,15 @@ function addToCart(productId) {
         item.id === productId
     );
 
-
   if (!product) {
     return;
   }
-
 
   const existing =
     cart.find(
       item =>
         item.id === productId
     );
-
 
   if (existing) {
 
@@ -1401,11 +1310,9 @@ function addToCart(productId) {
 
   }
 
-
   saveCart();
 
   updateCartUI();
-
 
   showToast(
     `${product.name} ajouté au panier`
@@ -1427,7 +1334,6 @@ function removeFromCart(
         item.id !== productId
     );
 
-
   saveCart();
 
   updateCartUI();
@@ -1435,7 +1341,7 @@ function removeFromCart(
 
 
 // ============================================================
-// MODIFIER LA QUANTITÉ
+// MODIFIER QUANTITÉ
 // ============================================================
 
 function changeQuantity(
@@ -1449,14 +1355,11 @@ function changeQuantity(
         cartItem.id === productId
     );
 
-
   if (!item) {
     return;
   }
 
-
   item.quantity += amount;
-
 
   if (
     item.quantity <= 0
@@ -1469,7 +1372,6 @@ function changeQuantity(
     return;
   }
 
-
   saveCart();
 
   updateCartUI();
@@ -1477,7 +1379,7 @@ function changeQuantity(
 
 
 // ============================================================
-// PRODUITS DU PANIER
+// PRODUITS PANIER
 // ============================================================
 
 function getCartProducts() {
@@ -1493,11 +1395,9 @@ function getCartProducts() {
               p.id === item.id
           );
 
-
         if (!product) {
           return null;
         }
-
 
         return {
 
@@ -1516,7 +1416,7 @@ function getCartProducts() {
 
 
 // ============================================================
-// TOTAL DU PANIER
+// TOTAL
 // ============================================================
 
 function getCartTotal() {
@@ -1564,7 +1464,7 @@ function getCartQuantity() {
 
 
 // ============================================================
-// AFFICHER LE PANIER
+// AFFICHER PANIER
 // ============================================================
 
 function renderCart() {
@@ -1577,18 +1477,10 @@ function renderCart() {
     return;
   }
 
-
   const cartProducts =
     getCartProducts();
 
-
-  cartItems.innerHTML =
-    "";
-
-
-  // ----------------------------------------------------------
-  // PANIER VIDE
-  // ----------------------------------------------------------
+  cartItems.innerHTML = "";
 
   if (
     cartProducts.length === 0
@@ -1614,27 +1506,16 @@ function renderCart() {
 
     `;
 
-  }
-
-
-  // ----------------------------------------------------------
-  // PRODUITS DU PANIER
-  // ----------------------------------------------------------
-
-  else {
+  } else {
 
     cartProducts.forEach(
       product => {
 
         const item =
-          document.createElement(
-            "div"
-          );
-
+          document.createElement("div");
 
         item.className =
           "cart-item";
-
 
         item.innerHTML = `
 
@@ -1703,24 +1584,20 @@ function renderCart() {
 
         `;
 
-
         const minusButton =
           item.querySelector(
             '[data-action="minus"]'
           );
-
 
         const plusButton =
           item.querySelector(
             '[data-action="plus"]'
           );
 
-
         const removeButton =
           item.querySelector(
             '[data-action="remove"]'
           );
-
 
         if (minusButton) {
 
@@ -1738,7 +1615,6 @@ function renderCart() {
 
         }
 
-
         if (plusButton) {
 
           plusButton.addEventListener(
@@ -1755,7 +1631,6 @@ function renderCart() {
 
         }
 
-
         if (removeButton) {
 
           removeButton.addEventListener(
@@ -1771,7 +1646,6 @@ function renderCart() {
 
         }
 
-
         cartItems.appendChild(
           item
         );
@@ -1781,20 +1655,10 @@ function renderCart() {
 
   }
 
-
-  // ----------------------------------------------------------
-  // TOTAL
-  // ----------------------------------------------------------
-
   cartTotal.textContent =
     formatPrice(
       getCartTotal()
     );
-
-
-  // ----------------------------------------------------------
-  // BOUTON PAYPAL
-  // ----------------------------------------------------------
 
   checkoutButton.disabled =
     cartProducts.length === 0;
@@ -1802,7 +1666,7 @@ function renderCart() {
 
 
 // ============================================================
-// METTRE À JOUR L'INTERFACE DU PANIER
+// UI PANIER
 // ============================================================
 
 function updateCartUI() {
@@ -1814,13 +1678,12 @@ function updateCartUI() {
 
   }
 
-
   renderCart();
 }
 
 
 // ============================================================
-// OUVRIR LE PANIER
+// OUVRIR PANIER
 // ============================================================
 
 function openCart() {
@@ -1832,19 +1695,15 @@ function openCart() {
     return;
   }
 
-
   renderCart();
-
 
   cartDrawer.classList.add(
     "open"
   );
 
-
   drawerOverlay.classList.add(
     "open"
   );
-
 
   document.body.style.overflow =
     "hidden";
@@ -1852,7 +1711,7 @@ function openCart() {
 
 
 // ============================================================
-// FERMER LE PANIER
+// FERMER PANIER
 // ============================================================
 
 function closeCart() {
@@ -1865,7 +1724,6 @@ function closeCart() {
 
   }
 
-
   if (drawerOverlay) {
 
     drawerOverlay.classList.remove(
@@ -1874,14 +1732,13 @@ function closeCart() {
 
   }
 
-
   document.body.style.overflow =
     "";
 }
 
 
 // ============================================================
-// CONSTRUIRE LA LISTE DISCORD
+// LISTE DISCORD
 // ============================================================
 
 function buildDiscordProductList(
@@ -1889,7 +1746,6 @@ function buildDiscordProductList(
 ) {
 
   let text = "";
-
 
   for (
     const product of cartProducts
@@ -1899,7 +1755,6 @@ function buildDiscordProductList(
       `• **${product.name}** × ${product.quantity} • ${formatPrice(
         product.price * product.quantity
       )} • ${product.platform}\n`;
-
 
     if (
       (
@@ -1914,11 +1769,9 @@ function buildDiscordProductList(
       break;
     }
 
-
     text +=
       line;
   }
-
 
   return (
     text ||
@@ -1928,11 +1781,7 @@ function buildDiscordProductList(
 
 
 // ============================================================
-// ENVOYER LA COMMANDE SUR DISCORD
-// ============================================================
-// IMPORTANT :
-// Cette fonction signale qu'une commande a été INITIÉE.
-// Elle ne confirme PAS que PayPal a été payé.
+// ENVOI AUTOMATIQUE DISCORD
 // ============================================================
 
 async function sendOrderToDiscord() {
@@ -1940,28 +1789,23 @@ async function sendOrderToDiscord() {
   if (
     !DISCORD_WEBHOOK_URL ||
     DISCORD_WEBHOOK_URL ===
-      "COLLE_TON_WEBHOOK_ICI"
+      "COLLE_TON_WEBHOOK_ICI" ||
+    DISCORD_WEBHOOK_URL ===
+      "mon_whebook"
   ) {
 
     console.warn(
       "Webhook Discord non configuré."
     );
 
-    showToast(
-      "Webhook Discord non configuré."
-    );
-
     return false;
   }
-
 
   const cartProducts =
     getCartProducts();
 
-
   const total =
     getCartTotal();
-
 
   if (
     cartProducts.length === 0 ||
@@ -1971,19 +1815,16 @@ async function sendOrderToDiscord() {
     return false;
   }
 
-
   const orderId =
     "NOVA-" +
     Date.now()
       .toString(36)
       .toUpperCase();
 
-
   const productLines =
     buildDiscordProductList(
       cartProducts
     );
-
 
   const message = {
 
@@ -2002,7 +1843,7 @@ async function sendOrderToDiscord() {
           "🛒 NOVA KEY SHOP • Nouvelle commande",
 
         description:
-          "Une nouvelle commande vient d’être initiée depuis la boutique.",
+          "Une commande a été initiée depuis NOVA KEY SHOP.",
 
         color:
           0x7c3cff,
@@ -2092,7 +1933,7 @@ async function sendOrderToDiscord() {
         footer: {
 
           text:
-            "NOVA KEY SHOP • Système de commandes"
+            "NOVA KEY SHOP • Commande automatique"
 
         },
 
@@ -2104,7 +1945,6 @@ async function sendOrderToDiscord() {
     ]
 
   };
-
 
   try {
 
@@ -2131,7 +1971,6 @@ async function sendOrderToDiscord() {
         }
       );
 
-
     if (
       !response.ok
     ) {
@@ -2142,12 +1981,10 @@ async function sendOrderToDiscord() {
 
     }
 
-
     console.log(
-      "Commande envoyée sur Discord :",
+      "Commande envoyée automatiquement sur Discord :",
       orderId
     );
-
 
     return true;
 
@@ -2157,12 +1994,6 @@ async function sendOrderToDiscord() {
       "Erreur webhook Discord :",
       error
     );
-
-
-    showToast(
-      "Impossible d'envoyer la commande sur Discord."
-    );
-
 
     return false;
   }
@@ -2178,7 +2009,6 @@ async function payWithPayPal() {
   const total =
     getCartTotal();
 
-
   if (
     total <= 0
   ) {
@@ -2190,26 +2020,11 @@ async function payWithPayPal() {
     return;
   }
 
-
-  // ----------------------------------------------------------
-  // MONTANT AVEC EXACTEMENT 2 DÉCIMALES
-  // ----------------------------------------------------------
-
   const amount =
     total.toFixed(2);
 
-
-  // ----------------------------------------------------------
-  // LIEN PAYPAL.ME
-  // ----------------------------------------------------------
-
   const paypalUrl =
     `https://paypal.me/${PAYPAL_USERNAME}/${amount}`;
-
-
-  // ----------------------------------------------------------
-  // ÉVITER LES DOUBLE-CLICS
-  // ----------------------------------------------------------
 
   if (checkoutButton) {
 
@@ -2221,20 +2036,219 @@ async function payWithPayPal() {
 
   }
 
-
-  // ----------------------------------------------------------
-  // ENVOI DE LA COMMANDE SUR DISCORD
-  // ----------------------------------------------------------
-
   await sendOrderToDiscord();
-
-
-  // ----------------------------------------------------------
-  // REDIRECTION PAYPAL
-  // ----------------------------------------------------------
 
   window.location.href =
     paypalUrl;
+}
+
+
+// ============================================================
+// CRÉER LES BOUTONS DISCORD DANS APP.JS
+// ============================================================
+
+function createDiscordButtons() {
+
+  const navActions =
+    document.querySelector(
+      ".nav-actions"
+    );
+
+  if (!navActions) {
+    return;
+  }
+
+
+  // ----------------------------------------------------------
+  // SUPPRIMER D'ANCIENS BOUTONS AJOUTÉS PAR UNE VERSION
+  // PRÉCÉDENTE
+  // ----------------------------------------------------------
+
+  const oldDiscord =
+    document.getElementById(
+      "discordButton"
+    );
+
+  if (oldDiscord) {
+    oldDiscord.remove();
+  }
+
+
+  const oldAuth =
+    document.getElementById(
+      "authButton"
+    );
+
+  if (oldAuth) {
+    oldAuth.remove();
+  }
+
+
+  // ----------------------------------------------------------
+  // BOUTON AUTHENTIFICATION
+  // ----------------------------------------------------------
+
+  const authButton =
+    document.createElement(
+      "button"
+    );
+
+  authButton.type =
+    "button";
+
+  authButton.className =
+    "nav-btn nova-auth-button";
+
+  authButton.id =
+    "novaAuthButton";
+
+  authButton.title =
+    "Authentification Discord";
+
+  authButton.setAttribute(
+    "aria-label",
+    "Authentification Discord"
+  );
+
+  authButton.innerHTML =
+    "👤";
+
+
+  authButton.addEventListener(
+    "click",
+    openDiscordAuthentication
+  );
+
+
+  // ----------------------------------------------------------
+  // BOUTON DISCORD
+  // ----------------------------------------------------------
+
+  const discordButton =
+    document.createElement(
+      "button"
+    );
+
+  discordButton.type =
+    "button";
+
+  discordButton.className =
+    "nav-btn nova-discord-button";
+
+  discordButton.id =
+    "novaDiscordButton";
+
+  discordButton.title =
+    "Serveur Discord";
+
+  discordButton.setAttribute(
+    "aria-label",
+    "Serveur Discord"
+  );
+
+
+  discordButton.innerHTML = `
+
+    <img
+      src="${escapeAttribute(
+        DISCORD_LOGO_URL
+      )}"
+      alt="Discord"
+      draggable="false"
+    >
+
+  `;
+
+
+  discordButton.addEventListener(
+    "click",
+    openDiscordServer
+  );
+
+
+  // ----------------------------------------------------------
+  // PLACEMENT
+  //
+  // Accueil
+  // Auth
+  // Discord
+  // Panier
+  // ----------------------------------------------------------
+
+  if (homeButton) {
+
+    homeButton.insertAdjacentElement(
+      "afterend",
+      authButton
+    );
+
+    authButton.insertAdjacentElement(
+      "afterend",
+      discordButton
+    );
+
+  } else {
+
+    navActions.prepend(
+      discordButton
+    );
+
+    navActions.prepend(
+      authButton
+    );
+
+  }
+}
+
+
+// ============================================================
+// OUVRIR SERVEUR DISCORD
+// ============================================================
+
+function openDiscordServer() {
+
+  if (
+    !DISCORD_SERVER_URL ||
+    DISCORD_SERVER_URL ===
+      "COLLE_ICI_LE_LIEN_DE_TON_SERVEUR"
+  ) {
+
+    showToast(
+      "Lien du serveur Discord non configuré."
+    );
+
+    return;
+  }
+
+  window.open(
+    DISCORD_SERVER_URL,
+    "_blank",
+    "noopener,noreferrer"
+  );
+}
+
+
+// ============================================================
+// AUTHENTIFICATION DISCORD
+// ============================================================
+
+function openDiscordAuthentication() {
+
+  if (
+    !DISCORD_OAUTH_URL ||
+    DISCORD_OAUTH_URL ===
+      "COLLE_ICI_TON_URL_OAUTH2"
+  ) {
+
+    showToast(
+      "Authentification Discord non configurée."
+    );
+
+    return;
+  }
+
+  window.location.href =
+    DISCORD_OAUTH_URL;
 }
 
 
@@ -2250,25 +2264,20 @@ function showToast(
     return;
   }
 
-
   const toast =
     document.createElement(
       "div"
     );
 
-
   toast.className =
     "toast";
-
 
   toast.textContent =
     "✓ " + message;
 
-
   toastContainer.appendChild(
     toast
   );
-
 
   setTimeout(
     () => {
@@ -2276,10 +2285,8 @@ function showToast(
       toast.style.opacity =
         "0";
 
-
       toast.style.transform =
         "translateY(10px)";
-
 
       setTimeout(
         () => {
@@ -2405,7 +2412,7 @@ if (closeCartButton) {
 
 
 // ============================================================
-// FERMER AVEC OVERLAY
+// OVERLAY
 // ============================================================
 
 if (drawerOverlay) {
@@ -2418,7 +2425,7 @@ if (drawerOverlay) {
 
 
 // ============================================================
-// CHECKOUT PAYPAL
+// CHECKOUT
 // ============================================================
 
 if (checkoutButton) {
@@ -2443,10 +2450,8 @@ if (homeButton) {
       activeCategory =
         "Tous";
 
-
       searchTerm =
         "";
-
 
       if (searchInput) {
 
@@ -2455,7 +2460,6 @@ if (homeButton) {
 
       }
 
-
       if (sortSelect) {
 
         sortSelect.value =
@@ -2463,11 +2467,9 @@ if (homeButton) {
 
       }
 
-
       renderCategories();
 
       renderProducts();
-
 
       window.scrollTo({
 
@@ -2505,8 +2507,7 @@ document.addEventListener(
 
 
 // ============================================================
-// STYLES DES PETITS LOGOS
-// LOGOS UNIQUEMENT DANS LES CATÉGORIES
+// STYLES
 // ============================================================
 
 const categoryLogoStyles =
@@ -2514,12 +2515,7 @@ const categoryLogoStyles =
     "style"
   );
 
-
 categoryLogoStyles.textContent = `
-
-  /* ==========================================================
-     BOUTONS DE CATÉGORIE
-     ========================================================== */
 
   .category {
 
@@ -2535,10 +2531,6 @@ categoryLogoStyles.textContent = `
 
   }
 
-
-  /* ==========================================================
-     PETIT CERCLE DU LOGO
-     ========================================================== */
 
   .category-logo {
 
@@ -2580,10 +2572,6 @@ categoryLogoStyles.textContent = `
   }
 
 
-  /* ==========================================================
-     LOGO ENTIER VISIBLE
-     ========================================================== */
-
   .category-logo img {
 
     width: 100% !important;
@@ -2611,10 +2599,6 @@ categoryLogoStyles.textContent = `
   }
 
 
-  /* ==========================================================
-     CATÉGORIE "TOUS"
-     ========================================================== */
-
   .category-logo-all {
 
     font-size: 8px !important;
@@ -2640,11 +2624,6 @@ categoryLogoStyles.textContent = `
   }
 
 
-  /* ==========================================================
-     IMPORTANT :
-     AUCUN LOGO DANS LES CARTES PRODUITS
-     ========================================================== */
-
   .product-category-logo {
 
     display: none !important;
@@ -2666,18 +2645,82 @@ categoryLogoStyles.textContent = `
   }
 
 
-  /* ==========================================================
-     EMPÊCHER LES LOGOS HÉRITÉS
-     ========================================================== */
-
   .product-card .category-logo {
 
     display: none !important;
 
   }
 
-`;
 
+  /* ==========================================================
+     BOUTON AUTHENTIFICATION
+     ========================================================== */
+
+  .nova-auth-button {
+
+    font-size: 18px !important;
+
+  }
+
+
+  /* ==========================================================
+     BOUTON DISCORD
+     ========================================================== */
+
+  .nova-discord-button {
+
+    padding: 0 !important;
+
+    overflow: hidden !important;
+
+  }
+
+
+  .nova-discord-button img {
+
+    width: 22px !important;
+
+    height: 22px !important;
+
+    object-fit: contain !important;
+
+    object-position: center !important;
+
+    display: block !important;
+
+  }
+
+
+  .nova-discord-button:hover {
+
+    border-color:
+      rgba(
+        88,
+        101,
+        242,
+        0.8
+      ) !important;
+
+    background:
+      rgba(
+        88,
+        101,
+        242,
+        0.14
+      ) !important;
+
+    box-shadow:
+      0 0 18px
+      rgba(
+        88,
+        101,
+        242,
+        0.18
+      ) !important;
+
+  }
+
+`;
 
 document.head.appendChild(
   categoryLogoStyles
@@ -2695,6 +2738,8 @@ function init() {
   renderProducts();
 
   updateCartUI();
+
+  createDiscordButtons();
 
 }
 
