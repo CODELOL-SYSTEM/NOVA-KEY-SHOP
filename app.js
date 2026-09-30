@@ -451,7 +451,7 @@ const products = [
 
 
   // ============================================================
-  // CARTES CADEAU PLAYSTATION STORE
+  // CARTES PLAYSTATION STORE
   // ============================================================
 
   {
@@ -532,19 +532,205 @@ const products = [
     type: "Carte cadeau",
     platform: "PlayStation",
     image: "https://gaming-cdn.com/images/products/21246/616x353/carte-cadeau-playstation-store-150eur-playstation-5-playstation-4-playstation-store-cover.jpg?v=1764260665"
+  },
+
+
+  // ============================================================
+  // XBOX LIVE
+  // ============================================================
+
+  {
+    id: "xbox-live-5",
+    name: "Carte cadeau XBOX Live - 5 €",
+    price: 4.69,
+    category: "Xbox",
+    type: "Carte cadeau",
+    platform: "Xbox",
+    image: "https://gaming-cdn.com/images/products/298/616x353/carte-cadeau-xbox-live-5eur-eur5-card-xbox-one-xbox-series-x-s-pc-jeu-microsoft-store-europe-cover.jpg?v=1745397486"
+  },
+
+  {
+    id: "xbox-live-10",
+    name: "Carte cadeau XBOX Live - 10 €",
+    price: 9.29,
+    category: "Xbox",
+    type: "Carte cadeau",
+    platform: "Xbox",
+    image: "https://gaming-cdn.com/images/products/273/616x353/carte-cadeau-xbox-live-10eur-xbox-one-xbox-series-x-s-pc-microsoft-store-cover.jpg?v=1770462901"
+  },
+
+  {
+    id: "xbox-live-15",
+    name: "Carte cadeau XBOX Live - 15 €",
+    price: 13.89,
+    category: "Xbox",
+    type: "Carte cadeau",
+    platform: "Xbox",
+    image: "https://gaming-cdn.com/images/products/297/616x353/carte-cadeau-xbox-live-15eur-xbox-one-xbox-series-x-s-pc-microsoft-store-cover.jpg?v=1770462888"
+  },
+
+  {
+    id: "xbox-live-20",
+    name: "Carte cadeau XBOX Live - 20 €",
+    price: 18.59,
+    category: "Xbox",
+    type: "Carte cadeau",
+    platform: "Xbox",
+    image: "https://gaming-cdn.com/images/products/296/616x353/carte-cadeau-xbox-live-20eur-eur20-card-xbox-one-xbox-series-x-s-pc-jeu-microsoft-store-europe-cover.jpg?v=1745397290"
+  },
+
+  {
+    id: "xbox-live-25",
+    name: "Carte cadeau XBOX Live - 25 €",
+    price: 23.19,
+    category: "Xbox",
+    type: "Carte cadeau",
+    platform: "Xbox",
+    image: "https://gaming-cdn.com/images/products/274/616x353/carte-cadeau-xbox-live-25eur-xbox-one-xbox-series-x-s-pc-microsoft-store-cover.jpg?v=1770462896"
+  },
+
+  {
+    id: "xbox-live-30",
+    name: "Carte cadeau XBOX Live - 30 €",
+    price: 27.89,
+    category: "Xbox",
+    type: "Carte cadeau",
+    platform: "Xbox",
+    image: "https://gaming-cdn.com/images/products/299/616x353/carte-cadeau-xbox-live-30eur-eur30-card-xbox-one-xbox-series-x-s-pc-jeu-microsoft-store-europe-cover.jpg?v=1745399038"
+  },
+
+  {
+    id: "xbox-live-50",
+    name: "Carte cadeau XBOX Live - 50 €",
+    price: 46.49,
+    category: "Xbox",
+    type: "Carte cadeau",
+    platform: "Xbox",
+    image: "https://gaming-cdn.com/images/products/4/616x353/carte-cadeau-xbox-live-50eur-eur50-card-xbox-one-xbox-series-x-s-pc-jeu-microsoft-store-europe-cover.jpg?v=1745330443"
+  },
+
+  {
+    id: "xbox-live-75",
+    name: "Carte cadeau XBOX Live - 75 €",
+    price: 69.69,
+    category: "Xbox",
+    type: "Carte cadeau",
+    platform: "Xbox",
+    image: "https://gaming-cdn.com/images/products/11038/616x353/carte-cadeau-xbox-live-75eur-eur75-card-xbox-one-xbox-series-x-s-pc-jeu-microsoft-store-europe-cover.jpg?v=1745404395"
+  },
+
+  {
+    id: "xbox-live-100",
+    name: "Carte cadeau XBOX Live - 100 €",
+    price: 92.99,
+    category: "Xbox",
+    type: "Carte cadeau",
+    platform: "Xbox",
+    image: "https://gaming-cdn.com/images/products/23075/616x353/carte-cadeau-xbox-100eur-pc-xbox-series-x-s-xbox-one-microsoft-store-cover.jpg?v=1782311503"
+  },
+
+
+  // ============================================================
+  // NINTENDO ESHOP
+  // ============================================================
+
+  {
+    id: "nintendo-eshop-15",
+    name: "Carte Nintendo eShop - 15 €",
+    price: 13.89,
+    category: "Nintendo",
+    type: "Carte cadeau",
+    platform: "Nintendo Switch",
+    image: "https://gaming-cdn.com/images/products/2356/616x353/carte-nintendo-eshop-15eur-switch-switch-2-nintendo-eshop-cover.jpg?v=1750231868"
+  },
+
+  {
+    id: "nintendo-eshop-25",
+    name: "Carte Nintendo eShop - 25 €",
+    price: 23.29,
+    category: "Nintendo",
+    type: "Carte cadeau",
+    platform: "Nintendo Switch",
+    image: "https://gaming-cdn.com/images/products/2355/616x353/carte-nintendo-eshop-25eur-eur25-card-switch-switch-2-jeu-nintendo-eshop-europe-cover.jpg?v=1739437306"
+  },
+
+  {
+    id: "nintendo-eshop-50",
+    name: "Carte Nintendo eShop - 50 €",
+    price: 45.89,
+    category: "Nintendo",
+    type: "Carte cadeau",
+    platform: "Nintendo Switch",
+    image: "https://gaming-cdn.com/images/products/4931/616x353/carte-nintendo-eshop-50eur-eur50-card-switch-switch-2-jeu-nintendo-eshop-europe-cover.jpg?v=1739437320"
+  },
+
+  {
+    id: "nintendo-eshop-75",
+    name: "Carte Nintendo eShop - 75 €",
+    price: 68.89,
+    category: "Nintendo",
+    type: "Carte cadeau",
+    platform: "Nintendo Switch",
+    image: "https://gaming-cdn.com/images/products/14096/616x353/carte-nintendo-eshop-75eur-eur75-card-switch-switch-2-jeu-nintendo-eshop-europe-cover.jpg?v=1739437367"
+  },
+
+  {
+    id: "nintendo-eshop-100",
+    name: "Carte Nintendo eShop - 100 €",
+    price: 91.89,
+    category: "Nintendo",
+    type: "Carte cadeau",
+    platform: "Nintendo Switch",
+    image: "https://gaming-cdn.com/images/products/14097/616x353/carte-nintendo-eshop-100eur-switch-switch-2-nintendo-eshop-cover.jpg?v=1750243777"
+  },
+
+  {
+    id: "nintendo-switch-online-pack-additionnel-12",
+    name: "Abonnement Nintendo Switch Online + Pack additionnel - 12 Mois",
+    price: 31.93,
+    category: "Nintendo",
+    type: "Abonnement",
+    platform: "Nintendo Switch",
+    image: "https://gaming-cdn.com/images/products/16876/616x353/abonnement-nintendo-switch-online-pack-additionnel-12-mois-individuel-12-months-switch-jeu-nintendo-eshop-europe-cover.jpg?v=1716974715"
   }
 
 ];
+
 
 // ============================================================
 // CONFIGURATION
 // ============================================================
 
-const CART_STORAGE_KEY =
-  "novaKeyShopCart";
+const CART_STORAGE_KEY = "novaKeyShopCart";
 
-const PAYPAL_USERNAME =
-  "SH0PNOVA";
+const PAYPAL_USERNAME = "SH0PNOVA";
+
+
+// ============================================================
+// LOGOS DES CATÉGORIES
+// ============================================================
+
+const categoryLogos = {
+
+  Roblox:
+    "https://lens.usercontent.google.com/image?vsrid=CMWTyeuezJ6FyQEQAhgBIiQ2ZjQzYWEyZS01ZTFkLTQyMTUtYjMyZC1hMGQ2OGViYTk1MmYyggEiAmVuKC5CdAoubGZlLWR1bW15OjczYzc2NDVmLTk5ZjEtNGIwMS04OWNhLThlZGY0YzlmMWE2YhJCCkAvYm5zL3JhL2JvcmcvcmEvYm5zL2xlbnMtZnJvbnRlbmQtYXBpL3Byb2QubGVucy1mcm9udGVuZC1hcGkvMTA0WgQKAnJhOIWF7a-zlpcD&gsessionid=dpXIvtjXQUfTfeLwHkwMqes0qb5DYLTXJUWMbZZAii4RlpZU1eG2Rw",
+
+  Fortnite:
+    "https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_lettermark_logo.png?utm_source=fr.wikipedia.org&utm_campaign=index&utm_content=original",
+
+  VALORANT:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8qLNClC4nl43RXtcpB3nJRzSkPVJCo5N5NTCdHP9KoQ&s=10",
+
+  PlayStation:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzNivDjU6YI9cHx9WSEMamSW6gvuZud_k-P8dWo4rjPw&s=10",
+
+  Xbox:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKc6nIcgmKOh7v01fjT9at5yllmJJOmkVD2_Oe0KaxnQ&s=10",
+
+  Nintendo:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF2h0xKBZSie1sgJrOvppHwYFOICSUhTU27G8PP2hzPA&s=10"
+
+};
 
 
 // ============================================================
@@ -563,79 +749,49 @@ let searchTerm = "";
 // ============================================================
 
 const productsGrid =
-  document.getElementById(
-    "productsGrid"
-  );
+  document.getElementById("productsGrid");
 
 const categoriesContainer =
-  document.getElementById(
-    "categories"
-  );
+  document.getElementById("categories");
 
 const searchInput =
-  document.getElementById(
-    "searchInput"
-  );
+  document.getElementById("searchInput");
 
 const sortSelect =
-  document.getElementById(
-    "sortSelect"
-  );
+  document.getElementById("sortSelect");
 
 const resultCount =
-  document.getElementById(
-    "resultCount"
-  );
+  document.getElementById("resultCount");
 
 const cartButton =
-  document.getElementById(
-    "cartButton"
-  );
+  document.getElementById("cartButton");
 
 const cartCount =
-  document.getElementById(
-    "cartCount"
-  );
+  document.getElementById("cartCount");
 
 const cartDrawer =
-  document.getElementById(
-    "cartDrawer"
-  );
+  document.getElementById("cartDrawer");
 
 const drawerOverlay =
-  document.getElementById(
-    "drawerOverlay"
-  );
+  document.getElementById("drawerOverlay");
 
 const closeCartButton =
-  document.getElementById(
-    "closeCart"
-  );
+  document.getElementById("closeCart");
 
 const cartItems =
-  document.getElementById(
-    "cartItems"
-  );
+  document.getElementById("cartItems");
 
 const cartTotal =
-  document.getElementById(
-    "cartTotal"
-  );
+  document.getElementById("cartTotal");
 
 const checkoutButton =
-  document.getElementById(
-    "checkoutButton"
-  );
+  document.getElementById("checkoutButton");
 
 const toastContainer =
-  document.getElementById(
-    "toastContainer"
-  );
+  document.getElementById("toastContainer");
 
 const homeButton =
-  document.getElementById(
-    "homeButton"
-  );
+  document.getElementById("homeButton");
 
 
 // ============================================================
@@ -644,7 +800,7 @@ const homeButton =
 
 function formatPrice(price) {
 
-  return price.toLocaleString(
+  return Number(price).toLocaleString(
     "fr-FR",
     {
       style: "currency",
@@ -678,7 +834,15 @@ function loadCart() {
       return [];
     }
 
-    return parsed;
+    return parsed.filter(
+      item =>
+        item &&
+        typeof item.id === "string" &&
+        Number.isFinite(
+          Number(item.quantity)
+        ) &&
+        Number(item.quantity) > 0
+    );
 
   } catch (error) {
 
@@ -716,10 +880,70 @@ function saveCart() {
 
 
 // ============================================================
+// LOGO D'UNE CATÉGORIE
+// ============================================================
+
+function getCategoryLogo(category) {
+
+  if (
+    category === "PlayStation Plus" ||
+    category === "PlayStation Store"
+  ) {
+
+    return categoryLogos.PlayStation;
+  }
+
+  return categoryLogos[category] || "";
+}
+
+
+// ============================================================
+// NOM AFFICHÉ DES CATÉGORIES
+// ============================================================
+
+function getCategoryLabel(category) {
+
+  const labels = {
+
+    Tous: "Tous",
+
+    Roblox: "Roblox",
+
+    Fortnite: "Fortnite",
+
+    VALORANT: "VALORANT",
+
+    PlayStation: "PlayStation",
+
+    "PlayStation Plus":
+      "PlayStation Plus",
+
+    "PlayStation Store":
+      "PlayStation Store",
+
+    Xbox: "Xbox",
+
+    Nintendo: "Nintendo"
+
+  };
+
+  return (
+    labels[category] ||
+    category
+  );
+}
+
+
+// ============================================================
 // CATÉGORIES
 // ============================================================
 
 function renderCategories() {
+
+  if (!categoriesContainer) {
+    return;
+  }
+
 
   const categories = [
     "Tous",
@@ -731,8 +955,9 @@ function renderCategories() {
     )
   ];
 
-  categoriesContainer.innerHTML =
-    "";
+
+  categoriesContainer.innerHTML = "";
+
 
   categories.forEach(
     category => {
@@ -741,6 +966,9 @@ function renderCategories() {
         document.createElement(
           "button"
         );
+
+
+      button.type = "button";
 
       button.className =
         "category" +
@@ -751,30 +979,59 @@ function renderCategories() {
             : ""
         );
 
+
+      const logo =
+        getCategoryLogo(category);
+
+
+      const label =
+        getCategoryLabel(category);
+
+
       if (category === "Tous") {
 
-        button.textContent =
-          "✨ Tous";
+        button.innerHTML = `
+          <span
+            class="category-logo category-logo-all"
+            aria-hidden="true"
+          >
+            ✨
+          </span>
 
-      } else if (
-        category === "Roblox"
-      ) {
+          <span>
+            ${escapeHTML(label)}
+          </span>
+        `;
 
-        button.textContent =
-          "🎮 Roblox";
+      } else if (logo) {
 
-      } else if (
-        category === "Fortnite"
-      ) {
+        button.innerHTML = `
+          <span class="category-logo">
+            <img
+              src="${escapeAttribute(logo)}"
+              alt=""
+              loading="lazy"
+            >
+          </span>
 
-        button.textContent =
-          "🟣 Fortnite";
+          <span>
+            ${escapeHTML(label)}
+          </span>
+        `;
 
       } else {
 
-        button.textContent =
-          category;
+        button.innerHTML = `
+          <span class="category-logo category-logo-fallback">
+            🎮
+          </span>
+
+          <span>
+            ${escapeHTML(label)}
+          </span>
+        `;
       }
+
 
       button.addEventListener(
         "click",
@@ -790,9 +1047,11 @@ function renderCategories() {
         }
       );
 
+
       categoriesContainer.appendChild(
         button
       );
+
     }
   );
 }
@@ -813,30 +1072,38 @@ function getFilteredProducts() {
           product.category ===
             activeCategory;
 
+
         const searchableText =
           (
             product.name +
             " " +
             product.category +
             " " +
+            product.type +
+            " " +
             product.platform
           ).toLowerCase();
+
 
         const matchesSearch =
           searchableText.includes(
             searchTerm.toLowerCase()
           );
 
+
         return (
           matchesCategory &&
           matchesSearch
         );
+
       }
     );
 
 
   const sort =
-    sortSelect.value;
+    sortSelect
+      ? sortSelect.value
+      : "default";
 
 
   if (sort === "price-low") {
@@ -879,19 +1146,27 @@ function getFilteredProducts() {
 
 function renderProducts() {
 
+  if (!productsGrid) {
+    return;
+  }
+
+
   const filtered =
     getFilteredProducts();
 
-  productsGrid.innerHTML =
-    "";
+
+  productsGrid.innerHTML = "";
 
 
-  resultCount.textContent =
-    `${filtered.length} produit${
-      filtered.length > 1
-        ? "s"
-        : ""
-    }`;
+  if (resultCount) {
+
+    resultCount.textContent =
+      `${filtered.length} produit${
+        filtered.length > 1
+          ? "s"
+          : ""
+      }`;
+  }
 
 
   if (
@@ -934,8 +1209,31 @@ function renderProducts() {
           "article"
         );
 
+
       card.className =
         "product-card";
+
+
+      const categoryLogo =
+        getCategoryLogo(
+          product.category
+        );
+
+
+      const categoryHTML =
+        categoryLogo
+          ? `
+            <span class="product-category-logo">
+              <img
+                src="${escapeAttribute(
+                  categoryLogo
+                )}"
+                alt=""
+                loading="lazy"
+              >
+            </span>
+          `
+          : "";
 
 
       card.innerHTML = `
@@ -956,9 +1254,12 @@ function renderProducts() {
         <div class="product-body">
 
           <div class="product-category">
-            ${escapeHTML(
-              product.category
-            )}
+            ${categoryHTML}
+            <span>
+              ${escapeHTML(
+                product.category
+              )}
+            </span>
           </div>
 
           <div class="product-name">
@@ -973,6 +1274,12 @@ function renderProducts() {
             )}
           </div>
 
+          <div class="product-type">
+            🏷️ ${escapeHTML(
+              product.type
+            )}
+          </div>
+
           <div class="product-bottom">
 
             <div class="product-price">
@@ -982,6 +1289,7 @@ function renderProducts() {
             </div>
 
             <button
+              type="button"
               class="add-btn"
               data-product-id="${escapeAttribute(
                 product.id
@@ -1002,16 +1310,19 @@ function renderProducts() {
         );
 
 
-      addButton.addEventListener(
-        "click",
-        () => {
+      if (addButton) {
 
-          addToCart(
-            product.id
-          );
+        addButton.addEventListener(
+          "click",
+          () => {
 
-        }
-      );
+            addToCart(
+              product.id
+            );
+
+          }
+        );
+      }
 
 
       productsGrid.appendChild(
@@ -1058,6 +1369,7 @@ function addToCart(productId) {
       id: product.id,
       quantity: 1
     });
+
   }
 
 
@@ -1084,6 +1396,7 @@ function removeFromCart(
       item =>
         item.id !== productId
     );
+
 
   saveCart();
 
@@ -1112,10 +1425,14 @@ function changeQuantity(
   }
 
 
-  item.quantity += amount;
+  item.quantity =
+    Number(item.quantity) +
+    Number(amount);
 
 
-  if (item.quantity <= 0) {
+  if (
+    item.quantity <= 0
+  ) {
 
     removeFromCart(
       productId
@@ -1147,14 +1464,16 @@ function getCartProducts() {
               p.id === item.id
           );
 
+
         if (!product) {
           return null;
         }
 
+
         return {
           ...product,
           quantity:
-            item.quantity
+            Number(item.quantity)
         };
 
       }
@@ -1202,7 +1521,7 @@ function getCartQuantity() {
 
       return (
         total +
-        item.quantity
+        Number(item.quantity)
       );
 
     },
@@ -1217,12 +1536,20 @@ function getCartQuantity() {
 
 function renderCart() {
 
+  if (
+    !cartItems ||
+    !cartTotal ||
+    !checkoutButton
+  ) {
+    return;
+  }
+
+
   const cartProducts =
     getCartProducts();
 
 
-  cartItems.innerHTML =
-    "";
+  cartItems.innerHTML = "";
 
 
   if (
@@ -1262,6 +1589,7 @@ function renderCart() {
             "div"
           );
 
+
         item.className =
           "cart-item";
 
@@ -1274,6 +1602,7 @@ function renderCart() {
             alt="${escapeAttribute(
               product.name
             )}"
+            loading="lazy"
           >
 
           <div>
@@ -1294,13 +1623,24 @@ function renderCart() {
             <div class="quantity-controls">
 
               <button
+                type="button"
                 class="quantity-btn"
                 data-action="minus"
               >
                 −
               </button>
 
+              <span
+                style="
+                  min-width:25px;
+                  text-align:center;
+                "
+              >
+                ${product.quantity}
+              </span>
+
               <button
+                type="button"
                 class="quantity-btn"
                 data-action="plus"
               >
@@ -1312,6 +1652,7 @@ function renderCart() {
           </div>
 
           <button
+            type="button"
             class="remove-item"
             data-action="remove"
             title="Supprimer"
@@ -1321,11 +1662,27 @@ function renderCart() {
         `;
 
 
-        item
-          .querySelector(
+        const minusButton =
+          item.querySelector(
             '[data-action="minus"]'
-          )
-          .addEventListener(
+          );
+
+
+        const plusButton =
+          item.querySelector(
+            '[data-action="plus"]'
+          );
+
+
+        const removeButton =
+          item.querySelector(
+            '[data-action="remove"]'
+          );
+
+
+        if (minusButton) {
+
+          minusButton.addEventListener(
             "click",
             () => {
 
@@ -1336,13 +1693,12 @@ function renderCart() {
 
             }
           );
+        }
 
 
-        item
-          .querySelector(
-            '[data-action="plus"]'
-          )
-          .addEventListener(
+        if (plusButton) {
+
+          plusButton.addEventListener(
             "click",
             () => {
 
@@ -1353,13 +1709,12 @@ function renderCart() {
 
             }
           );
+        }
 
 
-        item
-          .querySelector(
-            '[data-action="remove"]'
-          )
-          .addEventListener(
+        if (removeButton) {
+
+          removeButton.addEventListener(
             "click",
             () => {
 
@@ -1369,6 +1724,7 @@ function renderCart() {
 
             }
           );
+        }
 
 
         cartItems.appendChild(
@@ -1399,8 +1755,12 @@ function renderCart() {
 
 function updateCartUI() {
 
-  cartCount.textContent =
-    getCartQuantity();
+  if (cartCount) {
+
+    cartCount.textContent =
+      getCartQuantity();
+  }
+
 
   renderCart();
 }
@@ -1412,13 +1772,23 @@ function updateCartUI() {
 
 function openCart() {
 
+  if (
+    !cartDrawer ||
+    !drawerOverlay
+  ) {
+    return;
+  }
+
+
   cartDrawer.classList.add(
     "open"
   );
 
+
   drawerOverlay.classList.add(
     "open"
   );
+
 
   document.body.style.overflow =
     "hidden";
@@ -1431,13 +1801,25 @@ function openCart() {
 
 function closeCart() {
 
-  cartDrawer.classList.remove(
-    "open"
-  );
+  if (
+    cartDrawer
+  ) {
 
-  drawerOverlay.classList.remove(
-    "open"
-  );
+    cartDrawer.classList.remove(
+      "open"
+    );
+  }
+
+
+  if (
+    drawerOverlay
+  ) {
+
+    drawerOverlay.classList.remove(
+      "open"
+    );
+  }
+
 
   document.body.style.overflow =
     "";
@@ -1466,17 +1848,6 @@ function payWithPayPal() {
   }
 
 
-  /*
-   * Exemple :
-   *
-   * Total = 15.99 €
-   *
-   * URL générée :
-   *
-   * https://paypal.me/SH0PNOVA/15.99
-   */
-
-
   const amount =
     total.toFixed(2);
 
@@ -1498,13 +1869,20 @@ function showToast(
   message
 ) {
 
+  if (!toastContainer) {
+    return;
+  }
+
+
   const toast =
     document.createElement(
       "div"
     );
 
+
   toast.className =
     "toast";
+
 
   toast.textContent =
     "✓ " + message;
@@ -1520,6 +1898,7 @@ function showToast(
 
       toast.style.opacity =
         "0";
+
 
       toast.style.transform =
         "translateY(10px)";
@@ -1584,80 +1963,101 @@ function escapeAttribute(
 // RECHERCHE
 // ============================================================
 
-searchInput.addEventListener(
-  "input",
-  event => {
+if (searchInput) {
 
-    searchTerm =
-      event.target.value.trim();
+  searchInput.addEventListener(
+    "input",
+    event => {
 
-    renderProducts();
+      searchTerm =
+        event.target.value.trim();
 
-  }
-);
+      renderProducts();
+
+    }
+  );
+}
 
 
 // ============================================================
 // TRI
 // ============================================================
 
-sortSelect.addEventListener(
-  "change",
-  () => {
+if (sortSelect) {
 
-    renderProducts();
+  sortSelect.addEventListener(
+    "change",
+    () => {
 
-  }
-);
+      renderProducts();
+
+    }
+  );
+}
 
 
 // ============================================================
 // PANIER
 // ============================================================
 
-cartButton.addEventListener(
-  "click",
-  openCart
-);
+if (cartButton) {
+
+  cartButton.addEventListener(
+    "click",
+    openCart
+  );
+}
 
 
-closeCartButton.addEventListener(
-  "click",
-  closeCart
-);
+if (closeCartButton) {
+
+  closeCartButton.addEventListener(
+    "click",
+    closeCart
+  );
+}
 
 
-drawerOverlay.addEventListener(
-  "click",
-  closeCart
-);
+if (drawerOverlay) {
+
+  drawerOverlay.addEventListener(
+    "click",
+    closeCart
+  );
+}
 
 
 // ============================================================
 // PAYPAL
 // ============================================================
 
-checkoutButton.addEventListener(
-  "click",
-  payWithPayPal
-);
+if (checkoutButton) {
+
+  checkoutButton.addEventListener(
+    "click",
+    payWithPayPal
+  );
+}
 
 
 // ============================================================
 // ACCUEIL
 // ============================================================
 
-homeButton.addEventListener(
-  "click",
-  () => {
+if (homeButton) {
 
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+  homeButton.addEventListener(
+    "click",
+    () => {
 
-  }
-);
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    }
+  );
+}
 
 
 // ============================================================
