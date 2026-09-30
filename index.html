@@ -19,7 +19,6 @@
       padding: 0;
     }
 
-
     /* ============================================================
        VARIABLES
     ============================================================ */
@@ -29,19 +28,14 @@
       --bg2: #0d0d14;
       --card: #11111a;
       --card2: #171722;
-
       --border: rgba(255,255,255,0.09);
-
       --text: #ffffff;
       --muted: #9292a3;
-
       --accent: #7c3cff;
       --accent2: #a66cff;
-
       --success: #39e58c;
       --danger: #ff4d67;
     }
-
 
     /* ============================================================
        BODY
@@ -71,7 +65,6 @@
       min-height: 100vh;
     }
 
-
     /* ============================================================
        FORMULAIRES
     ============================================================ */
@@ -85,7 +78,6 @@
     button {
       cursor: pointer;
     }
-
 
     /* ============================================================
        TOP BAR
@@ -108,7 +100,6 @@
         1px solid var(--border);
     }
 
-
     /* ============================================================
        HEADER
     ============================================================ */
@@ -129,7 +120,6 @@
         1px solid var(--border);
     }
 
-
     .navbar {
       max-width: 1400px;
 
@@ -146,7 +136,6 @@
 
       gap: 20px;
     }
-
 
     /* ============================================================
        LOGO NOVA
@@ -165,7 +154,6 @@
 
       white-space: nowrap;
     }
-
 
     .logo-mark {
       width: 36px;
@@ -191,7 +179,6 @@
       font-weight: 900;
     }
 
-
     /* ============================================================
        RECHERCHE
     ============================================================ */
@@ -203,7 +190,6 @@
 
       position: relative;
     }
-
 
     .search input {
       width: 100%;
@@ -229,11 +215,9 @@
         box-shadow 0.2s;
     }
 
-
     .search input::placeholder {
       color: #6f6f80;
     }
-
 
     .search input:focus {
       border-color:
@@ -243,7 +227,6 @@
         0 0 0 3px
         rgba(124,60,255,0.1);
     }
-
 
     .search-icon {
       position: absolute;
@@ -259,7 +242,6 @@
       pointer-events: none;
     }
 
-
     /* ============================================================
        ACTIONS HEADER
     ============================================================ */
@@ -273,7 +255,6 @@
 
       gap: 10px;
     }
-
 
     .nav-btn {
       border:
@@ -291,8 +272,13 @@
 
       transition:
         0.2s;
-    }
 
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+    }
 
     .nav-btn:hover {
       border-color:
@@ -305,6 +291,38 @@
         rgba(124,60,255,0.12);
     }
 
+    /* ============================================================
+       BOUTON DISCORD
+    ============================================================ */
+
+    .discord-btn {
+      padding: 0;
+
+      overflow: hidden;
+    }
+
+    .discord-btn img {
+      width: 22px;
+      height: 22px;
+
+      object-fit: contain;
+
+      object-position: center;
+
+      display: block;
+    }
+
+    .discord-btn:hover {
+      border-color:
+        rgba(88,101,242,0.8);
+
+      background:
+        rgba(88,101,242,0.14);
+
+      box-shadow:
+        0 0 18px
+        rgba(88,101,242,0.18);
+    }
 
     /* ============================================================
        PANIER HEADER
@@ -316,7 +334,6 @@
       padding:
         0 15px;
     }
-
 
     .cart-count {
       position: absolute;
@@ -348,7 +365,6 @@
       font-weight: 800;
     }
 
-
     /* ============================================================
        MAIN
     ============================================================ */
@@ -361,7 +377,6 @@
       padding:
         35px 24px 70px;
     }
-
 
     /* ============================================================
        HERO
@@ -398,7 +413,6 @@
       align-items: center;
     }
 
-
     .hero::after {
       content: "";
 
@@ -421,7 +435,6 @@
         blur(20px);
     }
 
-
     .hero-content {
       position: relative;
 
@@ -429,7 +442,6 @@
 
       max-width: 700px;
     }
-
 
     .hero-badge {
       display: inline-flex;
@@ -455,7 +467,6 @@
       margin-bottom: 18px;
     }
 
-
     .hero h1 {
       font-size:
         clamp(38px, 6vw, 68px);
@@ -467,11 +478,9 @@
       margin-bottom: 18px;
     }
 
-
     .hero h1 span {
       color: #a875ff;
     }
-
 
     .hero p {
       color: var(--muted);
@@ -482,7 +491,6 @@
 
       font-size: 15px;
     }
-
 
     /* ============================================================
        SECTION
@@ -501,18 +509,15 @@
         40px 0 20px;
     }
 
-
     .section-head h2 {
       font-size: 26px;
     }
-
 
     .result-count {
       color: var(--muted);
 
       font-size: 13px;
     }
-
 
     /* ============================================================
        CATÉGORIES
@@ -530,11 +535,9 @@
       scrollbar-width: thin;
     }
 
-
     .categories::-webkit-scrollbar {
       height: 5px;
     }
-
 
     .categories::-webkit-scrollbar-thumb {
       background:
@@ -542,7 +545,6 @@
 
       border-radius: 99px;
     }
-
 
     .category {
       flex:
@@ -574,7 +576,6 @@
       white-space: nowrap;
     }
 
-
     .category:hover,
     .category.active {
       color: white;
@@ -589,10 +590,8 @@
         translateY(-1px);
     }
 
-
     /* ============================================================
-       PETITS LOGOS DES CATÉGORIES
-       LE LOGO ENTIER RESTE VISIBLE
+       LOGOS CATÉGORIES
     ============================================================ */
 
     .category-logo {
@@ -624,7 +623,6 @@
       flex-shrink: 0;
     }
 
-
     .category-logo img {
       width: 100%;
       height: 100%;
@@ -641,14 +639,12 @@
       padding: 2px;
     }
 
-
     .category-logo-all {
       font-size: 8px;
 
       background:
         rgba(255,255,255,0.08);
     }
-
 
     /* ============================================================
        CONTROLES
@@ -666,7 +662,6 @@
       margin:
         22px 0;
     }
-
 
     .sort {
       height: 42px;
@@ -688,16 +683,14 @@
       cursor: pointer;
     }
 
-
     .sort option {
       background: #11111a;
 
       color: white;
     }
 
-
     /* ============================================================
-       GRILLE PRODUITS
+       PRODUITS
     ============================================================ */
 
     .products-grid {
@@ -711,11 +704,6 @@
 
       gap: 18px;
     }
-
-
-    /* ============================================================
-       CARTE PRODUIT
-    ============================================================ */
 
     .product-card {
       background:
@@ -738,7 +726,6 @@
         box-shadow 0.2s;
     }
 
-
     .product-card:hover {
       transform:
         translateY(-5px);
@@ -750,11 +737,6 @@
         0 18px 45px
         rgba(0,0,0,0.28);
     }
-
-
-    /* ============================================================
-       IMAGE PRODUIT
-    ============================================================ */
 
     .product-image {
       height: 175px;
@@ -770,15 +752,9 @@
       background: #08080c;
     }
 
-
-    /* ============================================================
-       CORPS PRODUIT
-    ============================================================ */
-
     .product-body {
       padding: 16px;
     }
-
 
     .product-category {
       color: #9b73e9;
@@ -794,17 +770,10 @@
       margin-bottom: 8px;
     }
 
-
-    /*
-      IMPORTANT :
-      Aucun logo de catégorie dans les cartes.
-    */
-
     .product-category img,
     .product-category-logo {
       display: none !important;
     }
-
 
     .product-name {
       min-height: 42px;
@@ -816,7 +785,6 @@
       font-weight: 750;
     }
 
-
     .product-platform {
       color: var(--muted);
 
@@ -825,7 +793,6 @@
       margin-top: 8px;
     }
 
-
     .product-type {
       color: #77778a;
 
@@ -833,11 +800,6 @@
 
       margin-top: 6px;
     }
-
-
-    /* ============================================================
-       BAS PRODUIT
-    ============================================================ */
 
     .product-bottom {
       margin-top: 17px;
@@ -851,7 +813,6 @@
       gap: 10px;
     }
 
-
     .product-price {
       font-size: 18px;
 
@@ -859,7 +820,6 @@
 
       white-space: nowrap;
     }
-
 
     .add-btn {
       border: 0;
@@ -880,7 +840,6 @@
         0.2s;
     }
 
-
     .add-btn:hover {
       background:
         #925cff;
@@ -889,12 +848,10 @@
         scale(1.03);
     }
 
-
     .add-btn:active {
       transform:
         scale(0.98);
     }
-
 
     /* ============================================================
        EMPTY
@@ -919,7 +876,6 @@
         rgba(255,255,255,0.015);
     }
 
-
     /* ============================================================
        FOOTER
     ============================================================ */
@@ -938,9 +894,8 @@
       font-size: 12px;
     }
 
-
     /* ============================================================
-       OVERLAY PANIER
+       OVERLAY
     ============================================================ */
 
     .drawer-overlay {
@@ -961,13 +916,11 @@
         0.25s;
     }
 
-
     .drawer-overlay.open {
       opacity: 1;
 
       pointer-events: auto;
     }
-
 
     /* ============================================================
        PANIER
@@ -1004,12 +957,10 @@
       flex-direction: column;
     }
 
-
     .cart-drawer.open {
       transform:
         translateX(0);
     }
-
 
     /* ============================================================
        HEADER PANIER
@@ -1031,11 +982,9 @@
         1px solid var(--border);
     }
 
-
     .drawer-head h2 {
       font-size: 19px;
     }
-
 
     .close-btn {
       width: 40px;
@@ -1056,7 +1005,6 @@
         0.2s;
     }
 
-
     .close-btn:hover {
       background:
         rgba(255,77,103,0.12);
@@ -1064,7 +1012,6 @@
       border-color:
         rgba(255,77,103,0.5);
     }
-
 
     /* ============================================================
        ARTICLES PANIER
@@ -1077,7 +1024,6 @@
 
       padding: 15px;
     }
-
 
     .cart-item {
       display: grid;
@@ -1102,7 +1048,6 @@
       margin-bottom: 10px;
     }
 
-
     .cart-item img {
       width: 70px;
 
@@ -1117,7 +1062,6 @@
       background: #08080c;
     }
 
-
     .cart-item-name {
       font-size: 13px;
 
@@ -1126,7 +1070,6 @@
       line-height: 1.3;
     }
 
-
     .cart-item-price {
       margin-top: 5px;
 
@@ -1134,7 +1077,6 @@
 
       color: #aaaabd;
     }
-
 
     /* ============================================================
        QUANTITÉS
@@ -1150,7 +1092,6 @@
       margin-top: 8px;
     }
 
-
     .quantity-controls span {
       min-width: 22px;
 
@@ -1160,7 +1101,6 @@
 
       font-weight: 700;
     }
-
 
     .quantity-btn {
       width: 28px;
@@ -1181,7 +1121,6 @@
         0.2s;
     }
 
-
     .quantity-btn:hover {
       border-color:
         rgba(124,60,255,0.6);
@@ -1189,7 +1128,6 @@
       background:
         rgba(124,60,255,0.12);
     }
-
 
     .remove-item {
       border: 0;
@@ -1208,7 +1146,6 @@
         0.2s;
     }
 
-
     .remove-item:hover {
       transform:
         scale(1.15);
@@ -1216,7 +1153,6 @@
       color:
         #ff304f;
     }
-
 
     /* ============================================================
        BAS PANIER
@@ -1229,7 +1165,6 @@
       padding: 18px;
     }
 
-
     .total-line {
       display: flex;
 
@@ -1240,18 +1175,15 @@
       margin-bottom: 15px;
     }
 
-
     .total-line span:first-child {
       color: var(--muted);
     }
-
 
     .total {
       font-size: 23px;
 
       font-weight: 900;
     }
-
 
     /* ============================================================
        PAYPAL
@@ -1281,7 +1213,6 @@
         0.2s;
     }
 
-
     .checkout-btn:hover:not(:disabled) {
       transform:
         translateY(-1px);
@@ -1290,66 +1221,11 @@
         brightness(1.06);
     }
 
-
     .checkout-btn:disabled {
       opacity: 0.4;
 
       cursor: not-allowed;
     }
-
-
-    /* ============================================================
-       DISCORD / COMMANDE
-    ============================================================ */
-
-    .discord-order-btn {
-      width: 100%;
-
-      min-height: 48px;
-
-      margin-top: 10px;
-
-      border:
-        1px solid
-        rgba(124,60,255,0.45);
-
-      border-radius: 12px;
-
-      color: white;
-
-      background:
-        linear-gradient(
-          135deg,
-          #5865f2,
-          #7c3cff
-        );
-
-      font-weight: 900;
-
-      transition:
-        0.2s;
-    }
-
-
-    .discord-order-btn:hover:not(:disabled) {
-      transform:
-        translateY(-1px);
-
-      filter:
-        brightness(1.08);
-
-      box-shadow:
-        0 8px 25px
-        rgba(88,101,242,0.25);
-    }
-
-
-    .discord-order-btn:disabled {
-      opacity: 0.4;
-
-      cursor: not-allowed;
-    }
-
 
     /* ============================================================
        INFO PAYPAL
@@ -1366,7 +1242,6 @@
 
       margin-top: 10px;
     }
-
 
     /* ============================================================
        TOAST
@@ -1390,7 +1265,6 @@
       max-width:
         calc(100vw - 40px);
     }
-
 
     .toast {
       padding:
@@ -1418,7 +1292,6 @@
         transform 0.25s;
     }
 
-
     @keyframes toastIn {
 
       from {
@@ -1437,7 +1310,6 @@
 
     }
 
-
     /* ============================================================
        TABLETTE
     ============================================================ */
@@ -1454,7 +1326,6 @@
 
     }
 
-
     /* ============================================================
        MOBILE
     ============================================================ */
@@ -1470,11 +1341,9 @@
           12px 15px;
       }
 
-
       .logo {
         font-size: 18px;
       }
-
 
       .search {
         order: 3;
@@ -1484,12 +1353,10 @@
         max-width: none;
       }
 
-
       main {
         padding:
           20px 15px 50px;
       }
-
 
       .hero {
         padding:
@@ -1498,17 +1365,14 @@
         min-height: 290px;
       }
 
-
       .hero h1 {
         letter-spacing:
           -2px;
       }
 
-
       .hero p {
         font-size: 14px;
       }
-
 
       .products-grid {
         grid-template-columns:
@@ -1520,21 +1384,17 @@
         gap: 12px;
       }
 
-
       .product-image {
         height: 135px;
       }
-
 
       .product-body {
         padding: 12px;
       }
 
-
       .product-name {
         font-size: 14px;
       }
-
 
       .product-bottom {
         align-items:
@@ -1544,11 +1404,9 @@
           column;
       }
 
-
       .add-btn {
         width: 100%;
       }
-
 
       .controls {
         align-items:
@@ -1558,13 +1416,11 @@
           column;
       }
 
-
       .sort {
         width: 100%;
       }
 
     }
-
 
     /* ============================================================
        PETIT MOBILE
@@ -1576,49 +1432,35 @@
         grid-template-columns: 1fr;
       }
 
-
       .product-image {
         height: 190px;
       }
 
-
-      .nav-actions .nav-btn:first-child {
-        display: none;
-      }
-
-
       .logo-mark {
         width: 32px;
-
         height: 32px;
       }
-
 
       .logo {
         font-size: 16px;
       }
-
 
       .hero {
         padding:
           30px 20px;
       }
 
-
       .hero h1 {
         font-size: 42px;
       }
-
 
       .cart-item {
         grid-template-columns:
           60px 1fr auto;
       }
 
-
       .cart-item img {
         width: 60px;
-
         height: 50px;
       }
 
@@ -1627,7 +1469,6 @@
   </style>
 
 </head>
-
 
 <body>
 
@@ -1690,6 +1531,8 @@
       <div class="nav-actions">
 
 
+        <!-- ACCUEIL -->
+
         <button
           class="nav-btn"
           id="homeButton"
@@ -1700,6 +1543,26 @@
           🏠
         </button>
 
+
+        <!-- DISCORD -->
+
+        <button
+          class="nav-btn discord-btn"
+          id="discordButton"
+          type="button"
+          title="Discord"
+          aria-label="Discord"
+        >
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0hYuyxdAgrKOlEeGtlGDAqvmeYqyzLYr57DWV6uoljg&s=10"
+            alt="Discord"
+          >
+
+        </button>
+
+
+        <!-- PANIER -->
 
         <button
           class="nav-btn cart-btn"
@@ -1901,7 +1764,7 @@
     </div>
 
 
-    <!-- PRODUITS DU PANIER -->
+    <!-- ARTICLES -->
 
     <div
       class="cart-items"
@@ -1909,7 +1772,7 @@
     ></div>
 
 
-    <!-- TOTAL -->
+    <!-- BAS PANIER -->
 
     <div class="drawer-bottom">
 
@@ -1938,19 +1801,9 @@
         type="button"
         disabled
       >
+
         💳 Payer avec PayPal
-      </button>
 
-
-      <!-- DISCORD -->
-
-      <button
-        class="discord-order-btn"
-        id="discordOrderButton"
-        type="button"
-        disabled
-      >
-        🟣 Envoyer la commande sur Discord
       </button>
 
 
@@ -1964,12 +1817,11 @@
 
     </div>
 
-
   </aside>
 
 
   <!-- ============================================================
-       TOASTS
+       TOAST
   ============================================================ -->
 
   <div
