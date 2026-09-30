@@ -10,18 +10,18 @@
 
 const products = [
 
-  // ==========================================================
+  // ============================================================
   // ROBLOX
-  // ==========================================================
+  // ============================================================
 
   {
     id: "roblox-100",
     name: "Roblox Card - 100 ROBUX",
     price: 1.19,
     category: "Roblox",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/13504/616x353/roblox-card-100-robux-100-robux-pc-jeu-cover.jpg?v=1677828910"
+    image: "https://gaming-cdn.com/images/products/13504/616x353/roblox-card-100-robux-100-robux-pc-jeu-cover.jpg?v=1677828910"
   },
 
   {
@@ -29,9 +29,9 @@ const products = [
     name: "Roblox Card - 300 ROBUX",
     price: 3.95,
     category: "Roblox",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/18880/616x353/roblox-300-robux-300-robux-pc-jeu-europe-cover.jpg?v=1742283940"
+    image: "https://gaming-cdn.com/images/products/18880/616x353/roblox-300-robux-300-robux-pc-jeu-europe-cover.jpg?v=1742283940"
   },
 
   {
@@ -39,9 +39,9 @@ const products = [
     name: "Roblox Card - 400 ROBUX",
     price: 6.49,
     category: "Roblox",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/15265/616x353/roblox-card-400-robux-400-robux-pc-jeu-cover.jpg?v=1699346075"
+    image: "https://gaming-cdn.com/images/products/15265/616x353/roblox-card-400-robux-400-robux-pc-jeu-cover.jpg?v=1699346075"
   },
 
   {
@@ -49,9 +49,9 @@ const products = [
     name: "Roblox Card - 1500 ROBUX",
     price: 9.59,
     category: "Roblox",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/23409/616x353/roblox-1500-robux-pc-cover.jpg?v=1785919991"
+    image: "https://gaming-cdn.com/images/products/23409/616x353/roblox-1500-robux-pc-cover.jpg?v=1785919991"
   },
 
   {
@@ -59,9 +59,9 @@ const products = [
     name: "Roblox Card - 800 ROBUX",
     price: 9.91,
     category: "Roblox",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/10437/616x353/roblox-800-robux-pc-cover.jpg?v=1767788892"
+    image: "https://gaming-cdn.com/images/products/10437/616x353/roblox-800-robux-pc-cover.jpg?v=1767788892"
   },
 
   {
@@ -69,9 +69,9 @@ const products = [
     name: "Roblox Card - 1000 ROBUX",
     price: 10.49,
     category: "Roblox",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/22952/616x353/roblox-1000-robux-pc-cover.jpg?v=1781173294"
+    image: "https://gaming-cdn.com/images/products/22952/616x353/roblox-1000-robux-pc-cover.jpg?v=1781173294"
   },
 
   {
@@ -79,9 +79,9 @@ const products = [
     name: "Roblox Card - 2000 ROBUX",
     price: 21.99,
     category: "Roblox",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/15168/616x353/roblox-card-2000-robux-pc-cover.jpg?v=1767788872"
+    image: "https://gaming-cdn.com/images/products/15168/616x353/roblox-card-2000-robux-pc-cover.jpg?v=1767788872"
   },
 
   {
@@ -89,9 +89,9 @@ const products = [
     name: "Roblox Card - 1700 ROBUX",
     price: 23.99,
     category: "Roblox",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/7994/616x353/roblox-1700-robux-pc-cover.jpg?v=1767788932"
+    image: "https://gaming-cdn.com/images/products/7994/616x353/roblox-1700-robux-pc-cover.jpg?v=1767788932"
   },
 
   {
@@ -99,9 +99,9 @@ const products = [
     name: "Roblox Card - 2500 ROBUX",
     price: 26.99,
     category: "Roblox",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/18652/616x353/roblox-2500-robux-2500-robux-pc-jeu-europe-cover.jpg?v=1740132827"
+    image: "https://gaming-cdn.com/images/products/18652/616x353/roblox-2500-robux-2500-robux-pc-jeu-europe-cover.jpg?v=1740132827"
   },
 
   {
@@ -109,9 +109,9 @@ const products = [
     name: "Roblox Card - 3000 ROBUX",
     price: 34.99,
     category: "Roblox",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/18878/616x353/roblox-3000-robux-pc-cover.jpg?v=1767788845"
+    image: "https://gaming-cdn.com/images/products/18878/616x353/roblox-3000-robux-pc-cover.jpg?v=1767788845"
   },
 
   {
@@ -119,9 +119,9 @@ const products = [
     name: "Roblox Card - 4000 ROBUX",
     price: 39.99,
     category: "Roblox",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/18879/616x353/roblox-4000-robux-pc-cover.jpg?v=1767788831"
+    image: "https://gaming-cdn.com/images/products/18879/616x353/roblox-4000-robux-pc-cover.jpg?v=1767788831"
   },
 
   {
@@ -129,9 +129,9 @@ const products = [
     name: "Roblox Card - 4500 ROBUX",
     price: 44.99,
     category: "Roblox",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/7995/616x353/roblox-4500-robux-pc-cover.jpg?v=1767788921"
+    image: "https://gaming-cdn.com/images/products/7995/616x353/roblox-4500-robux-pc-cover.jpg?v=1767788921"
   },
 
   {
@@ -139,9 +139,9 @@ const products = [
     name: "Roblox Card - 5250 ROBUX",
     price: 51.99,
     category: "Roblox",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/21588/616x353/roblox-5250-robux-pc-battle-net-cover.jpg?v=1770902730"
+    image: "https://gaming-cdn.com/images/products/21588/616x353/roblox-5250-robux-pc-battle-net-cover.jpg?v=1770902730"
   },
 
   {
@@ -149,24 +149,24 @@ const products = [
     name: "Roblox Card - 10000 ROBUX",
     price: 89.99,
     category: "Roblox",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/10435/616x353/roblox-10000-robux-pc-cover.jpg?v=1767788900"
+    image: "https://gaming-cdn.com/images/products/10435/616x353/roblox-10000-robux-pc-cover.jpg?v=1767788900"
   },
 
 
-  // ==========================================================
+  // ============================================================
   // FORTNITE
-  // ==========================================================
+  // ============================================================
 
   {
     id: "fortnite-legendes-fraiches",
     name: "Fortnite Pack Légendes fraîches + 1000 V-Bucks",
     price: 6.89,
     category: "Fortnite",
+    type: "Pack",
     platform: "Xbox",
-    image:
-      "https://gaming-cdn.com/images/products/9584/616x353/fortnite-pack-legendes-fraiches-1000-v-bucks-xbox-one-xbox-series-x-s-microsoft-store-cover.jpg?v=1781175723"
+    image: "https://gaming-cdn.com/images/products/9584/616x353/fortnite-pack-legendes-fraiches-1000-v-bucks-xbox-one-xbox-series-x-s-microsoft-store-cover.jpg?v=1781175723"
   },
 
   {
@@ -174,9 +174,9 @@ const products = [
     name: "Fortnite Cobalt Star Bundle + 1000 V-Bucks",
     price: 15.99,
     category: "Fortnite",
-    platform: "PlayStation 5",
-    image:
-      "https://gaming-cdn.com/images/products/18008/616x353/fortnite-cobalt-star-bundle-1000-v-bucks-playstation-5-playstation-store-cover.jpg?v=1781184809"
+    type: "Pack",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/18008/616x353/fortnite-cobalt-star-bundle-1000-v-bucks-playstation-5-playstation-store-cover.jpg?v=1781184809"
   },
 
   {
@@ -184,9 +184,9 @@ const products = [
     name: "Fortnite Flowering Chaos + 1000 V-Bucks",
     price: 12.69,
     category: "Fortnite",
-    platform: "PlayStation 5",
-    image:
-      "https://gaming-cdn.com/images/products/21199/616x353/fortnite-flowering-chaos-1000-v-bucks-playstation-5-playstation-store-cover.jpg?v=1781184757"
+    type: "Pack",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/21199/616x353/fortnite-flowering-chaos-1000-v-bucks-playstation-5-playstation-store-cover.jpg?v=1781184757"
   },
 
   {
@@ -194,9 +194,9 @@ const products = [
     name: "Fortnite - Pack Légendes animées",
     price: 10.99,
     category: "Fortnite",
-    platform: "PlayStation 5",
-    image:
-      "https://gaming-cdn.com/images/products/12592/616x353/fortnite-pack-legendes-animees-playstation-5-jeu-playstation-store-europe-cover.jpg?v=1748419162"
+    type: "Pack",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/12592/616x353/fortnite-pack-legendes-animees-playstation-5-jeu-playstation-store-europe-cover.jpg?v=1748419162"
   },
 
   {
@@ -204,9 +204,9 @@ const products = [
     name: "Fortnite - Darkfire & Ice Bundle + 1000 V-Bucks",
     price: 17.19,
     category: "Fortnite",
+    type: "Pack",
     platform: "Nintendo Switch",
-    image:
-      "https://gaming-cdn.com/images/products/20656/616x353/fortnite-darkfire-ice-bundle-1000-v-bucks-switch-nintendo-eshop-cover.jpg?v=1781184777"
+    image: "https://gaming-cdn.com/images/products/20656/616x353/fortnite-darkfire-ice-bundle-1000-v-bucks-switch-nintendo-eshop-cover.jpg?v=1781184777"
   },
 
   {
@@ -214,9 +214,9 @@ const products = [
     name: "Fortnite - Transformers Pack + 1000 V-Bucks",
     price: 15.99,
     category: "Fortnite",
-    platform: "PlayStation 4",
-    image:
-      "https://gaming-cdn.com/images/products/14693/616x353/fortnite-transformers-pack-1000-v-bucks-playstation-4-playstation-store-cover.jpg?v=1781185876"
+    type: "Pack",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/14693/616x353/fortnite-transformers-pack-1000-v-bucks-playstation-4-playstation-store-cover.jpg?v=1781185876"
   },
 
   {
@@ -224,19 +224,19 @@ const products = [
     name: "Fortnite - Darkfire Bundle",
     price: 19.99,
     category: "Fortnite",
+    type: "Pack",
     platform: "Nintendo Switch",
-    image:
-      "https://gaming-cdn.com/images/products/5733/616x353/fortnite-darkfire-bundle-switch-jeu-nintendo-eshop-europe-cover.jpg?v=1730385293"
+    image: "https://gaming-cdn.com/images/products/5733/616x353/fortnite-darkfire-bundle-switch-jeu-nintendo-eshop-europe-cover.jpg?v=1730385293"
   },
 
   {
     id: "fortnite-5000-vbucks",
-    name: "Fortnite - 5000 V-Bucks Gift Card (Epic Games)",
+    name: "Fortnite - 5000 V-Bucks Gift Card",
     price: 36.20,
     category: "Fortnite",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/8158/616x353/fortnite-5000-v-bucks-gift-card-5000-v-bucks-pc-jeu-epic-games-cover.jpg?v=1699365704"
+    image: "https://gaming-cdn.com/images/products/8158/616x353/fortnite-5000-v-bucks-gift-card-5000-v-bucks-pc-jeu-epic-games-cover.jpg?v=1699365704"
   },
 
   {
@@ -244,9 +244,9 @@ const products = [
     name: "Fortnite - The Batman Who Laughs Outfit",
     price: 8.99,
     category: "Fortnite",
+    type: "Contenu",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/9954/616x353/fortnite-the-batman-who-laughs-outfit-pc-jeu-epic-games-cover.jpg?v=1666177682"
+    image: "https://gaming-cdn.com/images/products/9954/616x353/fortnite-the-batman-who-laughs-outfit-pc-jeu-epic-games-cover.jpg?v=1666177682"
   },
 
   {
@@ -254,9 +254,9 @@ const products = [
     name: "Fortnite - Pack Lumière déchue",
     price: 3.60,
     category: "Fortnite",
+    type: "Pack",
     platform: "Xbox",
-    image:
-      "https://gaming-cdn.com/images/products/9848/616x353/fortnite-pack-lumiere-dechue-xbox-one-xbox-series-x-s-jeu-microsoft-store-europe-cover.jpg?v=1739374928"
+    image: "https://gaming-cdn.com/images/products/9848/616x353/fortnite-pack-lumiere-dechue-xbox-one-xbox-series-x-s-jeu-microsoft-store-europe-cover.jpg?v=1739374928"
   },
 
   {
@@ -264,29 +264,29 @@ const products = [
     name: "Fortnite - Catwoman's Grappling Claw Pickaxe",
     price: 8.99,
     category: "Fortnite",
+    type: "Contenu",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/9608/616x353/fortnite-catwoman-s-grappling-claw-pickaxe-pc-jeu-epic-games-cover.jpg?v=1702478626"
+    image: "https://gaming-cdn.com/images/products/9608/616x353/fortnite-catwoman-s-grappling-claw-pickaxe-pc-jeu-epic-games-cover.jpg?v=1702478626"
   },
 
   {
     id: "fortnite-1000-vbucks",
-    name: "Fortnite - 1000 V-Bucks Gift Card (Epic Games)",
+    name: "Fortnite - 1000 V-Bucks Gift Card",
     price: 8.59,
     category: "Fortnite",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/8156/616x353/fortnite-1000-v-bucks-gift-card-1000-v-bucks-pc-jeu-epic-games-cover.jpg?v=1701258416"
+    image: "https://gaming-cdn.com/images/products/8156/616x353/fortnite-1000-v-bucks-gift-card-1000-v-bucks-pc-jeu-epic-games-cover.jpg?v=1701258416"
   },
 
   {
     id: "fortnite-2800-vbucks",
-    name: "Fortnite - 2800 V-Bucks Gift Card (Epic Games)",
+    name: "Fortnite - 2800 V-Bucks Gift Card",
     price: 22.69,
     category: "Fortnite",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/8157/616x353/fortnite-2800-v-bucks-gift-card-2800-v-bucks-pc-jeu-epic-games-cover.jpg?v=1716909867"
+    image: "https://gaming-cdn.com/images/products/8157/616x353/fortnite-2800-v-bucks-gift-card-2800-v-bucks-pc-jeu-epic-games-cover.jpg?v=1716909867"
   },
 
   {
@@ -294,19 +294,19 @@ const products = [
     name: "Fortnite - Pack Iris + 600 V-Bucks",
     price: 2.77,
     category: "Fortnite",
+    type: "Pack",
     platform: "Xbox",
-    image:
-      "https://gaming-cdn.com/images/products/6828/616x353/fortnite-pack-iris-600-v-bucks-xbox-one-xbox-one-jeu-microsoft-store-europe-cover.jpg?v=1736957194"
+    image: "https://gaming-cdn.com/images/products/6828/616x353/fortnite-pack-iris-600-v-bucks-xbox-one-xbox-one-jeu-microsoft-store-europe-cover.jpg?v=1736957194"
   },
 
   {
     id: "fortnite-13500-vbucks",
-    name: "Fortnite - 13500 V-Bucks Gift Card (Epic Games)",
+    name: "Fortnite - 13500 V-Bucks Gift Card",
     price: 82.99,
     category: "Fortnite",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/10451/616x353/fortnite-13500-v-bucks-gift-card-13500-v-bucks-pc-jeu-epic-games-cover.jpg?v=1701258558"
+    image: "https://gaming-cdn.com/images/products/10451/616x353/fortnite-13500-v-bucks-gift-card-13500-v-bucks-pc-jeu-epic-games-cover.jpg?v=1701258558"
   },
 
   {
@@ -314,9 +314,9 @@ const products = [
     name: "Epic Games Gift Card 37 EUR - Fortnite 4500 V-Bucks",
     price: 35.89,
     category: "Fortnite",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/22600/616x353/epic-games-gift-card-37eur-fortnite-4500-v-bucks-gift-card-epic-games-cover.jpg?v=1781614127"
+    image: "https://gaming-cdn.com/images/products/22600/616x353/epic-games-gift-card-37eur-fortnite-4500-v-bucks-gift-card-epic-games-cover.jpg?v=1781614127"
   },
 
   {
@@ -324,9 +324,9 @@ const products = [
     name: "Epic Games Gift Card 23 EUR - Fortnite 2400 V-Bucks",
     price: 22.31,
     category: "Fortnite",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/22599/616x353/epic-games-gift-card-23eur-fortnite-2400-v-bucks-gift-card-epic-games-cover.jpg?v=1781614121"
+    image: "https://gaming-cdn.com/images/products/22599/616x353/epic-games-gift-card-23eur-fortnite-2400-v-bucks-gift-card-epic-games-cover.jpg?v=1781614121"
   },
 
   {
@@ -334,13 +334,207 @@ const products = [
     name: "Epic Games Gift Card 90 EUR - Fortnite 12500 V-Bucks",
     price: 87.30,
     category: "Fortnite",
+    type: "Carte cadeau",
     platform: "PC",
-    image:
-      "https://gaming-cdn.com/images/products/22586/616x353/epic-games-gift-card-90eur-fortnite-12500-v-bucks-gift-card-epic-games-cover.jpg?v=1778169070"
+    image: "https://gaming-cdn.com/images/products/22586/616x353/epic-games-gift-card-90eur-fortnite-12500-v-bucks-gift-card-epic-games-cover.jpg?v=1778169070"
+  },
+
+
+  // ============================================================
+  // VALORANT
+  // ============================================================
+
+  {
+    id: "valorant-450",
+    name: "VALORANT - 450 Riot Points",
+    price: 4.69,
+    category: "VALORANT",
+    type: "Carte cadeau",
+    platform: "PC",
+    image: "https://gaming-cdn.com/images/products/7093/616x353/valorant-5eur-450-riot-points-pc-cover.jpg?v=1768550634"
+  },
+
+  {
+    id: "valorant-1000",
+    name: "VALORANT - 1000 Riot Points",
+    price: 9.49,
+    category: "VALORANT",
+    type: "Carte cadeau",
+    platform: "PC",
+    image: "https://gaming-cdn.com/images/products/7094/616x353/valorant-10eur-1000-riot-points-pc-cover.jpg?v=1768550654"
+  },
+
+  {
+    id: "valorant-2050",
+    name: "VALORANT - 2050 Riot Points",
+    price: 18.99,
+    category: "VALORANT",
+    type: "Carte cadeau",
+    platform: "PC",
+    image: "https://gaming-cdn.com/images/products/7095/616x353/valorant-20eur-2050-riot-points-pc-cover.jpg?v=1768550730"
+  },
+
+  {
+    id: "valorant-2565",
+    name: "VALORANT - 2565 Riot Points",
+    price: 23.69,
+    category: "VALORANT",
+    type: "Carte cadeau",
+    platform: "PC",
+    image: "https://gaming-cdn.com/images/products/14355/616x353/valorant-25eur-2565-riot-points-pc-cover.jpg?v=1768550810"
+  },
+
+  {
+    id: "valorant-3650",
+    name: "VALORANT - 3650 Riot Points",
+    price: 33.19,
+    category: "VALORANT",
+    type: "Carte cadeau",
+    platform: "PC",
+    image: "https://gaming-cdn.com/images/products/13052/616x353/valorant-35eur-3650-riot-points-pc-cover.jpg?v=1768550793"
+  },
+
+  {
+    id: "valorant-5350",
+    name: "VALORANT - 5350 Riot Points",
+    price: 47.49,
+    category: "VALORANT",
+    type: "Carte cadeau",
+    platform: "PC",
+    image: "https://gaming-cdn.com/images/products/7096/616x353/valorant-50eur-5350-riot-points-pc-cover.jpg?v=1768550762"
+  },
+
+  {
+    id: "valorant-11000",
+    name: "VALORANT - 11000 Riot Points",
+    price: 94.99,
+    category: "VALORANT",
+    type: "Carte cadeau",
+    platform: "PC",
+    image: "https://gaming-cdn.com/images/products/13053/616x353/valorant-100eur-11000-riot-points-pc-cover.jpg?v=1768550803"
+  },
+
+
+  // ============================================================
+  // PLAYSTATION PLUS
+  // ============================================================
+
+  {
+    id: "ps-plus-essential-1-month",
+    name: "PlayStation Plus Essential - 1 Mois",
+    price: 7.99,
+    category: "PlayStation Plus",
+    type: "Abonnement",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/10689/616x353/playstation-plus-essential-1-mois-essential-1-month-playstation-4-playstation-5-jeu-playstation-store-europe-cover.jpg?v=1698221996"
+  },
+
+  {
+    id: "ps-plus-extra-3-months",
+    name: "PlayStation Plus Extra - 3 Mois",
+    price: 23.11,
+    category: "PlayStation Plus",
+    type: "Abonnement",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/10693/616x353/playstation-plus-extra-3-mois-extra-3-months-playstation-4-playstation-5-jeu-playstation-store-europe-cover.jpg?v=1698221963"
+  },
+
+  {
+    id: "ps-plus-essential-12-months",
+    name: "PlayStation Plus Essential - 12 Mois",
+    price: 58.99,
+    category: "PlayStation Plus",
+    type: "Abonnement",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/10691/616x353/playstation-plus-essential-12-mois-essential-12-months-playstation-4-playstation-5-jeu-playstation-store-europe-cover.jpg?v=1698221975"
+  },
+
+
+  // ============================================================
+  // CARTES CADEAU PLAYSTATION STORE
+  // ============================================================
+
+  {
+    id: "ps-store-10",
+    name: "Carte cadeau PlayStation Store - 10 €",
+    price: 9.49,
+    category: "PlayStation Store",
+    type: "Carte cadeau",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/12767/616x353/carte-cadeau-playstation-store-10eur-playstation-4-playstation-5-playstation-store-cover.jpg?v=1752592890"
+  },
+
+  {
+    id: "ps-store-20",
+    name: "Carte cadeau PlayStation Store - 20 €",
+    price: 19.09,
+    category: "PlayStation Store",
+    type: "Carte cadeau",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/600/616x353/carte-cadeau-playstation-store-20eur-playstation-4-playstation-5-playstation-store-cover.jpg?v=1752592904"
+  },
+
+  {
+    id: "ps-store-25",
+    name: "Carte cadeau PlayStation Store - 25 €",
+    price: 23.79,
+    category: "PlayStation Store",
+    type: "Carte cadeau",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/12769/616x353/carte-cadeau-playstation-store-25eur-playstation-4-playstation-5-playstation-store-cover.jpg?v=1771838734"
+  },
+
+  {
+    id: "ps-store-50",
+    name: "Carte cadeau PlayStation Store - 50 €",
+    price: 47.49,
+    category: "PlayStation Store",
+    type: "Carte cadeau",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/602/616x353/carte-cadeau-playstation-store-50eur-playstation-4-playstation-5-playstation-store-cover.jpg?v=1752592909"
+  },
+
+  {
+    id: "ps-store-60",
+    name: "Carte cadeau PlayStation Store - 60 €",
+    price: 56.39,
+    category: "PlayStation Store",
+    type: "Carte cadeau",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/12772/616x353/carte-cadeau-playstation-store-60eur-playstation-5-playstation-4-playstation-store-cover.jpg?v=1764768707"
+  },
+
+  {
+    id: "ps-store-80",
+    name: "Carte cadeau PlayStation Store - 80 €",
+    price: 75.99,
+    category: "PlayStation Store",
+    type: "Carte cadeau",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/16625/616x353/carte-cadeau-playstation-store-80eur-playstation-5-playstation-4-playstation-store-cover.jpg?v=1752592846"
+  },
+
+  {
+    id: "ps-store-100",
+    name: "Carte cadeau PlayStation Store - 100 €",
+    price: 94.99,
+    category: "PlayStation Store",
+    type: "Carte cadeau",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/12774/616x353/carte-cadeau-playstation-store-100eur-playstation-5-playstation-4-playstation-store-cover.jpg?v=1752592914"
+  },
+
+  {
+    id: "ps-store-150",
+    name: "Carte cadeau PlayStation Store - 150 €",
+    price: 140.99,
+    category: "PlayStation Store",
+    type: "Carte cadeau",
+    platform: "PlayStation",
+    image: "https://gaming-cdn.com/images/products/21246/616x353/carte-cadeau-playstation-store-150eur-playstation-5-playstation-4-playstation-store-cover.jpg?v=1764260665"
   }
 
 ];
-
 
 // ============================================================
 // CONFIGURATION
