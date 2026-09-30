@@ -692,7 +692,7 @@ const DISCORD_SERVER_URL = "https://discord.gg/73jCJ2tNV";
 // Mets ici ton URL OAuth2 complète.
 // ------------------------------------------------------------
 
-const DISCORD_OAUTH_URL = "https://discord.com/oauth2/authorize?client_id=1554855867973771354&permissions=0&response_type=code&redirect_uri=https%3A%2F%2Fcodelol-system.github.io%2FNOVA-KEY-SHOP%2F&integration_type=0&scope=identify+connections+email+guilds+guilds.members.read+applications.commands.permissions.update+openid+applications.entitlements+guilds.join+gdm.join+rpc.voice.read+rpc+rpc.video.read+rpc.screenshare.read+rpc.activities.write+messages.read+applications.commands+role_connections.write+applications.store.update+applications.builds.read+webhook.incoming+rpc.screenshare.write+rpc.video.write+rpc.voice.write+bot+rpc.notifications.read";
+const DISCORD_OAUTH_URL = "https://discord.com/oauth2/authorize?client_id=1554855867973771354&response_type=code&redirect_uri=https%3A%2F%2Fcodelol-system.github.io%2FNOVA-KEY-SHOP%2F&scope=identify";
 
 
 // ============================================================
